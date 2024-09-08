@@ -16,7 +16,7 @@ const Error = ({ error, reset }: ErrorProps) => {
 	const reload = useCallback(() => {
 		reset()
 		window.location.reload()
-	}, [])
+	}, [reset])
 
 	useEffect(() => {
 		console.info(error)

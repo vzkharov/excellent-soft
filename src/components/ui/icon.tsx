@@ -23,7 +23,7 @@ const Icon = memo(({ size, name, style, className, ...props }: IconProps) => {
 				}}
 			/>
 		),
-		[size],
+		[style, size, className],
 	)
 
 	const dynamicName = useMemo(() => dynamicIconImports[name], [name])
@@ -45,6 +45,7 @@ const Icon = memo(({ size, name, style, className, ...props }: IconProps) => {
 		/>
 	)
 })
+Icon.displayName = 'Icon'
 
 export { Icon }
 export type { IconProps, IconNames }

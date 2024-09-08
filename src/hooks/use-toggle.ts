@@ -50,12 +50,12 @@ const useToggle = ({
 			setValue(newValue)
 			newValue ? onActive?.(newValue) : onUnactive?.(newValue)
 		},
-		[disabled, readOnly],
+		[disabled, readOnly, onActive, onUnactive, setValue],
 	)
 
-	const open = useCallback(() => set(true), [])
-	const close = useCallback(() => set(false), [])
-	const toggle = useCallback(() => set(!value), [value])
+	const open = useCallback(() => set(true), [set])
+	const close = useCallback(() => set(false), [set])
+	const toggle = useCallback(() => set(!value), [set, value])
 
 	return [
 		value,

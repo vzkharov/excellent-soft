@@ -1,41 +1,18 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest } from 'next/server'
 
-import { NODE_ENV } from './env'
+import { configureCsp } from '~/lib/csp'
 
 const middleware = (request: NextRequest) => {
-	const nonce = Buffer.from(crypto.randomUUID()).toString('base64')
+	const response = configureCsp(request.headers)
 
-	const cspHeader =
-		NODE_ENV === 'development'
-			? ''
-			: `
-    script-src 'self' 'unsafe-inline' maps.googleapis.com;
-    base-uri 'self';
-    form-action 'self';
-    object-src 'none';
-    frame-ancestors 'none';
-    block-all-mixed-content;
-    upgrade-insecure-requests;
-`
-	// Replace newline characters and spaces
-	const contentSecurityPolicyHeaderValue = cspHeader.replace(/\s{2,}/g, ' ').trim()
-
-	const requestHeaders = new Headers(request.headers)
-	requestHeaders.set('x-nonce', nonce)
-
-	requestHeaders.set('Content-Security-Policy', contentSecurityPolicyHeaderValue)
-
-	const response = NextResponse.next({
-		request: {
-			headers: requestHeaders,
-		},
-	})
-	response.headers.set('Content-Security-Policy', contentSecurityPolicyHeaderValue)
+	/**
+	 * modify response...
+	 */
 
 	return response
 }
 
-const config = {
+export const config = {
 	matcher: [
 		/*
 		 * Match all request paths except for the ones starting with:
@@ -45,7 +22,7 @@ const config = {
 		 * - favicon.ico (favicon file)
 		 */
 		{
-			source: '/((?!api|_next/static|_next/image|favicon.ico|*.css).*)',
+			source: '/((?!api|_next/static|_next/image|favicon.ico).*)',
 			missing: [
 				{ type: 'header', key: 'next-router-prefetch' },
 				{ type: 'header', key: 'purpose', value: 'prefetch' },
@@ -54,5 +31,4 @@ const config = {
 	],
 }
 
-export default middleware
-export { config }
+export { middleware }

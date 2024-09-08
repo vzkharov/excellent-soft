@@ -15,12 +15,10 @@ const useCookie = <T>(key: string) => {
 		[key, setCookies],
 	)
 
-	const remove = useCallback(
-		(opts?: SetCookieOptions) => removeCookies(key, opts),
-		[key, removeCookies],
-	)
+	const remove = useCallback((opts?: SetCookieOptions) => removeCookies(key, opts), [key, removeCookies])
 
 	return [value, set, remove] as const
 }
 
 export { useCookie }
+export type { SetCookieOptions }

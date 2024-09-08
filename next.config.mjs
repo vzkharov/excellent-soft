@@ -1,21 +1,19 @@
 import createMDX from '@next/mdx'
 
+const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+
 /** @type {import('next').NextConfig} */
 const config = {
 	compress: true,
 	swcMinify: true,
-	// output: 'export',
+	output: IS_PRODUCTION ? 'export' : undefined,
 	optimizeFonts: true,
 	reactStrictMode: true,
 	productionBrowserSourceMaps: true,
 	pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 
 	typescript: {
-		ignoreBuildErrors: true,
 		tsconfigPath: './tsconfig.json',
-	},
-	eslint: {
-		ignoreDuringBuilds: true,
 	},
 
 	images: {

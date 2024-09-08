@@ -6,6 +6,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
+		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
 		"test": "NODE_ENV=test jest",
 		"test:watch": "NODE_ENV=test jest --watch",
 		"test:coverage": "NODE_ENV=test jest --coverage",

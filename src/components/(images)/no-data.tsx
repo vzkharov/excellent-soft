@@ -10,7 +10,7 @@ type NoDataProps = {
 const NoData = ({ style, className, imgSize = 350 }: StyleProps & NoDataProps) => (
 	<article
 		style={style}
-		className={cn('w-full h-auto flex flex-col items-center', className)}
+		className={cn('flex h-auto w-full flex-col items-center', className)}
 	>
 		<Image
 			alt="no-data"

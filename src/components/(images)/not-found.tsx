@@ -4,7 +4,7 @@ const NotFoundImage = () => (
 	<Image
 		alt="404"
 		src="/404.svg"
-		className="w-full h-[100vw] sm:h-[500px] sm:w-auto"
+		className="h-[100vw] w-full sm:h-[500px] sm:w-auto"
 	/>
 )
 

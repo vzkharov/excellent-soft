@@ -27,10 +27,7 @@ type Page<P = {}, S = {}> = (
 	props: PageProps<P, S>,
 ) => Promise<React.ReactElement<PageProps<P, S>>> | React.ReactElement<PageProps<P, S>>
 
-type HTMLImageProps = React.DetailedHTMLProps<
-	React.ImgHTMLAttributes<HTMLImageElement>,
-	HTMLImageElement
->
+type HTMLImageProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
 
 export type {
 	As,

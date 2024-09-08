@@ -1,9 +1,6 @@
 import { useEffect, type RefObject } from 'react'
 
-const useClickOutside = (
-	refs: (RefObject<Element | null> | undefined)[],
-	handler: (event: Event) => void,
-) => {
+const useClickOutside = (refs: (RefObject<Element | null> | undefined)[], handler: (event: Event) => void) => {
 	useEffect(() => {
 		const callback = (event: Event) => {
 			const target = (event as any).target

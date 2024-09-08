@@ -10,10 +10,7 @@ type UseDialogProps = UseToggleProps & {
 const useDialog = ({ preventClose, ...toggleProps }: UseDialogProps) => {
 	const [isOpen, { set, close, open }] = useToggle(toggleProps)
 
-	const handleClickOutside = useCallback(
-		() => isOpen && !preventClose && close(),
-		[isOpen, preventClose, close],
-	)
+	const handleClickOutside = useCallback(() => isOpen && !preventClose && close(), [isOpen, preventClose, close])
 
 	return { set, close, open, isOpen, clickOutside: handleClickOutside }
 }

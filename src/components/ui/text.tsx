@@ -86,7 +86,7 @@ const Label = <T extends As = 'label'>({
 		color={color}
 		disabled={disabled}
 		uppercase={uppercase}
-		className={cn('text-sm mb-3', className)}
+		className={cn('mb-3 text-sm', className)}
 	/>
 )
 

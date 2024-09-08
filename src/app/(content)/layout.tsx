@@ -37,9 +37,9 @@ const Root: Layout = ({ children }) => (
 		suppressContentEditableWarning
 		className={[gilroy.variable, gilroyBold.variable, bebasFont.variable].join(' ')}
 	>
-		<body className="w-screen min-h-screen flex flex-col overflow-x-clip">
+		<body className="flex min-h-screen w-screen flex-col overflow-x-clip">
 			<Header />
-			<main className="w-full flex-1 flex flex-col gap-y-2 px-2">{children}</main>
+			<main className="flex w-full flex-1 flex-col gap-y-2 px-2">{children}</main>
 			<Footer />
 		</body>
 	</html>

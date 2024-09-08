@@ -31,7 +31,7 @@ const AbsoluteImage = ({ alt, top, left, style, right, bottom, className, ...pro
 		{...props}
 		alt={alt}
 		style={{ top, left, right, bottom, ...style }}
-		className={cn('pointer-events-none select-none absolute -z-50', className)}
+		className={cn('pointer-events-none absolute -z-50 select-none', className)}
 	/>
 )
 

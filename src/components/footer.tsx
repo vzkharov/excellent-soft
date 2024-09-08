@@ -3,7 +3,7 @@ import { Button } from './ui/button'
 const Footer = () => {
 	return (
 		<div>
-			<div className="bg-gradient-to-r from-gradient-start to-gradient-end py-9 flex items-center justify-center">
+			<div className="flex items-center justify-center bg-gradient-to-r from-gradient-start to-gradient-end py-9">
 				<Button
 					variant="outline"
 					className="bg-transparent"
@@ -11,7 +11,7 @@ const Footer = () => {
 					Давайте обсудим ваш проект
 				</Button>
 			</div>
-			<footer className="bg-muted px-6 py-4 font-semibold flex items-center justify-center">
+			<footer className="flex items-center justify-center bg-muted px-6 py-4 font-semibold">
 				Footer
 			</footer>
 		</div>

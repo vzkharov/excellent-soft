@@ -30,7 +30,7 @@ const Cookies = ({ style, className }: StyleProps) => {
 				paddingBottom: isDesktop ? 20 : 0,
 			}}
 			className={cn(
-				'z-50 fixed inset-x-0 bottom-0 mx-auto md:max-w-3xl lg:max-w-5xl h-fit',
+				'fixed inset-x-0 bottom-0 z-50 mx-auto h-fit md:max-w-3xl lg:max-w-5xl',
 				className,
 			)}
 		>

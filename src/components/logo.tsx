@@ -9,7 +9,7 @@ const Logo = ({ className, ...props }: StyleProps) => (
 	<Link
 		{...props}
 		href="/"
-		className={cn('relative block flex-none w-max h-fit select-none', className)}
+		className={cn('relative block h-fit w-max flex-none select-none', className)}
 	>
 		<Image
 			width={1000}
@@ -17,7 +17,7 @@ const Logo = ({ className, ...props }: StyleProps) => (
 			alt="logo"
 			loading="eager"
 			src="/logo.png"
-			className="w-28 aspect-[3/1] object-cover"
+			className="aspect-[3/1] w-28 object-cover"
 		/>
 	</Link>
 )

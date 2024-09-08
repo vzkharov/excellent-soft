@@ -4,7 +4,7 @@ import createMDX from '@next/mdx'
 const config = {
 	compress: true,
 	swcMinify: true,
-	output: 'export',
+	// output: 'export',
 	optimizeFonts: true,
 	reactStrictMode: true,
 	productionBrowserSourceMaps: true,

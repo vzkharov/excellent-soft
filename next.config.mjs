@@ -4,7 +4,7 @@ import createMDX from '@next/mdx'
 const config = {
 	compress: true,
 	swcMinify: true,
-	// output: 'export',
+	output: 'export',
 	optimizeFonts: true,
 	reactStrictMode: true,
 	productionBrowserSourceMaps: true,
@@ -17,9 +17,6 @@ const config = {
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
-
-	headers: () => [],
-	rewrites: () => [{ source: '/services', destination: '/services/development' }],
 
 	images: {
 		minimumCacheTTL: 31536000,

@@ -4,7 +4,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start",
+		"start": "bun install serve -g && bunx serve out",
 		"lint": "next lint",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
 		"test": "NODE_ENV=test jest",

@@ -1,12 +1,12 @@
 import createMDX from '@next/mdx'
 
-const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+const IS_STATIC = process.env.STATIC_EXPORT === 'true'
 
 /** @type {import('next').NextConfig} */
 const config = {
 	compress: true,
 	swcMinify: true,
-	output: IS_PRODUCTION ? 'export' : undefined,
+	output: IS_STATIC ? 'export' : undefined,
 	optimizeFonts: true,
 	reactStrictMode: true,
 	productionBrowserSourceMaps: true,

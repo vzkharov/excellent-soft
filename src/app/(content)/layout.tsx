@@ -22,9 +22,8 @@ const gilroyBold = localFont({
 	display: 'swap',
 	variable: '--font-gilroy-bold',
 })
-const bebasFont = Bebas_Neue({
-	weight: ['400'],
-	subsets: ['latin', 'latin-ext'],
+const bebasNeue = localFont({
+	src: './_fonts/aa-bebasneue.ttf',
 	display: 'swap',
 	variable: '--font-bebas',
 })
@@ -35,7 +34,7 @@ const Root: Layout = ({ children }) => (
 		lang="ru"
 		suppressHydrationWarning
 		suppressContentEditableWarning
-		className={[gilroy.variable, gilroyBold.variable, bebasFont.variable].join(' ')}
+		className={[gilroy.variable, gilroyBold.variable, bebasNeue.variable].join(' ')}
 	>
 		<body className="flex min-h-screen w-screen flex-col overflow-x-clip">
 			<Header />

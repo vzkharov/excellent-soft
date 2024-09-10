@@ -45,7 +45,7 @@ h1 {
 	font-family: var(--font-bebas);
 	font-size: 6rem;
 	line-height: 100%;
-	font-weight: 700;
+	font-weight: 400;
 	color: hsl(var(--text));
 	text-transform: uppercase;
 }
@@ -54,7 +54,7 @@ h2 {
 	font-family: var(--font-bebas);
 	font-size: 4rem;
 	line-height: 100%;
-	font-weight: 700;
+	font-weight: 400;
 	color: hsl(var(--text));
 	text-transform: uppercase;
 }
@@ -63,7 +63,7 @@ h3 {
 	font-family: var(--font-bebas);
 	font-size: 3rem;
 	line-height: 100%;
-	font-weight: 700;
+	font-weight: 400;
 	color: hsl(var(--text));
 	text-transform: uppercase;
 }
@@ -72,7 +72,7 @@ h4 {
 	font-family: var(--font-bebas);
 	font-size: 2rem;
 	line-height: 100%;
-	font-weight: 700;
+	font-weight: 400;
 	color: hsl(var(--text));
 	text-transform: uppercase;
 }

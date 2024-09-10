@@ -25,6 +25,8 @@
 		--ring: 240 10% 3.9%;
 		--radius: 0.5rem;
 
+		--text: 0, 0%, 0%;
+
 		--gradient-start: 180 73% 80%;
 		--gradient-end: 223 99% 74%;
 	}
@@ -37,4 +39,80 @@
 	body {
 		@apply overflow-x-clip bg-background text-foreground;
 	}
+}
+
+h1 {
+	font-family: var(--font-bebas);
+	font-size: 6rem;
+	line-height: 100%;
+	font-weight: 700;
+	color: hsl(var(--text));
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: var(--font-bebas);
+	font-size: 4rem;
+	line-height: 100%;
+	font-weight: 700;
+	color: hsl(var(--text));
+	text-transform: uppercase;
+}
+
+h3 {
+	font-family: var(--font-bebas);
+	font-size: 3rem;
+	line-height: 100%;
+	font-weight: 700;
+	color: hsl(var(--text));
+	text-transform: uppercase;
+}
+
+h4 {
+	font-family: var(--font-bebas);
+	font-size: 2rem;
+	line-height: 100%;
+	font-weight: 700;
+	color: hsl(var(--text));
+	text-transform: uppercase;
+}
+
+h5 {
+	font-family: var(--font-gilroy-bold);
+	font-size: 1.5rem;
+	line-height: 123.8%;
+	font-weight: 700;
+	color: hsl(var(--text));
+}
+
+h6 {
+	font-family: var(--font-gilroy-bold);
+	font-size: 1.25rem;
+	line-height: 123.8%;
+	font-weight: 700;
+	color: hsl(var(--text));
+}
+
+p {
+	font-family: var(--font-gilroy);
+	font-size: 1rem;
+	line-height: 120%;
+	font-weight: 400;
+	color: hsl(var(--text));
+}
+
+p.large {
+	font-family: var(--font-gilroy);
+	font-size: 1.25rem;
+	line-height: 120%;
+	font-weight: 400;
+	color: hsl(var(--text));
+}
+
+p.small {
+	font-family: var(--font-gilroy);
+	font-size: 0.875rem;
+	line-height: 120%;
+	font-weight: 400;
+	color: hsl(var(--text));
 }

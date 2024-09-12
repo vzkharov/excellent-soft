@@ -3,8 +3,6 @@ import './globals.css'
 import type { Metadata, Viewport } from 'next'
 
 import localFont from 'next/font/local'
-import { Bebas_Neue } from 'next/font/google'
-
 import { DOMAIN_URL, FACEBOOK_VERIFICATION, GOOGLE_VERIFICATION, YANDEX_VERIFICATION } from '~/env'
 
 import type { Layout } from '~/lib/types'

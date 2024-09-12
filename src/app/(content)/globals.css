@@ -4,40 +4,27 @@
 
 @layer base {
 	:root {
-		--background: 0 0% 100%;
-		--foreground: 225 12% 19%;
-		--card: 0 0% 100%;
-		--card-foreground: 240 10% 3.9%;
-		--popover: 0 0% 100%;
-		--popover-foreground: 240 10% 3.9%;
-		--primary: 240 5.9% 10%;
-		--primary-foreground: 0 0% 98%;
-		--secondary: 76 100% 69%;
-		--secondary-foreground: 240 5.9% 10%;
-		--muted: 240 4.8% 95.9%;
-		--muted-foreground: 240 3.8% 46.1%;
-		--accent: 240 4.8% 95.9%;
-		--accent-foreground: 240 5.9% 10%;
-		--destructive: 0 84.2% 60.2%;
-		--destructive-foreground: 0 0% 98%;
-		--border: 0 0% 100%;
-		--input: 240 5.9% 90%;
-		--ring: 240 10% 3.9%;
-		--radius: 0.5rem;
-
-		--text: 0, 0%, 0%;
-
+		--white: 0 0% 100%;
+		--black: 0, 0%, 0%;
+		--gray-800: 225, 12%, 19%;
+		--gray-700: 222, 10%, 25%;
+		--gray-600: 222, 9%, 38%;
+		--gray-400: 230, 13%, 72%;
+		--gray-300: 217, 24%, 87%;
+		--gray-200: 218, 44%, 94%;
+		--lime: 76, 100%, 69%;
+		--blue: 223, 100%, 74%;
 		--gradient-start: 180 73% 80%;
 		--gradient-end: 223 99% 74%;
+
+		--radius-button: 35px;
+		--radius-block: 20px;
 	}
 }
 
 @layer base {
-	* {
-		@apply border-border;
-	}
 	body {
-		@apply overflow-x-clip bg-background text-foreground;
+		@apply overflow-x-clip bg-white text-black;
 	}
 }
 
@@ -46,7 +33,7 @@ h1 {
 	font-size: 6rem;
 	line-height: 100%;
 	font-weight: 400;
-	color: hsl(var(--text));
+	color: hsl(var(--black));
 	text-transform: uppercase;
 }
 
@@ -55,7 +42,7 @@ h2 {
 	font-size: 4rem;
 	line-height: 100%;
 	font-weight: 400;
-	color: hsl(var(--text));
+	color: hsl(var(--black));
 	text-transform: uppercase;
 }
 
@@ -64,7 +51,7 @@ h3 {
 	font-size: 3rem;
 	line-height: 100%;
 	font-weight: 400;
-	color: hsl(var(--text));
+	color: hsl(var(--black));
 	text-transform: uppercase;
 }
 
@@ -73,7 +60,7 @@ h4 {
 	font-size: 2rem;
 	line-height: 100%;
 	font-weight: 400;
-	color: hsl(var(--text));
+	color: hsl(var(--black));
 	text-transform: uppercase;
 }
 
@@ -82,7 +69,7 @@ h5 {
 	font-size: 1.5rem;
 	line-height: 123.8%;
 	font-weight: 700;
-	color: hsl(var(--text));
+	color: hsl(var(--black));
 }
 
 h6 {
@@ -90,7 +77,7 @@ h6 {
 	font-size: 1.25rem;
 	line-height: 123.8%;
 	font-weight: 700;
-	color: hsl(var(--text));
+	color: hsl(var(--black));
 }
 
 p {
@@ -98,7 +85,7 @@ p {
 	font-size: 1rem;
 	line-height: 120%;
 	font-weight: 400;
-	color: hsl(var(--text));
+	color: hsl(var(--black));
 }
 
 p.large {
@@ -106,7 +93,7 @@ p.large {
 	font-size: 1.25rem;
 	line-height: 120%;
 	font-weight: 400;
-	color: hsl(var(--text));
+	color: hsl(var(--black));
 }
 
 p.small {
@@ -114,5 +101,5 @@ p.small {
 	font-size: 0.875rem;
 	line-height: 120%;
 	font-weight: 400;
-	color: hsl(var(--text));
+	color: hsl(var(--black));
 }

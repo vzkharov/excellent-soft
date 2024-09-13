@@ -1,21 +1,35 @@
+import { tv } from 'tailwind-variants'
+
 import { Logo } from '~/components/logo'
+import { Section } from '~/components/section'
+import { BurgerButton } from '~/components/(buttons)/burger-button'
 
 import { HeaderNav } from './header-nav'
 
-import styles from './styles.module.css'
-
-const Header = () => {
-	return (
-		<header className={styles.header}>
-			<div className="flex justify-start">
-				<Logo className="rounded-b-xl bg-black px-1.5 pb-1.5 pt-3" />
-			</div>
+const Header = () => (
+	<Section
+		as="header"
+		className={styles.header()}
+	>
+		<div className={styles.headerItem()}>
+			<Logo className={styles.logo()} />
+		</div>
+		<div className={styles.headerItem()}>
 			<HeaderNav />
-			<div className="flex justify-end">
-				<Logo className="rounded-b-xl bg-black px-1.5 pb-1.5 pt-3" />
-			</div>
-		</header>
-	)
-}
+		</div>
+		<div className={styles.headerItem()}>
+			<BurgerButton />
+		</div>
+	</Section>
+)
+
+const styles = tv({
+	slots: {
+		header: 'flex items-center',
+		headerItem: 'flex-1 flex items-center first-of-type:justify-start last-of-type:justify-end',
+
+		logo: 'bg-content-100 rounded-b-xl px-1.5 pb-1.5 pt-4',
+	},
+})()
 
 export { Header }

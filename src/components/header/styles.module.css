@@ -1,7 +1,0 @@
-.header {
-	@apply container flex justify-between items-center;
-}
-
-.header > * {
-	@apply flex-1;
-}

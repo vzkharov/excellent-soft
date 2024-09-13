@@ -17,7 +17,8 @@ const FeedSection = () => (
 		className={styles.container()}
 	>
 		<Dialog>
-			<DialogTrigger className={styles.button()}>Давайте обсудим ваш проект</DialogTrigger>
+			{/** @fix with button */}
+			<DialogTrigger className={styles.trigger()}>Давайте обсудим ваш проект</DialogTrigger>
 			<DialogContent>
 				<DialogHeader>
 					<DialogTitle>Свяжитесь с нами</DialogTitle>
@@ -32,7 +33,7 @@ const styles = tv({
 	slots: {
 		bg: 'bg-gradient-to-r from-gradient-start to-gradient-end',
 		container: 'flex items-center justify-center p-9',
-		button: 'rounded-full border font-gilroy-bold text-md border-foreground px-16 py-3 bg-background hover:bg-content-0 hover:bg-gradient-to-r hover:from-gradient-start hover:to-gradient-end hover:text-transparent hover:bg-clip-text',
+		trigger: 'group rounded-full font-gilroy-bold text-md border border-gray-0 px-16 py-3 bg-transparent hover:bg-gray-0 text-gray-0 hover:text-gray-1',
 	},
 })()
 

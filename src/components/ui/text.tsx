@@ -17,7 +17,6 @@ const Text = <T extends As>({
 	as,
 	size,
 	color,
-	style,
 	weight,
 	children,
 	lineClamp,
@@ -38,9 +37,9 @@ const Text = <T extends As>({
 		// @ts-expect-error
 		<Comp
 			{...props}
-			style={{ ...style, fontSize: size }}
 			className={textVariants({
 				font,
+				size,
 				color,
 				inline,
 				gradient,
@@ -70,13 +69,24 @@ const textVariants = tv({
 		color: {
 			inherit: '',
 
-			default: 'text-foreground',
+			default: 'text-white',
 			primary: 'text-primary',
 			secondary: 'text-secondary',
-			link: 'text-primary',
+			// consider usage ?
+			// link: 'text-primary',
 
-			ghost: 'text-content-900',
-			muted: 'text-content-700',
+			ghost: 'text-gray-900',
+			muted: 'text-gray-700',
+		},
+		size: {
+			xs: 'text-xs',
+			sm: 'text-sm',
+			md: 'text-md',
+			lg: 'text-lg',
+			xl: 'text-xl',
+			'2xl': 'text-2xl',
+			'3xl': 'text-3xl',
+			'4xl': 'text-4xl',
 		},
 		lineClamp: {
 			none: 'line-clamp-none',
@@ -89,7 +99,7 @@ const textVariants = tv({
 
 		font: {
 			gilroy: 'font-gilroy',
-			gilroyBold: 'font-gilroy-bold',
+			['gilroy-bold']: 'font-gilroy-bold',
 			bebas: 'font-bebas leading-none',
 		},
 		gradient: {
@@ -103,6 +113,7 @@ const textVariants = tv({
 		},
 	},
 	defaultVariants: {
+		size: undefined,
 		font: 'gilroy',
 		color: 'inherit',
 		lineClamp: 'none',

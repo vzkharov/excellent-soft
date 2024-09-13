@@ -1,5 +1,7 @@
 import './styles.css'
 
+import { tv } from 'tailwind-variants'
+
 import type { Page } from '~/lib/types'
 
 import { Title } from '~/components/ui/text'
@@ -11,7 +13,8 @@ const InstalmentPage: Page = () => (
 	<>
 		<Section
 			as="span"
-			bg="mb-6 mt-12"
+			bg={styles.titleBg()}
+			className={styles.title()}
 		>
 			<Title
 				as="h2"
@@ -22,14 +25,24 @@ const InstalmentPage: Page = () => (
 			</Title>
 		</Section>
 		<Section
-			bg="bg-gradient-to-r from-content-200 to-content-100 py-10"
-			className="rounded-lg bg-gradient-to-r from-background/10 to-content-200 p-10 text-background"
+			bg={styles.infoBg()}
+			className={styles.infoSection()}
 		>
-			<div className="prose flex max-w-prose flex-col gap-y-6">
+			<div className={styles.infoContent()}>
 				<InstallmentMarkdown />
 			</div>
 		</Section>
 	</>
 )
+
+const styles = tv({
+	slots: {
+		title: 'pb-6 pt-12',
+		titleBg: 'bg-gray-100',
+		infoBg: 'bg-gradient-to-r from-gray-200 to-gray-100 py-10',
+		infoContent: 'flex max-w-prose flex-col gap-y-6',
+		infoSection: 'rounded-lg bg-gradient-to-r from-background/10 to-gray-200 p-10 text-background',
+	},
+})()
 
 export default InstalmentPage

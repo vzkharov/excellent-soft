@@ -4,11 +4,12 @@ const config = {
 	darkMode: ['class'],
 	content: ['./src/**/*.{ts,tsx}'],
 	theme: {
+		/** @fix ?? */
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '0rem',
 			screens: {
-				'2xl': '1140px',
+				'2xl': '1280px',
 			},
 		},
 		extend: {
@@ -16,48 +17,60 @@ const config = {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
-				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))',
-				},
-				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))',
-				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))',
-				},
-				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))',
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))',
-				},
+
+				muted: 'hsl(var(--muted))',
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))',
 				},
-				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))',
+				card: 'hsl(var(--card))',
+
+				// valid
+				background: 'hsl(var(--background))',
+				foreground: 'hsl(var(--foreground))',
+
+				primary: 'hsl(var(--primary))',
+				secondary: 'hsl(var(--secondary))',
+				accent: 'hsl(var(--accent))',
+
+				content: {
+					0: 'hsl(var(--content-0))',
+					100: 'hsl(var(--content-100))',
+					200: 'hsl(var(--content-200))',
+					300: 'hsl(var(--content-300))',
+
+					700: 'hsl(var(--content-700))',
+					800: 'hsl(var(--content-800))',
+					900: 'hsl(var(--content-900))',
+					1: 'hsl(var(--content-1))',
 				},
 
 				'gradient-start': 'hsl(var(--gradient-start))',
 				'gradient-end': 'hsl(var(--gradient-end))',
 			},
+			fontSize: {
+				xs: '12px',
+				sm: '16px',
+				md: '20px',
+				lg: '24px',
+				xl: '32px',
+				'2xl': '48px',
+				'3xl': '64px',
+				'4xl': '96px',
+			},
+			maxWidth: {
+				prose: '80ch',
+			},
 			fontFamily: {
-				sans: ['var(--font-gilroy)'],
-				mono: ['var(--font-bebas)'],
+				bebas: ['var(--font-bebas)'],
+				gilroy: ['var(--font-gilroy)'],
+				'gilroy-bold': ['var(--font-gilroy-bold)'],
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)',
+				lg: '35px',
+				md: '20px',
+				sm: '16px',
+				full: '9999px',
 			},
 			keyframes: {
 				'accordion-down': {

@@ -1,8 +1,9 @@
-import * as React from 'react'
-import Link from 'next/link'
-import { tv } from 'tailwind-variants'
+'use client'
 
-import { appNavConfig } from '~/config/nav'
+import { tv } from 'tailwind-variants'
+import { usePathname } from 'next/navigation'
+
+import { navigation } from '~/config/navigation'
 
 import {
 	NavigationMenu,
@@ -12,47 +13,63 @@ import {
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
 } from '~/components/ui/navigation-menu'
+import { Link } from '~/components/ui/link'
 
-const HeaderNav = () => (
-	<NavigationMenu>
-		<NavigationMenuList className="space-x-3">
-			<NavigationMenuItem>
-				<NavigationMenuTrigger>{appNavConfig.services.name}</NavigationMenuTrigger>
-				<NavigationMenuContent>
-					<ul className="flex w-[180px] flex-col items-stretch gap-y-2.5 py-4">
-						{[
-							appNavConfig.design,
-							appNavConfig.development,
-							appNavConfig.promotion,
-						].map((link) => (
-							<li key={link.id}>
-								<Link
-									href={link.href}
-									className="px-4 py-2.5"
-								>
-									{link.name}
-								</Link>
-							</li>
-						))}
-					</ul>
-				</NavigationMenuContent>
-			</NavigationMenuItem>
-			{[appNavConfig.works, appNavConfig.instalment].map((link) => (
-				<NavigationMenuItem key={link.id}>
-					<Link
-						href={link.href}
-						className={navigationMenuTriggerStyle()}
+const HeaderNav = () => {
+	const pathname = usePathname()
+
+	return (
+		<NavigationMenu>
+			<NavigationMenuList>
+				<NavigationMenuItem>
+					<NavigationMenuTrigger
+						aria-checked={pathname.includes(navigation.services.href)}
+						className={styles.popoverTrigger()}
 					>
-						{link.name}
-					</Link>
+						{navigation.services.name}
+					</NavigationMenuTrigger>
+					<NavigationMenuContent className={styles.popoverContent()}>
+						<ul>
+							{[
+								navigation.design,
+								navigation.development,
+								navigation.promotion,
+							].map((link) => (
+								<li key={link.id}>
+									<Link
+										href={link.href}
+										className={styles.popoverLink()}
+									>
+										{link.name}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</NavigationMenuContent>
 				</NavigationMenuItem>
-			))}
-		</NavigationMenuList>
-	</NavigationMenu>
-)
+				{[navigation.works, navigation.instalment].map((link) => (
+					<NavigationMenuItem key={link.id}>
+						<Link
+							href={link.href}
+							className={styles.navLink()}
+							aria-checked={pathname.includes(link.href)}
+						>
+							{link.name}
+						</Link>
+					</NavigationMenuItem>
+				))}
+			</NavigationMenuList>
+		</NavigationMenu>
+	)
+}
 
 const styles = tv({
-	slots: {},
-})
+	slots: {
+		navLink: navigationMenuTriggerStyle({ as: 'link' }),
+		popoverContent: 'w-[180px] py-3',
+		popoverLink: 'px-5 py-1.5',
+		popoverTrigger: navigationMenuTriggerStyle({ as: 'button' }),
+	},
+})()
 
 export { HeaderNav }

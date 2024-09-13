@@ -37,7 +37,7 @@ const Root: Layout = ({ children }) => (
 	>
 		<body className="flex min-h-screen w-screen flex-col overflow-x-clip">
 			<Header />
-			<main className="flex flex-col">{children}</main>
+			<main>{children}</main>
 			<Footer />
 		</body>
 	</html>

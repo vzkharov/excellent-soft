@@ -9,7 +9,7 @@ type Props = {
 
 type SectionComponent = <T extends As = 'section'>(props: MergeWithHTMLProps<T, Props>) => ReactChildren
 
-const Section: SectionComponent = ({ as, bg, style, className, children, ...props }) => {
+const Section: SectionComponent = ({ as, bg, className, children, ...props }) => {
 	const Slot = as || 'section'
 
 	return (

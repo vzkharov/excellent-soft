@@ -1,18 +1,18 @@
-type NavLinkConfig = {
+type NavigationLinkConfig = {
 	id: string
 	href: string
 	name: string
 }
 
-const appNavConfig = {
+const navigation = {
 	index: {
 		id: 'index',
 		href: '/',
 		name: 'Главная',
 	},
 	works: {
-		id: 'works',
-		href: '/works',
+		id: 'project',
+		href: '/projects',
 		name: 'Портфолио',
 	},
 	instalment: {
@@ -45,7 +45,7 @@ const appNavConfig = {
 		href: '/services/promotion',
 		name: 'Продвижение',
 	},
-} satisfies Record<string, NavLinkConfig>
+} satisfies Record<string, NavigationLinkConfig>
 
-export { appNavConfig }
-export type { NavLinkConfig }
+export { navigation }
+export type { NavigationLinkConfig }

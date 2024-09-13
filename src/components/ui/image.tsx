@@ -1,20 +1,21 @@
 import type { CSSProperties } from 'react'
-import NextImage, { type ImageProps as NextImageProps } from 'next/image'
 
 import { cn } from '~/lib/utils'
 
-type ImageProps = Omit<NextImageProps, 'alt'> & {
+type ImageProps = Omit<React.ComponentProps<'img'>, 'alt'> & {
 	alt?: string
 }
 
-const Image = ({ style, className, alt = '', width = 0, height = 0, ...props }: ImageProps) => (
-	<NextImage
+const Image = ({ style, className, src = '', alt = '', width = 1000, height = 1000, ...props }: ImageProps) => (
+	// eslint-disable-next-line @next/next/no-img-element
+	<img
 		{...props}
+		src={src}
 		alt={alt}
 		width={width}
 		style={style}
 		height={height}
-		className={cn('h-full w-auto', className)}
+		className={cn('h-auto w-full select-none object-cover', className)}
 	/>
 )
 
@@ -27,6 +28,7 @@ type AbsoluteImageProps = ImageProps &
 	}>
 
 const AbsoluteImage = ({ alt, top, left, style, right, bottom, className, ...props }: AbsoluteImageProps) => (
+	// eslint-disable-next-line @next/next/no-img-element
 	<Image
 		{...props}
 		alt={alt}

@@ -3,7 +3,6 @@ import './globals.css'
 import type { Metadata, Viewport } from 'next'
 
 import localFont from 'next/font/local'
-import { Bebas_Neue } from 'next/font/google'
 
 import { DOMAIN_URL, FACEBOOK_VERIFICATION, GOOGLE_VERIFICATION, YANDEX_VERIFICATION } from '~/env'
 
@@ -22,9 +21,8 @@ const gilroyBold = localFont({
 	display: 'swap',
 	variable: '--font-gilroy-bold',
 })
-const bebasFont = Bebas_Neue({
-	weight: ['400'],
-	subsets: ['latin', 'latin-ext'],
+const bebasFont = localFont({
+	src: './_fonts/aa-bebas-neue.ttf',
 	display: 'swap',
 	variable: '--font-bebas',
 })
@@ -39,7 +37,7 @@ const Root: Layout = ({ children }) => (
 	>
 		<body className="flex min-h-screen w-screen flex-col overflow-x-clip">
 			<Header />
-			<main className="flex w-full flex-1 flex-col gap-y-2 px-2">{children}</main>
+			<main className="flex flex-col">{children}</main>
 			<Footer />
 		</body>
 	</html>

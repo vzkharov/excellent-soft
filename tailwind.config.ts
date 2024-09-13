@@ -31,6 +31,7 @@ const config = {
 			},
 			fontFamily: {
 				sans: ['var(--font-gilroy)'],
+				'sans-bold': ['var(--font-gilroy-bold)'],
 				mono: ['var(--font-bebas)'],
 			},
 			borderRadius: {

@@ -8,6 +8,9 @@ type CookiesBannerProps = StyleProps & {
 	confirm?: (event: React.FormEvent<HTMLFormElement>) => unknown
 }
 
+/**
+ * @fix
+ */
 const CookiesBanner = ({ style, confirm, className }: CookiesBannerProps) => (
 	<form
 		style={style}

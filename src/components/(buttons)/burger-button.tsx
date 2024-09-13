@@ -1,63 +1,58 @@
 'use client'
 
-import { cn } from '~/lib/utils'
+import { tv } from 'tailwind-variants'
 
-import { Icon } from '~/components/ui/icon'
+import { navigation } from '~/config/navigation'
+
+import { XIcon } from '~/components/ui/icons/x-icon'
+import { MenuIcon } from '~/components/ui/icons/menu-icon'
+
+import { Link } from '~/components/ui/link'
 import { Popover, PopoverContent, PopoverTrigger } from '~/components/ui/popover'
 
-import { useToggle } from '~/hooks/use-toggle'
-import { appNavConfig } from '~/config/nav'
-import Link from 'next/link'
+const BurgerButton = () => (
+	<Popover>
+		<PopoverTrigger className={styles.button()}>
+			<XIcon className="hidden group-aria-expanded:block" />
+			<MenuIcon className="group-aria-expanded:hidden" />
+		</PopoverTrigger>
+		<PopoverContent
+			align="end"
+			width={240}
+			sideOffset={10}
+			className={styles.popoverContent()}
+		>
+			<ul>
+				{[
+					navigation.development,
+					navigation.design,
+					navigation.promotion,
+					navigation.works,
+					navigation.instalment,
+					navigation.contact,
+				].map((link) => (
+					<li key={link.id}>
+						<Link
+							href={link.href}
+							className={styles.link()}
+						>
+							{link.name}
+						</Link>
+					</li>
+				))}
+			</ul>
+		</PopoverContent>
+	</Popover>
+)
 
-const BurgerButton = () => {
-	const [open, { set }] = useToggle()
-
-	return (
-		<Popover onOpenChange={set}>
-			<PopoverTrigger
-				className={cn(
-					'group flex aspect-square h-14 w-14 items-center justify-center rounded-full',
-					open ? 'bg-background text-foreground' : ' bg-content-200 text-background',
-				)}
-			>
-				<Icon
-					name="x"
-					size={30}
-					className="group-[[aria-expanded=false]]:hidden"
-				/>
-				<Icon
-					name="menu"
-					size={30}
-					className="group-[[aria-expanded=true]]:hidden"
-				/>
-			</PopoverTrigger>
-			<PopoverContent
-				asChild
-				align="end"
-				sideOffset={10}
-			>
-				<ul className="flex w-[240px] flex-col gap-y-4 rounded-lg py-6">
-					{[
-						appNavConfig.development,
-						appNavConfig.design,
-						appNavConfig.promotion,
-						appNavConfig.works,
-						appNavConfig.instalment,
-						appNavConfig.contact,
-					].map((link) => (
-						<li key={link.id}>
-							<Link
-								href={link.href}
-								className="px-8 py-2.5"
-							>
-								{link.name}
-							</Link>
-						</li>
-					))}
-				</ul>
-			</PopoverContent>
-		</Popover>
-	)
-}
+const styles = tv({
+	slots: {
+		button: 'group flex h-14 w-14 items-center justify-center rounded-full',
+		buttonOpenIcon: '',
+		buttonCloseIcon: '',
+		popoverContent: 'w-[240px] rounded-lg py-5',
+		link: 'w-full px-8 py-2',
+	},
+})()
 
 export { BurgerButton }

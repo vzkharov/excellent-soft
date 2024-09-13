@@ -1,7 +1,13 @@
 import type { Page } from '~/lib/types'
 
+import { Section } from '~/components/section'
+
 const ServiceDesignPage: Page = () => {
-	return <section></section>
+	return (
+		<Section className="h-[80vh]">
+			<h1>Дизайн</h1>
+		</Section>
+	)
 }
 
 export default ServiceDesignPage

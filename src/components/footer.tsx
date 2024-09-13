@@ -1,19 +1,16 @@
-import { Button } from './ui/button'
+import { Button } from '~/components/ui/button'
+
+import { Section } from '~/components/section'
+import { FeedSection } from '~/components/feed-section'
 
 const Footer = () => {
 	return (
 		<div>
-			<div className="flex items-center justify-center bg-gradient-to-r from-gradient-start to-gradient-end py-9">
-				<Button
-					variant="outline"
-					className="bg-transparent"
-				>
-					Давайте обсудим ваш проект
-				</Button>
-			</div>
-			<footer className="flex items-center justify-center bg-muted px-6 py-4 font-semibold">
-				Footer
-			</footer>
+			<FeedSection />
+			<Section
+				bg="bg-content-200"
+				className="flex items-center justify-center p-9"
+			></Section>
 		</div>
 	)
 }

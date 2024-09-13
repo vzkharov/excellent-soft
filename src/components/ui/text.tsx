@@ -1,7 +1,6 @@
 import type { CSSProperties } from 'react'
 import { tv, type VariantProps } from 'tailwind-variants'
 
-import { cn } from '~/lib/utils'
 import type { As, MergeWithHTMLProps } from '~/lib/types'
 
 type Props<T extends As> = VariantProps<typeof textVariants> &
@@ -17,15 +16,15 @@ type TextProps<T extends As = 'p'> = MergeWithHTMLProps<T, Props<T>>
 const Text = <T extends As>({
 	as,
 	size,
-	style,
 	color,
+	style,
 	weight,
 	children,
 	lineClamp,
 	className,
-	brand = false,
+	font = 'gilroy',
 	inline = false,
-	disabled = false,
+	gradient = false,
 	uppercase = false,
 	...props
 }: TextProps<T>) => {
@@ -39,54 +38,29 @@ const Text = <T extends As>({
 		// @ts-expect-error
 		<Comp
 			{...props}
+			style={{ ...style, fontSize: size }}
 			className={textVariants({
+				font,
 				color,
-				brand,
 				inline,
-				disabled,
+				gradient,
 				lineClamp,
 				uppercase,
 				className,
 			})}
-			style={{ fontSize: size, fontWeight: weight, ...style }}
 		>
 			{children}
 		</Comp>
 	)
 }
 
-const Title = <T extends As = 'h1'>({ as = 'h1' as T, className, ...props }: TextProps<T>) => (
+const Title = <T extends As = 'h1'>({ as = 'h1' as T, font = 'bebas', ...props }: TextProps<T>) => (
 	// @ts-expect-error
 	<Text<T>
 		as={as}
 		uppercase
-		weight={700}
-		className={cn('text-[64px]', className)}
+		font={font}
 		{...props}
-	/>
-)
-
-const Hint = <T extends As>(props: TextProps<T>) => (
-	<Text
-		color="ghost"
-		{...props}
-	/>
-)
-
-const Label = <T extends As = 'label'>({
-	className,
-	color = 'muted',
-	disabled = true,
-	uppercase = true,
-	as = 'label' as T,
-	...props
-}: TextProps<T>) => (
-	<Text
-		{...props}
-		color={color}
-		disabled={disabled}
-		uppercase={uppercase}
-		className={cn('mb-3 text-sm', className)}
 	/>
 )
 
@@ -94,10 +68,15 @@ const textVariants = tv({
 	base: 'leading-tight flex-none transition-all',
 	variants: {
 		color: {
-			default: 'text-default',
-			ghost: 'text-ghost',
-			muted: 'text-muted',
-			primary: 'text-primaryText',
+			inherit: '',
+
+			default: 'text-foreground',
+			primary: 'text-primary',
+			secondary: 'text-secondary',
+			link: 'text-primary',
+
+			ghost: 'text-content-900',
+			muted: 'text-content-700',
 		},
 		lineClamp: {
 			none: 'line-clamp-none',
@@ -108,8 +87,13 @@ const textVariants = tv({
 			5: 'line-clamp-5',
 		},
 
-		brand: {
-			true: 'text-brand',
+		font: {
+			gilroy: 'font-gilroy',
+			gilroyBold: 'font-gilroy-bold',
+			bebas: 'font-bebas leading-none',
+		},
+		gradient: {
+			true: 'bg-gradient-to-r from-gradient-start to-gradient-end text-transparent bg-clip-text',
 		},
 		inline: {
 			true: 'inline-block',
@@ -117,19 +101,17 @@ const textVariants = tv({
 		uppercase: {
 			true: 'uppercase',
 		},
-		disabled: {
-			true: 'text-muted',
-		},
 	},
 	defaultVariants: {
+		font: 'gilroy',
+		color: 'inherit',
 		lineClamp: 'none',
 
-		brand: false,
 		inline: false,
-		disabled: false,
+		gradient: false,
 		uppercase: false,
 	},
 })
 
-export { Hint, Text, Title, Label }
+export { Text, Title }
 export type { TextProps }

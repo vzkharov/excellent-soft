@@ -1,5 +1,3 @@
-import './styles.css'
-
 import type { Page } from '~/lib/types'
 
 import { Section } from '~/components/section'

@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss'
 
+const _padding = '1rem'
+
 const config = {
 	darkMode: ['class'],
 	content: ['./src/**/*.{ts,tsx}'],
@@ -7,9 +9,9 @@ const config = {
 		/** @fix ?? */
 		container: {
 			center: true,
-			padding: '0rem',
+			padding: _padding,
 			screens: {
-				'2xl': '1280px',
+				'2xl': `calc(1128px + ${_padding})`,
 			},
 		},
 		extend: {
@@ -33,23 +35,23 @@ const config = {
 				secondary: 'hsl(var(--secondary))',
 				accent: 'hsl(var(--accent))',
 
-				content: {
-					0: 'hsl(var(--content-0))',
-					100: 'hsl(var(--content-100))',
-					200: 'hsl(var(--content-200))',
-					300: 'hsl(var(--content-300))',
+				dark: 'hsl(var(--dark))',
+				gray: {
+					100: 'hsl(var(--gray-100))',
+					200: 'hsl(var(--gray-200))',
+					300: 'hsl(var(--gray-300))',
 
-					700: 'hsl(var(--content-700))',
-					800: 'hsl(var(--content-800))',
-					900: 'hsl(var(--content-900))',
-					1: 'hsl(var(--content-1))',
+					700: 'hsl(var(--gray-700))',
+					800: 'hsl(var(--gray-800))',
+					900: 'hsl(var(--gray-900))',
 				},
+				white: 'hsl(var(--white))',
 
 				'gradient-start': 'hsl(var(--gradient-start))',
 				'gradient-end': 'hsl(var(--gradient-end))',
 			},
 			fontSize: {
-				xs: '12px',
+				xs: '14px',
 				sm: '16px',
 				md: '20px',
 				lg: '24px',
@@ -59,7 +61,7 @@ const config = {
 				'4xl': '96px',
 			},
 			maxWidth: {
-				prose: '80ch',
+				prose: '85ch',
 			},
 			fontFamily: {
 				bebas: ['var(--font-bebas)'],

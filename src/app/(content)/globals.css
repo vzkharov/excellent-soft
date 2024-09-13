@@ -13,7 +13,7 @@
 		--popover-foreground: 230 13% 72%;
 		--muted: 240 4.8% 95.9%;
 
-		--border: 0 0% 100%;
+		--border: 218 44% 94%;
 		--input: 240 5.9% 90%;
 		--ring: 240 10% 3.9%;
 		--radius: 1.25rem;
@@ -23,15 +23,17 @@
 		--secondary: 223 100% 74%;
 		--accent: 0 0% 100%;
 
-		--content-0: 0 0% 0%;
-		--content-100: 225 12% 19%;
-		--content-200: 222 10% 25%;
-		--content-300: 222 9% 38%;
+		--dark: 225 12% 19%;
+		--gray-0: 225 12% 19%;
+		--gray-100: 225 12% 19%;
+		--gray-200: 222 10% 25%;
+		--gray-300: 222 9% 38%;
 
-		--content-700: 230 13% 72%;
-		--content-800: 217 24% 87%;
-		--content-900: 218 44% 94%;
-		--content-1: 0 0% 100%;
+		--gray-700: 230 13% 72%;
+		--gray-800: 217 24% 87%;
+		--gray-900: 218 44% 94%;
+		--gray-1: 0 0% 100%;
+		--white: 0 0% 100%;
 
 		--gradient-start: 180 73% 80%;
 		--gradient-end: 223 99% 74%;
@@ -86,6 +88,6 @@ a:focus-visible {
 	body {
 		font-size: 16px;
 		font-family: var(--font-gilroy);
-		@apply overflow-x-clip bg-background text-foreground;
+		@apply text-dark overflow-x-clip bg-white;
 	}
 }

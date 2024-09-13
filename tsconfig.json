@@ -23,8 +23,7 @@
 		"allowJs": true,
 		"jsx": "preserve",
 		"paths": {
-			"~/*": ["./src/*"],
-			"markdown/*": ["./markdown/*"]
+			"~/*": ["./src/*"]
 		},
 		"forceConsistentCasingInFileNames": true
 	},

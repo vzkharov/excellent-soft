@@ -11,9 +11,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '~/
 import { Section } from '~/components/section'
 import { FeedButton } from '~/components/(buttons)/feed-button'
 
-import SeoMarkdown from '~/markdown/works/promotion/seo.mdx'
-import SmmMarkdown from '~/markdown/works/promotion/smm.mdx'
-import TargetMarkdown from '~/markdown/works/promotion/target.mdx'
+import SeoMarkdown from '~/markdown/services/promotion/seo.mdx'
+import SmmMarkdown from '~/markdown/services/promotion/smm.mdx'
+import TargetMarkdown from '~/markdown/services/promotion/target.mdx'
 
 const ServicePromotionPage: Page = () => (
 	<>

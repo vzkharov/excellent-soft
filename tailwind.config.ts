@@ -4,7 +4,7 @@ const _padding = '1rem'
 
 const config = {
 	darkMode: ['class'],
-	content: ['./src/**/*.{ts,tsx}'],
+	content: ['./src/**/*.{ts,tsx,md,mdx}'],
 	theme: {
 		/** @fix ?? */
 		container: {

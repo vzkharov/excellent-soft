@@ -1,34 +1,70 @@
 import { tv, type VariantProps } from 'tailwind-variants'
 
-import type { StyleProps } from '~/lib/types'
+import type { StyleProps, ReactChildren } from '~/lib/types'
 
 type CardProps = StyleProps &
 	CardVariants & {
 		title: string
 		description?: string
+
+		startContent?: ReactChildren
+		endContent?: ReactChildren
 	}
 
-const Card = ({ title, style, className, description, size = 'md', variant = 'outlined' }: CardProps) => (
-	<article
-		style={style}
-		className={cardVariants({ size, variant, className })}
-	>
-		<h5>{title}</h5>
-		{description ? <p>{description}</p> : null}
-	</article>
-)
+const Card = ({
+	title,
+	description,
+	endContent,
+	startContent,
+	style,
+	className,
+	size = 'md',
+	variant = 'outlined',
+}: CardProps) => {
+	const styles = cardVariants({ size, variant })
+
+	return (
+		<article
+			style={style}
+			className={styles.card({ className })}
+		>
+			{startContent}
+			<div className={styles.header()}>
+				{title ? <h5 className={styles.title()}>{title}</h5> : null}
+				{description ? <p>{description}</p> : null}
+			</div>
+			{endContent}
+		</article>
+	)
+}
 
 const cardVariants = tv({
-	base: 'rounded-md flex flex-col gap-y-5 cursor-default',
+	slots: {
+		card: 'rounded-md flex items-center gap-2 cursor-default',
+		header: 'space-y-5 self-start',
+		title: '',
+	},
 	variants: {
 		variant: {
-			default: '',
-			foreground: '',
-			outlined: 'bg-transparent border border-dark hover:border-transparent focus:border-transparent hover:bg-primary focus:bg-primary',
+			default: {
+				card: 'bg-white',
+			},
+			shadow: {
+				card: 'bg-gray-800',
+			},
+			outlined: {
+				card: 'bg-transparent border border-dark hover:border-transparent hover:bg-primary',
+			},
 		},
 		size: {
-			sm: '',
-			md: 'py-10 px-8',
+			sm: {
+				card: 'px-5 py-4',
+				title: 'text-sm',
+			},
+			md: {
+				card: 'py-10 px-8',
+				title: '',
+			},
 		},
 	},
 })

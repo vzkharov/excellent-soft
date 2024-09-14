@@ -42,32 +42,32 @@
 
 h1 {
 	font-family: var(--font-bebas);
-	font-size: 96px;
+	font-size: 6rem;
 }
 
 h2 {
 	font-family: var(--font-bebas);
-	font-size: 64px;
+	font-size: 4rem;
 }
 
 h3 {
 	font-family: var(--font-bebas);
-	font-size: 48px;
+	font-size: 3rem;
 }
 
 h4 {
 	font-family: var(--font-gilroy-bold);
-	font-size: 32px;
+	font-size: 2rem;
 }
 
 h5 {
 	font-family: var(--font-gilroy-bold);
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 h6 {
 	font-family: var(--font-gilroy-bold);
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 h1,
@@ -81,7 +81,7 @@ h6 {
 
 a {
 	font-family: var(--font-gilroy-bold);
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 a:hover,
@@ -96,6 +96,7 @@ a:focus-visible {
 	}
 	body {
 		@apply min-h-screen w-screen overflow-x-clip bg-white text-dark;
+		@apply selection:bg-dark selection:text-primary;
 
 		font-size: 16px;
 		font-family: var(--font-gilroy);

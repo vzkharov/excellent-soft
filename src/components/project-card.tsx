@@ -66,11 +66,8 @@ const ProjectCard = ({ style, className, ...project }: ProjectCardProps) => (
 const styles = tv({
 	slots: {
 		card: 'flex flex-col gap-y-5',
-		/**
-		 * @fix rounded ?
-		 */
-		imgWrapper: 'relative overflow-hidden rounded-sm',
-		imgOverlay: 'absolute inset-0 flex items-center justify-center select-none bg-foreground/30 opacity-0 backdrop-blur-lg transition-opacity hover:opacity-100',
+		imgWrapper: 'relative overflow-hidden',
+		imgOverlay: 'absolute inset-0 flex items-center justify-center select-none bg-black/20 opacity-0 backdrop-blur-lg transition-opacity hover:opacity-100',
 		companyLogo: 'h-auto w-auto object-none pointer-events-none',
 		info: 'space-y-1',
 	},

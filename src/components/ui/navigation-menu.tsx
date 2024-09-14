@@ -43,7 +43,7 @@ const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
 	[
-		'group inline-flex w-max items-center justify-center',
+		'group inline-flex w-max items-center justify-center select-none',
 		'rounded-full px-4 py-1 font-gilroy-bold',
 		'focus:outline-none',
 		'disabled:pointer-events-none disabled:opacity-50',

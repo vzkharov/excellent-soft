@@ -70,6 +70,15 @@ h6 {
 	font-size: 20px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1;
+}
+
 a {
 	font-family: var(--font-gilroy-bold);
 	font-size: 16px;
@@ -86,8 +95,9 @@ a:focus-visible {
 		@apply border-border;
 	}
 	body {
+		@apply min-h-screen w-screen overflow-x-clip bg-white text-dark;
+
 		font-size: 16px;
 		font-family: var(--font-gilroy);
-		@apply text-dark overflow-x-clip bg-white;
 	}
 }

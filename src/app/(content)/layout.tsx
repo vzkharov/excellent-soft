@@ -11,6 +11,8 @@ import type { Layout } from '~/lib/types'
 import { Footer } from '~/components/footer'
 import { Header } from '~/components/header'
 
+import { Providers } from './providers'
+
 const gilroy = localFont({
 	src: './_fonts/gilroy-regular.ttf',
 	display: 'swap',
@@ -35,10 +37,12 @@ const Root: Layout = ({ children }) => (
 		suppressContentEditableWarning
 		className={[gilroy.variable, gilroyBold.variable, bebasFont.variable].join(' ')}
 	>
-		<body className="flex min-h-screen w-screen flex-col overflow-x-clip">
-			<Header />
-			<main>{children}</main>
-			<Footer />
+		<body>
+			<Providers>
+				<Header />
+				<main>{children}</main>
+				<Footer />
+			</Providers>
 		</body>
 	</html>
 )

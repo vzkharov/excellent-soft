@@ -6,7 +6,7 @@ const Footer = () => {
 		<div>
 			<FeedSection />
 			<Section
-				bg="bg-gray-200"
+				bg="bg-gradient-to-r from-gray-200 to-dark"
 				className="flex items-center justify-center p-9"
 			></Section>
 		</div>

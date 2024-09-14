@@ -2,7 +2,7 @@ import { tv } from 'tailwind-variants'
 
 import { Logo } from '~/components/logo'
 import { Section } from '~/components/section'
-import { BurgerButton } from '~/components/(buttons)/burger-button'
+import { MenuButton } from '~/components/(buttons)/menu-button'
 
 import { HeaderNav } from './header-nav'
 
@@ -18,7 +18,7 @@ const Header = () => (
 			<HeaderNav />
 		</div>
 		<div className={styles.headerItem()}>
-			<BurgerButton />
+			<MenuButton />
 		</div>
 	</Section>
 )

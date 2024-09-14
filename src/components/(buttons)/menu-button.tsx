@@ -10,7 +10,9 @@ import { MenuIcon } from '~/components/ui/icons/menu-icon'
 import { Link } from '~/components/ui/link'
 import { Popover, PopoverContent, PopoverTrigger } from '~/components/ui/popover'
 
-const BurgerButton = () => (
+import { FeedButton } from '~/components/(buttons)/feed-button'
+
+const MenuButton = () => (
 	<Popover>
 		<PopoverTrigger className={styles.button()}>
 			<XIcon className="hidden group-aria-expanded:block" />
@@ -40,6 +42,12 @@ const BurgerButton = () => (
 						</Link>
 					</li>
 				))}
+				<FeedButton
+					dir="y"
+					variant="ghost"
+					// fix
+					className="mx-8 mt-2"
+				/>
 			</ul>
 		</PopoverContent>
 	</Popover>
@@ -55,4 +63,4 @@ const styles = tv({
 	},
 })()
 
-export { BurgerButton }
+export { MenuButton }

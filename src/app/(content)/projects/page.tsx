@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { tv } from 'tailwind-variants'
 
 import type { Page } from '~/lib/types'
@@ -16,21 +17,25 @@ const ProjectsPage: Page = () => (
 			<Title as="h2">Наши проекты</Title>
 		</Section>
 
-		<Section className={styles.filters()}>
-			<ProjectFilterType />
-			<Separator />
-			<ProjectFilterPurpose />
-		</Section>
+		<Suspense>
+			<Section className={styles.filters()}>
+				<ProjectFilterType />
+				<Separator />
+				<ProjectFilterPurpose />
+			</Section>
+		</Suspense>
 
-		<ProjectSection className={styles.grid()} />
+		<Suspense>
+			<ProjectSection />
+		</Suspense>
 	</>
 )
 
 const styles = tv({
 	slots: {
 		title: 'pb-6 pt-12',
-		filters: 'flex flex-col gap-y-5',
-		grid: 'py-24',
+		filters: 'flex flex-col gap-y-5 py-2.5',
+		grid: '',
 	},
 })()
 

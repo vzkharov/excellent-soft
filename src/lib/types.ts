@@ -17,6 +17,8 @@ type StyleProps = Partial<{
 	style: React.CSSProperties
 }>
 
+type Provider = (props: { children: ReactChildren }) => React.ReactNode
+
 type Layout = (props: { children: ReactChildren }) => React.ReactNode
 
 type PageProps<P = {}, S = {}> = {
@@ -33,6 +35,7 @@ export type {
 	As,
 	Page,
 	Layout,
+	Provider,
 	nullable,
 	AnyObject,
 	StyleProps,

@@ -5,7 +5,7 @@ const CheckIcon: IconElement = ({ size = '1em', ...props }) => (
 		width={size}
 		height={size}
 		stroke="currentColor"
-		strokeWidth="1"
+		strokeWidth="2"
 		strokeLinecap="round"
 		strokeLinejoin="round"
 		{...props}

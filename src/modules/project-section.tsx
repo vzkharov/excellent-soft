@@ -9,9 +9,9 @@ import { ProjectCard } from '~/components/project-card'
 const ProjectSection = ({ className, ...props }: StyleProps) => (
 	<Section
 		{...props}
-		className={className}
+		className={styles.section({ className })}
 	>
-		<div className={styles.section()}>
+		<div className={styles.grid()}>
 			{projectsConfig.map((project) => (
 				<ProjectCard
 					key={project.id}
@@ -27,9 +27,10 @@ const ProjectSection = ({ className, ...props }: StyleProps) => (
 
 const styles = tv({
 	slots: {
-		section: 'grid grid-cols-2 gap-x-9 gap-y-12',
+		section: 'py-24 space-y-24',
+		grid: 'grid grid-cols-2 gap-x-9 gap-y-12',
 		card: 'odd:mt-16',
-		button: 'mt-24 mx-auto cursor-pointer flex items-center justify-center aspect-square h-1/4 w-1/4 rounded-full bg-gradient-to-r from-gradient-start to-gradient-end font-gilroy-bold text-md text-dark hover:from-primary hover:to-primary focus:from-primary focus:to-primary',
+		button: 'mx-auto cursor-pointer flex items-center justify-center aspect-square h-1/4 w-1/4 rounded-full bg-gradient-to-r from-gradient-start to-gradient-end font-gilroy-bold text-md text-dark hover:from-primary hover:to-primary focus:from-primary focus:to-primary',
 	},
 })()
 

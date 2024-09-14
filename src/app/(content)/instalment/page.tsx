@@ -1,5 +1,3 @@
-import './styles.css'
-
 import { tv } from 'tailwind-variants'
 
 import type { Page } from '~/lib/types'

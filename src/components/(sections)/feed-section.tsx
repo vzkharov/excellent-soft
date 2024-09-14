@@ -11,13 +11,13 @@ import {
 
 import { Section } from '~/components/section'
 
+/** @fix with button */
 const FeedSection = () => (
 	<Section
 		bg={styles.bg()}
 		className={styles.container()}
 	>
 		<Dialog>
-			{/** @fix with button */}
 			<DialogTrigger className={styles.trigger()}>Давайте обсудим ваш проект</DialogTrigger>
 			<DialogContent>
 				<DialogHeader>
@@ -33,7 +33,7 @@ const styles = tv({
 	slots: {
 		bg: 'bg-gradient-to-r from-gradient-start to-gradient-end',
 		container: 'flex items-center justify-center p-9',
-		trigger: 'group rounded-full font-gilroy-bold text-md border border-gray-0 px-16 py-3 bg-transparent hover:bg-gray-0 text-gray-0 hover:text-gray-1',
+		trigger: 'group rounded-full font-gilroy-bold text-md border border-dark px-16 py-3 bg-transparent hover:bg-gray-0 text-gray-0 hover:text-gray-1',
 	},
 })()
 

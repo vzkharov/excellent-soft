@@ -11,23 +11,23 @@ import { ProjectSection } from '~/modules/project-section'
 import { ProjectFilterType } from '~/modules/project-filter-type'
 import { ProjectFilterPurpose } from '~/modules/project-filter-purpose'
 
-const ProjectsPage: Page = () => (
+const ProjectsPage: Page = async () => (
 	<>
 		<Section className={styles.title()}>
 			<Title as="h2">Наши проекты</Title>
 		</Section>
 
-		<Suspense>
-			<Section className={styles.filters()}>
+		<Section className={styles.filters()}>
+			<Suspense fallback={<div className={styles.filterFallback()} />}>
 				<ProjectFilterType />
-				<Separator />
+			</Suspense>
+			<Separator />
+			<Suspense fallback={<div className={styles.filterFallback()} />}>
 				<ProjectFilterPurpose />
-			</Section>
-		</Suspense>
+			</Suspense>
+		</Section>
 
-		<Suspense>
-			<ProjectSection />
-		</Suspense>
+		<ProjectSection />
 	</>
 )
 
@@ -35,7 +35,7 @@ const styles = tv({
 	slots: {
 		title: 'pb-6 pt-12',
 		filters: 'flex flex-col gap-y-5 py-2.5',
-		grid: '',
+		filterFallback: 'h-11',
 	},
 })()
 

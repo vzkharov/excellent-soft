@@ -1,4 +1,8 @@
+'use client'
+
 import { projectTypeConfig } from '~/config/projects'
+
+import { useProjectFilterState } from '~/features/(project)/use-project-filter-state'
 
 import { Tabs, TabsList, TabsTrigger } from '~/components/ui/tabs'
 
@@ -8,11 +12,13 @@ const noFilter = {
 }
 
 const ProjectFilterType = () => {
-	/**
-	 * @todo useQueryState
-	 */
+	const [state, setState] = useProjectFilterState(0)
+
 	return (
-		<Tabs defaultValue={noFilter.value}>
+		<Tabs
+			defaultValue={state.type}
+			onValueChange={(value) => setState({ type: value })}
+		>
 			<TabsList>
 				<TabsTrigger value={noFilter.value}>{noFilter.name}</TabsTrigger>
 				{[

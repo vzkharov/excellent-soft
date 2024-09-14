@@ -2,9 +2,11 @@
 
 import * as React from 'react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
-import { ChevronDownIcon } from '@radix-ui/react-icons'
 
 import { cn } from '~/lib/utils'
+
+import { PlusIcon } from './icons/plus-icon'
+import { MinusIcon } from './icons/minus-icon'
 
 const Accordion = AccordionPrimitive.Root
 
@@ -14,7 +16,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
 	<AccordionPrimitive.Item
 		ref={ref}
-		className={cn('border-b', className)}
+		className={cn('rounded-md bg-gray-900', className)}
 		{...props}
 	/>
 ))
@@ -28,13 +30,23 @@ const AccordionTrigger = React.forwardRef<
 		<AccordionPrimitive.Trigger
 			ref={ref}
 			className={cn(
-				'flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180',
+				'group flex flex-1 items-center justify-between px-8 py-8 font-medium leading-none transition-all hover:underline data-[state=open]:pb-4',
 				className,
 			)}
 			{...props}
 		>
-			{children}
-			<ChevronDownIcon className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+			<span className="translate-y-1">{children}</span>
+
+			<span className="flex aspect-square h-14 w-14 items-center justify-center rounded-full bg-white">
+				<PlusIcon
+					size="0.75em"
+					className="block group-[[data-state=open]]:hidden"
+				/>
+				<MinusIcon
+					size="0.75em"
+					className="hidden group-[[data-state=open]]:block"
+				/>
+			</span>
 		</AccordionPrimitive.Trigger>
 	</AccordionPrimitive.Header>
 ))
@@ -46,10 +58,10 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
 	<AccordionPrimitive.Content
 		ref={ref}
-		className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+		className="group overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
 		{...props}
 	>
-		<div className={cn('pb-4 pt-0', className)}>{children}</div>
+		<div className={cn('px-8 pb-8 pt-0', className)}>{children}</div>
 	</AccordionPrimitive.Content>
 ))
 AccordionContent.displayName = AccordionPrimitive.Content.displayName

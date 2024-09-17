@@ -2,27 +2,44 @@
 
 import * as React from 'react'
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
-import { CheckIcon } from '@radix-ui/react-icons'
+import { tv, type VariantProps } from 'tailwind-variants'
 
 import { cn } from '~/lib/utils'
 
-const Checkbox = React.forwardRef<
-	React.ElementRef<typeof CheckboxPrimitive.Root>,
-	React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
->(({ className, ...props }, ref) => (
-	<CheckboxPrimitive.Root
-		ref={ref}
-		className={cn(
-			'peer h-4 w-4 shrink-0 rounded-sm border border-primary shadow focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground',
-			className,
-		)}
-		{...props}
-	>
-		<CheckboxPrimitive.Indicator className={cn('flex items-center justify-center text-current')}>
-			<CheckIcon className="h-4 w-4" />
-		</CheckboxPrimitive.Indicator>
-	</CheckboxPrimitive.Root>
-))
+import { CheckIcon } from './icons/check-icon'
+
+type CheckboxProps = React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> & CheckboxVariants
+
+const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root>, CheckboxProps>(
+	({ id, className, color = 'foreground', ...props }, ref) => (
+		<CheckboxPrimitive.Root
+			ref={ref}
+			id={id}
+			className={checkboxVariants({ color, className })}
+			{...props}
+		>
+			<CheckboxPrimitive.Indicator className={cn('flex items-center justify-center text-current')}>
+				<CheckIcon className="h-4 w-4" />
+			</CheckboxPrimitive.Indicator>
+		</CheckboxPrimitive.Root>
+	),
+)
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
+const checkboxVariants = tv({
+	base: 'peer h-5 w-5 shrink-0 rounded-[1px] border focus-visible:outline-none focus-visible:outline-1 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+	variants: {
+		color: {
+			default: 'border-dark focus-visible:outline-dark data-[state=checked]:bg-dark data-[state=checked]:text-white',
+			foreground: 'border-white focus-visible:outline-white data-[state=checked]:bg-white data-[state=checked]:text-dark',
+		},
+	},
+	defaultVariants: {
+		color: 'default',
+	},
+})
+
+type CheckboxVariants = VariantProps<typeof checkboxVariants>
+
 export { Checkbox }
+export type { CheckboxProps }

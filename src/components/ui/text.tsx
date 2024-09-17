@@ -69,11 +69,12 @@ const textVariants = tv({
 		color: {
 			inherit: '',
 
-			default: 'text-white',
+			default: 'text-dark',
+			foreground: 'text-white',
 			primary: 'text-primary',
 			secondary: 'text-secondary',
 			// consider usage ?
-			// link: 'text-primary',
+			link: 'underline hover:text-primary cursor-pointer',
 
 			ghost: 'text-gray-900',
 			muted: 'text-gray-700',

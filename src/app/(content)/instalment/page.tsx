@@ -10,7 +10,7 @@ import InstallmentMarkdown from '~/markdown/instalment.mdx'
 const InstalmentPage: Page = () => (
 	<>
 		<Section
-			as="span"
+			as="div"
 			bg={styles.titleBg()}
 			className={styles.title()}
 		>
@@ -35,8 +35,8 @@ const InstalmentPage: Page = () => (
 
 const styles = tv({
 	slots: {
-		title: 'pb-6 pt-12',
-		titleBg: 'bg-gray-100',
+		title: '',
+		titleBg: 'relative bg-gray-100 pb-6 pt-12 before:absolute before:bg-gray-100 before:bottom-0 before:inset-x-0 before:h-screen before:-z-10',
 		infoBg: 'bg-gradient-to-r from-gray-200 to-gray-100 py-10',
 		infoContent: 'flex max-w-prose flex-col gap-y-6',
 		infoSection: 'rounded-lg bg-gradient-to-r from-background/10 to-gray-200 p-10 text-background',

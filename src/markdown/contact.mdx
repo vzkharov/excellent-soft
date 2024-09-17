@@ -1,5 +1,10 @@
-import { Spacer } from '~/components/ui/spacer'
+import { contactConfig } from '~/config/contact'
+
 import { Text } from '~/components/ui/text'
+import { Link } from '~/components/ui/link'
+import { Spacer } from '~/components/ui/spacer'
+
+import { ContactGroup } from '~/components/contact-group'
 
 ### Контакты
 
@@ -12,7 +17,13 @@ import { Text } from '~/components/ui/text'
 <Spacer y="1.25rem" />
 
 Для сотрудничества и резюме: <br />
-hello@esoft.by
+
+<Link
+	href={contactConfig.email.href}
+	className="font-gilroy underline"
+>
+	{contactConfig.email.value}
+</Link>
 
 <Spacer y="1.25rem" />
 
@@ -20,13 +31,4 @@ hello@esoft.by
 
 <Spacer y="1.25rem" />
 
-Мы в соц. сетях:
-
-<Spacer y="1.25rem" />
-
-<div className="flex items-center gap-3">
-	<div className="h-8 w-8 rounded-full bg-white/10" />
-	<div className="h-8 w-8 rounded-full bg-white/10" />
-	<div className="h-8 w-8 rounded-full bg-white/10" />
-	<div className="h-8 w-8 rounded-full bg-white/10" />
-</div>
+<ContactGroup />

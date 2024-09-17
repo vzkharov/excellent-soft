@@ -1,16 +1,97 @@
-import { Section } from '~/components/section'
-import { FeedSection } from '~/components/(sections)/feed-section'
+import { tv } from 'tailwind-variants'
 
-const Footer = () => {
-	return (
-		<div>
-			<FeedSection />
-			<Section
-				bg="bg-gradient-to-r from-gray-200 to-dark"
-				className="flex items-center justify-center p-9"
-			></Section>
-		</div>
-	)
-}
+import { legalConfig } from '~/config/legal'
+
+import { Link } from '~/components/ui/link'
+import { Spacer } from '~/components/ui/spacer'
+import { Text, Title } from '~/components/ui/text'
+
+import { Logo } from '~/components/logo'
+import { Section } from '~/components/section'
+import { ContactGroup } from '~/components/contact-group'
+import { FeedSection } from '~/components/(sections)/feed-section'
+import { ContactSection } from '~/components/(sections)/contact-section'
+import { OrganizationCopyright } from '~/components/organization-copyright'
+
+const Footer = () => (
+	<>
+		<FeedSection />
+
+		<Section
+			as="div"
+			bg={styles.bg()}
+			className={styles.container()}
+		>
+			<Text
+				as="h6"
+				font="gilroy-bold"
+			>
+				Опишите задачу
+			</Text>
+
+			<Spacer y="4rem" />
+
+			<ContactSection>
+				<div className="space-y-7">
+					<Title as="h2">
+						Мы уже <br /> приступили <br /> к работе!
+					</Title>
+					<Text color="link">hello@esoft.by</Text>
+				</div>
+			</ContactSection>
+
+			<Spacer y="8rem" />
+
+			<footer className={styles.footer()}>
+				<Logo className={styles.logo()} />
+
+				<div className={styles.footerSection()}>
+					<Text font="gilroy-bold">Время работы:</Text>
+					<Text>Пн. - пт.: 10.00 - 18.00</Text>
+				</div>
+				<div className={styles.footerSection()}>
+					{[legalConfig.privacy, legalConfig.cookie].map((link) => (
+						<Link
+							key={link.id}
+							href={link.url}
+							className="font-gilroy text-xs leading-tight"
+						>
+							{link.name}
+						</Link>
+					))}
+				</div>
+
+				<ContactGroup className={styles.footerSection()} />
+			</footer>
+
+			<Spacer y="0.75rem" />
+
+			<OrganizationCopyright />
+		</Section>
+	</>
+)
+
+const footerConfig = [
+	{
+		name: '',
+		nodes: ['Время работы:', 'Пн. - пт.: 10.00 - 18.00'],
+	},
+	{
+		name: '',
+		nodes: ['Политика конфиденциальности', 'Пн. - пт.: 10.00 - 18.00'],
+	},
+]
+
+const styles = tv({
+	slots: {
+		bg: 'bg-gradient-to-r from-gray-200 to-dark',
+		container: 'pb-8 pt-14 text-white',
+		contactForm: 'max-w-xl',
+
+		footer: 'flex justify-between gap-x-4 pt-6 border-t border-gray-900/10',
+		logo: 'h-9',
+		footerSection: 'text-xs',
+	},
+})()
 
 export { Footer }

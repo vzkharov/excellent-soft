@@ -4,4 +4,6 @@ const formatDate = (dateString: string) => {
 	return date.toLocaleDateString('ru-RU', options)
 }
 
-export { formatDate }
+const getCurrentYear = () => new Date(Date.now()).getFullYear()
+
+export { formatDate, getCurrentYear }

@@ -8,6 +8,7 @@ import { Spacer } from '~/components/ui/spacer'
 import { Tabs, TabsList, TabsTrigger } from '~/components/ui/tabs'
 
 import { Section } from '~/components/section'
+import { DevelopmentCarousel } from '~/modules/development-carousel'
 
 const ServiceDevelopmentPage: Page = () => (
 	<>
@@ -50,12 +51,7 @@ const ServiceDevelopmentPage: Page = () => (
 		</Section>
 
 		<Section>
-			<Title
-				as="h3"
-				className={styles.title()}
-			>
-				Примеры того как это может выглядеть
-			</Title>
+			<DevelopmentCarousel />
 		</Section>
 	</>
 )

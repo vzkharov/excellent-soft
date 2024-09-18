@@ -9,6 +9,7 @@ import { Tabs, TabsList, TabsTrigger } from '~/components/ui/tabs'
 
 import { Section } from '~/components/section'
 import { FeedSection } from '~/components/(sections)/feed-section'
+import { DesignCarousel } from '~/modules/design-carousel'
 
 const ServiceDesignPage: Page = () => (
 	<>
@@ -53,12 +54,7 @@ const ServiceDesignPage: Page = () => (
 		<FeedSection />
 
 		<Section>
-			<Title
-				as="h3"
-				className={styles.title()}
-			>
-				Примеры того как это может выглядеть
-			</Title>
+			<DesignCarousel />
 		</Section>
 	</>
 )

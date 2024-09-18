@@ -44,8 +44,6 @@ const MenuButton = () => (
 				))}
 				<FeedButton
 					dir="y"
-					variant="ghost"
-					// fix
 					className="mx-8 mt-2"
 				/>
 			</ul>

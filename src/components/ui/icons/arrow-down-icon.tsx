@@ -5,15 +5,16 @@ const ArrowDownIcon: IconElement = ({ size = '1em', ...props }) => (
 		width={size}
 		height={size}
 		stroke="currentColor"
-		strokeWidth="2"
+		strokeWidth="1.5"
 		strokeLinecap="round"
 		strokeLinejoin="round"
 		{...props}
 		fill="none"
-		viewBox="0 0 22 22"
+		viewBox="0 0 24 24"
 		xmlns="http://www.w3.org/2000/svg"
 	>
-		<path d="M1 10.5556L21 10.5556M21 10.5556L11.5556 1.11111M21 10.5556L11.5556 20" />
+		<path d="M12 5v14" />
+		<path d="m19 12-7 7-7-7" />
 	</svg>
 )
 

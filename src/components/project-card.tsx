@@ -7,7 +7,7 @@ import type { Project } from '~/entities/project'
 import { Text } from '~/components/ui/text'
 import { Image } from '~/components/ui/image'
 import { Button } from '~/components/ui/button'
-import { ArrowDownIcon } from './ui/icons/arrow-down-icon'
+import { ArrowDownIcon } from '~/components/ui/icons/arrow-down-icon'
 
 type ProjectCardProps = Project & StyleProps
 
@@ -50,15 +50,16 @@ const ProjectCard = ({ style, className, ...project }: ProjectCardProps) => (
 		</div>
 
 		<Button
-			variant="outline"
+			size="sm"
+			// variant="foreground"
 			/**
 			 * @fix
 			 * @description use button only variant
 			 */
-			className="gap-x-2.5 border-foreground bg-foreground px-5 py-2.5 text-xs text-background hover:bg-background hover:text-foreground"
+			// className="gap-x-2 border-foreground bg-foreground px-5 py-2.5 text-xs text-background hover:bg-background hover:text-foreground"
 		>
 			Смотреть кейс
-			<ArrowDownIcon size="0.85em" />
+			<ArrowDownIcon className="-rotate-90" />
 		</Button>
 	</article>
 )
@@ -66,7 +67,7 @@ const ProjectCard = ({ style, className, ...project }: ProjectCardProps) => (
 const styles = tv({
 	slots: {
 		card: 'flex flex-col gap-y-5',
-		imgWrapper: 'relative overflow-hidden',
+		imgWrapper: 'relative overflow-hidden cursor-pointer',
 		imgOverlay: 'absolute inset-0 flex items-center justify-center select-none bg-black/20 opacity-0 backdrop-blur-lg transition-opacity hover:opacity-100',
 		companyLogo: 'h-auto w-auto object-none pointer-events-none',
 		info: 'space-y-1',

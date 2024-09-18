@@ -17,8 +17,6 @@ const FeedButton = ({ size, variant, className, dir = 'x', ...props }: FeedButto
 				key={feed.id}
 				size={size}
 				variant={variant}
-				/** @fix delete `className` */
-				className="group rounded-full border border-dark bg-transparent font-gilroy-bold text-sm text-dark hover:bg-dark hover:text-white"
 			>
 				{feed.name}
 			</Button>

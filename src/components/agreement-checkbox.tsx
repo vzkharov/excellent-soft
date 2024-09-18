@@ -8,7 +8,7 @@ import { Text } from '~/components/ui/text'
 import { Link } from '~/components/ui/link'
 import { Checkbox, type CheckboxProps } from '~/components/ui/checkbox'
 
-type AgreementCheckboxProps = Pick<CheckboxProps, 'id' | 'name' | 'required' | 'color'> & StyleProps
+type AgreementCheckboxProps = Pick<CheckboxProps, 'id' | 'name' | 'required' | 'variant'> & StyleProps
 
 const AgreementCheckbox = ({ id, className, ...props }: AgreementCheckboxProps) => (
 	<div className={styles.container({ className })}>

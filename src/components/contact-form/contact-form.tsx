@@ -19,6 +19,7 @@ const ContactForm = ({ className, ...props }: ContactFormProps) => (
 			<Input
 				key={field.name}
 				{...field}
+				variant="foreground"
 				className={styles.input()}
 			/>
 		))}
@@ -26,12 +27,15 @@ const ContactForm = ({ className, ...props }: ContactFormProps) => (
 		<AgreementCheckbox
 			id="agreement"
 			name="agreement"
+			variant="foreground"
 			className={styles.agreement()}
 		/>
 
 		<Button
+			bold
+			full
 			size="lg"
-			// fix with button variant
+			variant="gradient"
 			className={styles.submitButton()}
 		>
 			Отправить
@@ -44,8 +48,7 @@ const styles = tv({
 		form: 'flex flex-col',
 		input: 'mt-7 first-of-type:mt-0',
 		agreement: 'mt-4',
-		submitButton:
-			'font-gilroy-bold text-md w-full rounded-full py-3 bg-gradient-to-r from-gradient-start to-gradient-end text-dark mt-12 hover:opacity-75 transition-opacity',
+		submitButton: 'py-3 mt-12',
 	},
 })()
 

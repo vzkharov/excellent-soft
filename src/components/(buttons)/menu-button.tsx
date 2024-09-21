@@ -48,7 +48,7 @@ const MenuButton = () => (
 						bold
 						variant="shadow"
 						// fix
-						className="w-full justify-between px-4 text-left"
+						className="w-full justify-between px-4 text-left [&>*]:justify-between"
 					/>
 				</div>
 			</ul>

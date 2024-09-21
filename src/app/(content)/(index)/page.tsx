@@ -13,7 +13,7 @@ import { DevelopmentSection } from './_sections/development-section'
 
 const HomePage: Page = () => (
 	<>
-		<WelcomeSection className="pb-40 pt-24" />
+		<WelcomeSection className="pb-40 pt-24 text-white" />
 
 		<Section color="brand" />
 
@@ -30,7 +30,10 @@ const HomePage: Page = () => (
 
 		<FeedSection />
 
-		<ProjectSection withTitle />
+		<ProjectSection
+			withTitle
+			color="white"
+		/>
 
 		<Section color="brand" />
 

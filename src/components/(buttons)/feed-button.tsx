@@ -5,18 +5,20 @@ import { feedConfig } from '~/config/feed'
 
 import { Button, type ButtonProps } from '~/components/ui/button'
 
-type FeedButtonProps = Pick<ButtonProps, 'size' | 'variant'> & FeedButtonVariants & StyleProps & {}
+type FeedButtonProps = Pick<ButtonProps, 'size' | 'bold' | 'variant'> & FeedButtonVariants & StyleProps & {}
 
-const FeedButton = ({ size, variant, className, dir = 'x', ...props }: FeedButtonProps) => (
+const FeedButton = ({ size, bold, variant, className, dir = 'x', ...props }: FeedButtonProps) => (
 	<div
 		{...props}
-		className={feedButtonVariants({ dir, className })}
+		className={feedButtonVariants({ dir })}
 	>
 		{[feedConfig.telegram, feedConfig.whatsapp].map((feed) => (
 			<Button
 				key={feed.id}
 				size={size}
+				bold={bold}
 				variant={variant}
+				className={className}
 			>
 				{feed.name}
 			</Button>
@@ -25,7 +27,7 @@ const FeedButton = ({ size, variant, className, dir = 'x', ...props }: FeedButto
 )
 
 const feedButtonVariants = tv({
-	base: 'flex gap-x-3 gap-y-2',
+	base: 'flex gap-x-3 gap-y-1.5',
 	variants: {
 		dir: {
 			x: 'flex-row items-center',

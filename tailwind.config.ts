@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss'
 
-const _padding = '1rem'
+import plugin from './tailwind.plugin'
+
+const _padding: number = 1
 
 const config = {
 	darkMode: ['class'],
@@ -9,9 +11,9 @@ const config = {
 		/** @fix ?? */
 		container: {
 			center: true,
-			padding: _padding,
+			padding: `${_padding}rem`,
 			screens: {
-				'2xl': `calc(1128px + ${_padding})`,
+				'2xl': `calc(1128px + ${2 * _padding}rem)`,
 			},
 		},
 		extend: {
@@ -51,14 +53,14 @@ const config = {
 				'gradient-end': 'hsl(var(--gradient-end))',
 			},
 			fontSize: {
-				xs: '14px',
-				sm: '16px',
-				md: '20px',
-				lg: '24px',
-				xl: '32px',
-				'2xl': '48px',
-				'3xl': '64px',
-				'4xl': '96px',
+				xs: '0.875rem',
+				sm: '1rem',
+				md: '1.25rem',
+				lg: '1.5rem',
+				xl: '2rem',
+				'2xl': '3rem',
+				'3xl': '4rem',
+				'4xl': '64rem',
 			},
 			maxWidth: {
 				prose: '85ch',
@@ -90,7 +92,7 @@ const config = {
 			},
 		},
 	},
-	plugins: [require('tailwindcss-animate')],
+	plugins: [require('tailwindcss-animate'), plugin()],
 } satisfies Config
 
 export default config

@@ -1,13 +1,41 @@
 import type { Page } from '~/lib/types'
 
-import { Section } from '~/components/section'
+import { Section } from '~/components/(sections)'
+import { FeedSection } from '~/components/(sections)/feed-section'
 
-const HomePage: Page = () => {
-	return (
-		<Section className="h-[80vh]">
-			<h1>Контакты</h1>
+import { FaqSection } from '~/modules/faq-section'
+import { PartnerSection } from '~/modules/partners'
+import { ProjectSection } from '~/modules/project-section'
+
+import { WelcomeSection } from './_sections/welcome-section'
+import { ProcessSection } from './_sections/process-section'
+import { DevelopmentSection } from './_sections/development-section'
+
+const HomePage: Page = () => (
+	<>
+		<WelcomeSection className="pb-40 pt-24" />
+
+		<Section color="brand" />
+
+		<DevelopmentSection className="pb-20 pt-24" />
+
+		<Section
+			color="dark"
+			className="overflow-x-visible pb-20 pt-24"
+		>
+			<ProcessSection />
 		</Section>
-	)
-}
+
+		<PartnerSection />
+
+		<FeedSection />
+
+		<ProjectSection withTitle />
+
+		<Section color="brand" />
+
+		<FaqSection withTitle />
+	</>
+)
 
 export default HomePage

@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react'
 import { tv, type VariantProps } from 'tailwind-variants'
+import { renderSplittedText } from '~/helpers/string'
 
 import type { As, MergeWithHTMLProps } from '~/lib/types'
 
@@ -22,6 +23,7 @@ const Text = <T extends As>({
 	lineClamp,
 	className,
 	font = 'gilroy',
+	bold = false,
 	inline = false,
 	gradient = false,
 	uppercase = false,
@@ -39,6 +41,7 @@ const Text = <T extends As>({
 			{...props}
 			className={textVariants({
 				font,
+				bold,
 				size,
 				color,
 				inline,
@@ -48,7 +51,7 @@ const Text = <T extends As>({
 				className,
 			})}
 		>
-			{children}
+			{typeof children === 'string' ? renderSplittedText(children) : children}
 		</Comp>
 	)
 }
@@ -64,7 +67,7 @@ const Title = <T extends As = 'h1'>({ as = 'h1' as T, font = 'bebas', ...props }
 )
 
 const textVariants = tv({
-	base: 'leading-tight flex-none transition-all',
+	base: 'leading-tight flex-none',
 	variants: {
 		color: {
 			inherit: '',
@@ -103,8 +106,12 @@ const textVariants = tv({
 			['gilroy-bold']: 'font-gilroy-bold',
 			bebas: 'font-bebas leading-none',
 		},
+
+		bold: {
+			true: 'font-gilroy-bold',
+		},
 		gradient: {
-			true: 'bg-gradient-to-r from-gradient-start to-gradient-end text-transparent bg-clip-text',
+			true: 'text-gradient',
 		},
 		inline: {
 			true: 'inline-block',
@@ -115,10 +122,11 @@ const textVariants = tv({
 	},
 	defaultVariants: {
 		size: undefined,
+		color: undefined,
 		font: 'gilroy',
-		color: 'inherit',
 		lineClamp: 'none',
 
+		bold: false,
 		inline: false,
 		gradient: false,
 		uppercase: false,

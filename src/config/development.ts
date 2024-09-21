@@ -1,6 +1,13 @@
-import type { Development } from '~/entities/development'
+type Card = {
+	id: string
+	title: string
+	cover: string
 
-const developmentCardsConfig = {
+	actionText: string
+	description: string
+}
+
+const cardsConfig = {
 	landing: {
 		id: 'landing',
 		title: 'Лендинг',
@@ -37,6 +44,70 @@ const developmentCardsConfig = {
 		description:
 			'Сервис организовывает взаимодействие между сайтами, поэтому технически требует большего внимания при разработке.',
 	},
-} satisfies Record<string, Development>
+} satisfies Record<string, Card>
 
-export { developmentCardsConfig }
+type Feature = {
+	id: string
+	title: string
+	icon: string
+}
+
+const featuresConfig = [
+	{
+		id: 'chat-bot',
+		title: 'Чат-боты',
+		icon: '/icons/chat.svg',
+	},
+	{
+		id: 'ai',
+		title: 'Внедрение AI',
+		icon: '/icons/ai.svg',
+	},
+	{
+		id: 'voice',
+		title: 'Голосовой интерфейс',
+		icon: '/icons/microphone.svg',
+	},
+	{
+		id: 'inquiry',
+		title: 'По запросу',
+		icon: '/icons/smile.svg',
+	},
+] satisfies Feature[]
+
+type Job = {
+	id: string
+	title: string
+	description: string
+
+	minDate: string
+}
+
+const jobsConfig = [
+	{
+		id: 'promo',
+		title: 'промо \n страницы',
+		description: 'Отличный инструмент для быстрого старта продаж и тестирования рынка',
+		minDate: 'от 5 дней',
+	},
+	{
+		id: 'corporate',
+		title: 'Корпоративные сайты',
+		description: 'Вся информация о деятельности компании для клиентов',
+		minDate: 'от 3 недель',
+	},
+	{
+		id: 'marketplace',
+		title: 'Интернет магазины',
+		description: 'Лучший способ как для розничных магазинов, так и для оптовых продаж',
+		minDate: 'от 5 недель',
+	},
+	{
+		id: 'web-service',
+		title: 'веб \n сервисы',
+		description: 'Которые способны выстоять даже в высококонкурентных нишах',
+		minDate: 'от 8 недель',
+	},
+] satisfies Job[]
+
+export { jobsConfig, cardsConfig, featuresConfig }

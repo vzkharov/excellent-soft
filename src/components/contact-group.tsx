@@ -44,7 +44,7 @@ const styles = tv({
 		wrapper: 'flex flex-col gap-y-3',
 		group: 'flex items-center gap-x-5',
 		link: 'w-fit',
-		img: 'h-8 w-8 filter grayscale brightness-200 hover:grayscale-0 hover:brightness-100 transition-all',
+		img: 'h-7 w-auto filter grayscale brightness-[5] hover:grayscale-0 hover:brightness-100 transition-all',
 	},
 })()
 

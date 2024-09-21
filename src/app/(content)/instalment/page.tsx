@@ -3,7 +3,7 @@ import { tv } from 'tailwind-variants'
 import type { Page } from '~/lib/types'
 
 import { Title } from '~/components/ui/text'
-import { Section } from '~/components/section'
+import { Section } from '~/components/(sections)'
 
 import InstallmentMarkdown from '~/markdown/instalment.mdx'
 

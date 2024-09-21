@@ -1,7 +1,7 @@
 import { tv } from 'tailwind-variants'
 
 import { Logo } from '~/components/logo'
-import { Section } from '~/components/section'
+import { Section } from '~/components/(sections)'
 import { MenuButton } from '~/components/(buttons)/menu-button'
 
 import { HeaderNav } from './header-nav'

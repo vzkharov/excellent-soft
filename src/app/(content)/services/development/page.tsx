@@ -7,7 +7,7 @@ import { Title } from '~/components/ui/text'
 import { Spacer } from '~/components/ui/spacer'
 import { Tabs, TabsList, TabsTrigger } from '~/components/ui/tabs'
 
-import { Section } from '~/components/section'
+import { Section } from '~/components/(sections)'
 import { DevelopmentCarousel } from '~/modules/development-carousel'
 
 const ServiceDevelopmentPage: Page = () => (

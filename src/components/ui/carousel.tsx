@@ -213,7 +213,7 @@ CarouselControls.displayName = '@excellent-soft/carousel/controls'
 
 const carouselStyles = tv({
 	slots: {
-		container: 'relative',
+		container: 'relative w-full',
 		content: 'flex',
 		item: 'min-w-0 shrink-0 grow-0 basis-auto select-none',
 		controls: 'mx-auto flex w-fit items-center gap-4',

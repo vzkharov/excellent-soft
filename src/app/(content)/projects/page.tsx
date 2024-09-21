@@ -5,7 +5,7 @@ import type { Page } from '~/lib/types'
 
 import { Title } from '~/components/ui/text'
 import { Separator } from '~/components/ui/separator'
-import { Section } from '~/components/section'
+import { Section } from '~/components/(sections)'
 
 import { ProjectSection } from '~/modules/project-section'
 import { ProjectFilterType } from '~/modules/project-filter-type'

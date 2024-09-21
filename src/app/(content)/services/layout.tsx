@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import type { Layout } from '~/lib/types'
 
-import { Section } from '~/components/section'
+import { Section } from '~/components/(sections)'
 
 const ServiceLayout: Layout = ({ children }) => <div className="flex flex-col gap-y-24 pb-20 pt-4">{children}</div>
 

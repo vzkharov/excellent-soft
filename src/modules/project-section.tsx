@@ -1,14 +1,18 @@
 import { tv } from 'tailwind-variants'
 
-import type { StyleProps } from '~/lib/types'
 import { projectsConfig } from '~/config/projects'
 
-import { Section } from '~/components/section'
-import { ProjectCard } from '~/components/project-card'
+import { ProjectCard } from '~/components/(cards)/project-card'
+import { Section, type SectionProps } from '~/components/(sections)'
 
-const ProjectSection = ({ className, ...props }: StyleProps) => (
+type ProjectSectionProps = Omit<SectionProps, 'title'> & {
+	withTitle?: boolean
+}
+
+const ProjectSection = ({ className, withTitle = false, ...props }: ProjectSectionProps) => (
 	<Section
 		{...props}
+		title={withTitle ? 'Примеры работ' : undefined}
 		className={styles.section({ className })}
 	>
 		<div className={styles.grid()}>

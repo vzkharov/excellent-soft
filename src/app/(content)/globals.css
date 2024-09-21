@@ -40,6 +40,14 @@
 
 		--gradient-start: 180 73% 80%;
 		--gradient-end: 223 99% 74%;
+
+		--indent-xs: 0.5rem;
+		--indent-sm: 1rem;
+		--indent-md: 1.25rem;
+		--indent-lg: 1.5rem;
+		--indent-xl: 2rem;
+		--indent-2xl: 2.5rem;
+		--indent-3xl: 4rem;
 	}
 }
 

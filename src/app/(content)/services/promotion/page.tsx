@@ -8,7 +8,7 @@ import { Spacer } from '~/components/ui/spacer'
 import { Tabs, TabsList, TabsTrigger } from '~/components/ui/tabs'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '~/components/ui/accordion'
 
-import { Section } from '~/components/section'
+import { Section } from '~/components/(sections)'
 import { FeedButton } from '~/components/(buttons)/feed-button'
 
 import SeoMarkdown from '~/markdown/services/promotion/seo.mdx'

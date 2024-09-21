@@ -7,7 +7,7 @@ import { Spacer } from '~/components/ui/spacer'
 import { Text, Title } from '~/components/ui/text'
 
 import { Logo } from '~/components/logo'
-import { Section } from '~/components/section'
+import { Section } from '~/components/(sections)'
 import { ContactGroup } from '~/components/contact-group'
 import { FeedSection } from '~/components/(sections)/feed-section'
 import { ContactSection } from '~/components/(sections)/contact-section'
@@ -19,16 +19,10 @@ const Footer = () => (
 
 		<Section
 			as="div"
-			bg={styles.bg()}
+			color="metal"
+			title="Опишите задачу"
 			className={styles.container()}
 		>
-			<Text
-				as="h6"
-				font="gilroy-bold"
-			>
-				Опишите задачу
-			</Text>
-
 			<Spacer y="4rem" />
 
 			<ContactSection>
@@ -49,19 +43,20 @@ const Footer = () => (
 					<Text font="gilroy-bold">Время работы:</Text>
 					<Text>Пн. - пт.: 10.00 - 18.00</Text>
 				</div>
+
 				<div className={styles.footerSection()}>
 					{[legalConfig.privacy, legalConfig.cookie].map((link) => (
 						<Link
 							key={link.id}
 							href={link.url}
-							className="font-gilroy text-xs leading-tight"
+							className="font-gilroy text-xs leading-none"
 						>
 							{link.name}
 						</Link>
 					))}
 				</div>
 
-				<ContactGroup className={styles.footerSection()} />
+				<ContactGroup />
 			</footer>
 
 			<Spacer y="0.75rem" />
@@ -90,7 +85,7 @@ const styles = tv({
 
 		footer: 'flex justify-between gap-x-4 pt-6 border-t border-gray-900/10',
 		logo: 'h-9',
-		footerSection: 'text-xs',
+		footerSection: 'text-xs space-y-2',
 	},
 })()
 

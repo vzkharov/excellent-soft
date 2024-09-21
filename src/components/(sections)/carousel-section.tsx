@@ -2,10 +2,11 @@ import { Title } from '~/components/ui/text'
 import { Spacer } from '~/components/ui/spacer'
 import { Carousel, CarouselContent, CarouselControls, CarouselItem } from '~/components/ui/carousel'
 
-import { Section } from '~/components/section'
-import { CarouselCard, type CarouselCardConfig } from '~/components/carousel-card'
+import { CarouselCard, type CarouselCardConfig } from '~/components/(cards)/carousel-card'
 
-type CarouselSectionProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> & {
+import { Section, type SectionProps } from './index'
+
+type CarouselSectionProps = Omit<SectionProps, 'children'> & {
 	items: CarouselCardConfig[]
 }
 

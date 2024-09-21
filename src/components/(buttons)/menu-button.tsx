@@ -38,14 +38,19 @@ const MenuButton = () => (
 							href={link.href}
 							className={styles.link()}
 						>
-							{link.name}
+							<span className="group-hover:text-gradient">{link.name}</span>
 						</Link>
 					</li>
 				))}
-				<FeedButton
-					dir="y"
-					className="mx-8 mt-2"
-				/>
+				<div className="mx-4 mt-1">
+					<FeedButton
+						dir="y"
+						bold
+						variant="shadow"
+						// fix
+						className="w-full justify-between px-4 text-left"
+					/>
+				</div>
 			</ul>
 		</PopoverContent>
 	</Popover>
@@ -57,7 +62,7 @@ const styles = tv({
 		buttonOpenIcon: '',
 		buttonCloseIcon: '',
 		popoverContent: 'w-[240px] rounded-lg py-5',
-		link: 'w-full px-8 py-2',
+		link: 'w-full px-8 py-2 group',
 	},
 })()
 

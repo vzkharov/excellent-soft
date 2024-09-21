@@ -27,6 +27,6 @@
 		},
 		"forceConsistentCasingInFileNames": true
 	},
-	"include": ["src", "next-env.d.ts", ".next/types/**/*.ts", "markdown/instalment.mdx"],
+	"include": ["src", "next-env.d.ts", ".next/types/**/*.ts"],
 	"exclude": ["node_modules"]
 }

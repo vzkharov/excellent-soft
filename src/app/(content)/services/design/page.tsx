@@ -1,12 +1,8 @@
-import { tv } from 'tailwind-variants'
-
 import type { Page } from '~/lib/types'
 
 import { Section } from '~/components/(sections)'
 import { FeedSection } from '~/components/(sections)/feed-section'
 import { DesignCarousel } from '~/modules/design-carousel'
-
-import DesignProcess from '~/markdown/services/design/design-process.mdx'
 
 import { ServiceMain } from '../_components/service-main'
 
@@ -29,32 +25,7 @@ const ServiceDesignPage: Page = () => (
 		<Section>
 			<DesignCarousel />
 		</Section>
-
-		<Section id="process">
-			{/** @todo */}
-			<DesignProcess />
-		</Section>
-
-		<FeedSection />
-
-		<Section id="ux">
-			{/** @todo */}
-			<DesignProcess />
-		</Section>
-
-		<FeedSection />
-
-		<Section id="mvp">
-			{/** @todo */}
-			<DesignProcess />
-		</Section>
 	</>
 )
-
-const styles = tv({
-	slots: {
-		title: '',
-	},
-})()
 
 export default ServiceDesignPage

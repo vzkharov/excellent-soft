@@ -1,5 +1,3 @@
-import Spline from '@splinetool/react-spline/next'
-
 import { BackgroundImage } from '~/components/background-image'
 
 /**
@@ -7,18 +5,14 @@ import { BackgroundImage } from '~/components/background-image'
  */
 const SplineBackground = () => (
 	<BackgroundImage>
-		{/* <video
+		<video
 			preload="metadata"
-			src="/bg.mp4"
+			src="/spline.mp4"
 			muted
 			playsInline
 			loop
 			autoPlay
-			className="h-full w-full object-cover opacity-50"
-		/> */}
-		<Spline
-			scene="/bg.spline"
-			className="block h-full w-full"
+			className="h-full w-full object-cover"
 		/>
 	</BackgroundImage>
 )

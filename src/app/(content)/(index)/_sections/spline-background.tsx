@@ -7,11 +7,18 @@ import { BackgroundImage } from '~/components/background-image'
  */
 const SplineBackground = () => (
 	<BackgroundImage>
+		{/* <video
+			preload="metadata"
+			src="/bg.mp4"
+			muted
+			playsInline
+			loop
+			autoPlay
+			className="h-full w-full object-cover opacity-50"
+		/> */}
 		<Spline
 			scene="/bg.spline"
-			// scene="https://prod.spline.design/boAM3jpff2108QBc/scene.splinecode"
-			// scene="https://prod.spline.design/lVbKY2OJwE1l6i34/scene.splinecode"
-			className="block h-full w-full opacity-100"
+			className="block h-full w-full"
 		/>
 	</BackgroundImage>
 )

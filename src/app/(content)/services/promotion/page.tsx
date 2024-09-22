@@ -36,9 +36,9 @@ const ServicePromotionPage: Page = () => (
 			<Spacer y="2rem" />
 
 			<Accordion
-				type="single"
+				type="multiple"
 				className="space-y-2"
-				defaultValue="seo"
+				defaultValue={['seo']}
 			>
 				{tabs.map((tab) => (
 					<AccordionItem
@@ -47,7 +47,7 @@ const ServicePromotionPage: Page = () => (
 						value={tab.id}
 					>
 						<AccordionTrigger className="max-md:px-6">
-							<span className="translate-y-1">{tab.title}</span>
+							<span className="translate-y-1.5">{tab.title}</span>
 							<AccordionCloseIcon />
 						</AccordionTrigger>
 						<AccordionContent className="max-md:px-6">

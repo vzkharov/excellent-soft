@@ -34,7 +34,7 @@ const Footer = () => (
 				</div>
 			</ContactSection>
 
-			<Spacer y="8rem" />
+			<Spacer y="6rem" />
 
 			<footer className={styles.footer()}>
 				<Logo className={styles.logo()} />
@@ -83,7 +83,7 @@ const styles = tv({
 		container: 'pb-8 pt-14 text-white',
 		contactForm: 'max-w-xl',
 
-		footer: 'flex justify-between gap-x-4 pt-6 border-t border-gray-900/10',
+		footer: 'flex flex-col md:flex-row justify-between gap-y-8 gap-x-4 pt-6 border-t border-gray-900/10',
 		logo: 'h-9',
 		footerSection: 'text-xs space-y-2',
 	},

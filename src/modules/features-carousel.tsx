@@ -34,8 +34,9 @@ const FeaturesCarousel = ({ className, ...props }: StyleProps) => (
 
 const styles = tv({
 	slots: {
-		section: "relative overflow-hidden flex flex-col items-center justify-center gap-10 rounded-md bg-black/20 py-36 after:absolute after:bottom-0 after:h-px after:w-full after:max-w-screen-md after:bg-primary after:content-['']",
+		section: "relative text-center overflow-hidden flex flex-col items-center justify-center gap-10 rounded-md bg-black/20 py-36 after:absolute after:bottom-0 after:h-px after:w-full after:max-w-screen-md after:bg-primary after:content-['']",
 		carousel: 'max-w-screen-md',
+
 		card: 'w-[174px]',
 	},
 })()

@@ -12,6 +12,7 @@ const FeedSection = () => (
 			bold
 			size="lg"
 			variant="outlined"
+			className={styles.button()}
 		>
 			Давайте обсудим ваш проект
 		</ContactButton>
@@ -21,6 +22,7 @@ const FeedSection = () => (
 const styles = tv({
 	slots: {
 		container: 'flex items-center justify-center p-9',
+		button: 'max-md:w-full max-md:px-0',
 	},
 })()
 

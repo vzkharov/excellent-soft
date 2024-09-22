@@ -37,7 +37,7 @@ const HomePage: Page = () => (
 
 		<Section color="brand" />
 
-		<FaqSection withTitle />
+		<FaqSection color="metal" />
 	</>
 )
 

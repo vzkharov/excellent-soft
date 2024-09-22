@@ -7,7 +7,7 @@ import type { Provider } from '~/lib/types'
 
 const pageColors: Record<string, string> = {
 	DEFAULT: 'bg-white',
-	'/': 'bg-black',
+	'/': 'bg-gray-100',
 	'/contact': 'bg-gray-100',
 	'/instalment': 'bg-gray-100',
 }

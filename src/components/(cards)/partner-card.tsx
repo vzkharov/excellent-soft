@@ -46,9 +46,9 @@ const styles = tv({
 		bg: 'bg-gradient-to-tr',
 		card: 'group flex items-center justify-between py-16 gap-x-16 cursor-pointer',
 		header: 'flex flex-1 items-center justify-between',
-		title: 'group-hover:text-gradient translate-y-1 group-hover:underline',
+		title: 'group-hover:text-gradient translate-y-1 group-hover:underline line-clamp-1 flex-1',
 
-		arrow: 'group-hover:bg-gradient-brand flex h-14 w-14 items-center justify-center rounded-full bg-gray-900/10',
+		arrow: 'flex-none group-hover:bg-gradient-brand flex h-14 w-14 items-center justify-center rounded-full bg-gray-900/10',
 		arrowIcon: 'h-7 w-7 -rotate-90 text-gradient-end group-hover:text-dark',
 
 		description: 'flex-1 text-left max-md:hidden',

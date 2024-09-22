@@ -1,6 +1,8 @@
 import { tv, type VariantProps } from 'tailwind-variants'
 
+import { cn } from '~/lib/utils'
 import type { StyleProps } from '~/lib/types'
+
 import { feedConfig } from '~/config/feed'
 
 import { Button, type ButtonProps } from '~/components/ui/button'
@@ -18,9 +20,10 @@ const FeedButton = ({ size, bold, variant, className, dir = 'x', ...props }: Fee
 				size={size}
 				bold={bold}
 				variant={variant}
-				className={className}
+				className={cn('[&>*]:gap-x-3', className)}
 			>
 				{feed.name}
+				{feed.icon}
 			</Button>
 		))}
 	</div>
@@ -30,7 +33,7 @@ const feedButtonVariants = tv({
 	base: 'flex gap-x-3 gap-y-1.5',
 	variants: {
 		dir: {
-			x: 'flex-row items-center',
+			x: 'flex-row items-center max-md:flex-col max-md:items-start',
 			y: 'flex-col w-full',
 		},
 	},

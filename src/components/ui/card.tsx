@@ -5,7 +5,7 @@ import type { StyleProps, ReactChildren } from '~/lib/types'
 type CardProps = StyleProps &
 	CardVariants & {
 		title: string
-		description?: string
+		children?: string
 
 		startContent?: ReactChildren
 		endContent?: ReactChildren
@@ -13,7 +13,7 @@ type CardProps = StyleProps &
 
 const Card = ({
 	title,
-	description,
+	children,
 	endContent,
 	startContent,
 	style,
@@ -31,7 +31,7 @@ const Card = ({
 			{startContent}
 			<div className={styles.header()}>
 				{title ? <h5 className={styles.title()}>{title}</h5> : null}
-				{description ? <p>{description}</p> : null}
+				{children ? <p>{children}</p> : null}
 			</div>
 			{endContent}
 		</article>

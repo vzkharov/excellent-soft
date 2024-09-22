@@ -16,7 +16,7 @@ const ContactSection = ({ children, className, ...props }: ContactSectionProps) 
 
 const styles = tv({
 	slots: {
-		section: 'flex justify-between max-w-screen-lg',
+		section: 'flex flex-col lg:flex-row gap-y-12 justify-between max-w-screen-lg',
 	},
 })()
 

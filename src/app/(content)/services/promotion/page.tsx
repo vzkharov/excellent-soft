@@ -1,86 +1,62 @@
-import { tv } from 'tailwind-variants'
-
 import type { Page } from '~/lib/types'
 
-import { Card } from '~/components/ui/card'
 import { Title } from '~/components/ui/text'
 import { Spacer } from '~/components/ui/spacer'
-import { Tabs, TabsList, TabsTrigger } from '~/components/ui/tabs'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '~/components/ui/accordion'
+
+import {
+	Accordion,
+	AccordionCloseIcon,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from '~/components/ui/accordion'
 
 import { Section } from '~/components/(sections)'
 import { FeedButton } from '~/components/(buttons)/feed-button'
 
-import SeoMarkdown from '~/markdown/services/promotion/seo.mdx'
-import SmmMarkdown from '~/markdown/services/promotion/smm.mdx'
-import TargetMarkdown from '~/markdown/services/promotion/target.mdx'
+import { ServiceMain } from '../_components/service-main'
+
+import { tabs, features } from './_data'
+
+const title = 'Эффективные маркетинговые стратегии. Мы \n адаптируем наш подход к вашим \n потребностям'
 
 const ServicePromotionPage: Page = () => (
 	<>
 		<Section>
-			<Tabs defaultValue="seo">
-				<TabsList>
-					{items.map((tab) => (
-						<TabsTrigger
-							key={tab.id}
-							value={tab.id}
-						>
-							{tab.title}
-						</TabsTrigger>
-					))}
-				</TabsList>
-			</Tabs>
-
-			<Spacer y="4rem" />
-
-			<Title
-				as="h2"
-				className={styles.title()}
-			>
-				Эффективные маркетинговые стратегии. Мы <br /> адаптируем наш подход к вашим <br />
-				потребностям
-			</Title>
-
-			<Spacer y="2rem" />
-
-			<section className="grid grid-cols-2 gap-6">
-				{features.map((feature, idx) => (
-					<Card
-						key={idx}
-						title={feature.title}
-						description={feature.description}
-						size="md"
-						variant="outlined"
-					/>
-				))}
-			</section>
+			<ServiceMain
+				tabs={tabs}
+				title={title}
+				features={features}
+			/>
 		</Section>
 
 		<Section>
-			<Title
-				as="h2"
-				className={styles.title()}
-			>
-				Что мы предлагаем?
-			</Title>
+			<Title as="h2">Что мы предлагаем?</Title>
 
 			<Spacer y="2rem" />
 
 			<Accordion
-				type="multiple"
+				type="single"
 				className="space-y-2"
+				defaultValue="seo"
 			>
-				{items.map((item) => (
+				{tabs.map((tab) => (
 					<AccordionItem
-						key={item.id}
-						id={item.id}
-						value={item.id}
+						key={tab.id}
+						id={tab.id}
+						value={tab.id}
 					>
-						<AccordionTrigger>{item.title}</AccordionTrigger>
+						<AccordionTrigger>
+							<span className="translate-y-1">{tab.title}</span>
+							<AccordionCloseIcon />
+						</AccordionTrigger>
 						<AccordionContent>
-							{item.markdown}
+							{tab.markdown}
 							<Spacer y="2rem" />
-							<FeedButton />
+							<FeedButton
+								bold
+								variant="outlined"
+							/>
 						</AccordionContent>
 					</AccordionItem>
 				))}
@@ -88,51 +64,5 @@ const ServicePromotionPage: Page = () => (
 		</Section>
 	</>
 )
-
-const features = [
-	{
-		title: 'SEO',
-		description: 'Эффективная базовая SEO-настройка нового сайта может быстро начать приносить плоды.',
-	},
-	{
-		title: 'Копирайт',
-		description:
-			'Мы пишем привлекательный и беглый текстовый текст любым голосом и стилем, соответствующим вашему бренду.',
-	},
-	{
-		title: 'Контекстная реклама',
-		description:
-			'Позволяет вашему бизнесу появляться в результатах поиска или на веб-страницах, где ваша целевая аудитория уже ищет информацию, связанную с вашими товарами или услугами.',
-	},
-	{
-		title: 'SMM',
-		description:
-			'Направляем пользователей из социальных сетей на ваш веб-сайт, что может способствовать росту продаж или получению заявок.',
-	},
-] as const
-
-const items = [
-	{
-		id: 'seo',
-		title: 'Настройка SEO',
-		markdown: <SeoMarkdown />,
-	},
-	{
-		id: 'target',
-		title: 'Контекстная реклама',
-		markdown: <TargetMarkdown />,
-	},
-	{
-		id: 'smm',
-		title: 'SMM',
-		markdown: <SmmMarkdown />,
-	},
-] as const
-
-const styles = tv({
-	slots: {
-		title: '',
-	},
-})()
 
 export default ServicePromotionPage

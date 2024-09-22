@@ -58,7 +58,7 @@ const Text = <T extends As>({
 
 const Title = <T extends As = 'h1'>({ as = 'h1' as T, font = 'bebas', ...props }: TextProps<T>) => (
 	// @ts-expect-error
-	<Text<T>
+	<Text
 		as={as}
 		uppercase
 		font={font}

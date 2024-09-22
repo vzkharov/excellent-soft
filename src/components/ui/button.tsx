@@ -22,7 +22,7 @@ Button.displayName = '@excellent-soft/button'
 
 const buttonVariants = tv({
 	slots: {
-		button: 'group w-fit box-border rounded-full border border-transparent select-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50',
+		button: 'group/button w-fit box-border rounded-full border border-transparent select-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50',
 		text: 'w-full h-full inline-flex gap-x-2 items-center justify-center whitespace-nowrap',
 	},
 
@@ -33,30 +33,30 @@ const buttonVariants = tv({
 			// valid
 			default: {
 				button: 'bg-dark border-dark hover:bg-transparent focus-visible:bg-transparent',
-				text: 'text-white group-hover:text-dark group-focus-visible:text-dark',
+				text: 'text-white group-hover/button:text-dark group-focus-visible:text-dark',
 			},
 			outlined: {
 				button: 'border-dark hover:bg-dark',
-				text: 'text-dark group-hover:text-gradient group-hover:font-gilroy-bold group-hover:[&>svg]:stroke-secondary',
+				text: 'text-dark group-hover/button:text-gradient group-hover/button:font-gilroy-bold group-hover/button:[&>svg]:text-secondary',
 			},
 			primary: {
 				button: 'bg-primary border-primary hover:bg-transparent focus-visible:bg-transparent ',
-				text: 'text-dark group-hover:text-primary group-focus-visible:text-primary',
+				text: 'text-dark group-hover/button:text-primary group-focus-visible:text-primary',
 			},
 
 			shadow: {
-				button: 'bg-gray-300/30 hover:border-secondary active:bg-transparent',
-				text: 'text-gray-700 group-hover:text-gradient',
+				button: 'bg-gray-300/30 active:bg-transparent',
+				text: 'text-gray-700 group-hover/button:text-gradient group-hover/button:[&>svg]:text-secondary',
 			},
 			gradient: {
 				button: 'border-transparent text-dark hover:border-secondary bg-gradient-to-r  from-gradient-start to-gradient-end hover:bg-none',
-				text: 'group-hover:text-gradient',
+				text: 'group-hover/button:text-gradient',
 			},
 		},
 		size: {
-			sm: { button: 'px-5 py-2 ', text: 'text-xs' },
-			md: { button: 'px-6 py-2 ', text: 'text-sm' },
-			lg: { button: 'px-16 py-3 ', text: 'text-md' },
+			sm: { button: 'px-5 py-2 h-10', text: 'text-xs' },
+			md: { button: 'px-6 py-2 h-11', text: 'text-sm' },
+			lg: { button: 'px-16 py-3 h-13', text: 'text-md' },
 			icon: { button: 'h-9 w-9' },
 		},
 		bold: {

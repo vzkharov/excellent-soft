@@ -17,7 +17,7 @@ const Logo = ({ className, ...props }: StyleProps) => (
 			alt="logo"
 			loading="eager"
 			src="/logo.png"
-			className="aspect-[3/1] h-11 object-cover"
+			className="aspect-[3/1] h-9 object-cover lg:h-11"
 		/>
 	</Link>
 )

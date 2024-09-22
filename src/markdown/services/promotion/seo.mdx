@@ -54,12 +54,15 @@ import { CheckCircleIcon } from '~/components/ui/icons/check-circle-icon'
 	].map((item, idx) => (
 		<Card
 			key={idx}
-			description={item}
-			size="sm"
-			variant="shadow"
-			startContent={<CheckCircleIcon />}
-		/>
-	))}
+
+    		size="sm"
+    		variant="shadow"
+    		startContent={<CheckCircleIcon />}
+    	>
+    		{item}
+    	</Card>
+    ))}
+
 </div>
 
 <Spacer y="2rem" />

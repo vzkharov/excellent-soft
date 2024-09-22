@@ -22,7 +22,7 @@ const ContactButton = (props: ButtonProps) => (
 				<li>Либо мы вам перезвоним</li>
 			</div>
 
-			<DialogFooter>
+			<DialogFooter className={styles.footer()}>
 				<Input
 					type="tel"
 					name="phone"
@@ -39,6 +39,7 @@ const styles = tv({
 	slots: {
 		content: 'px-10 pb-12 pt-10',
 		body: 'flex flex-col gap-y-3',
+		footer: 'flex flex-row md:flex-row',
 	},
 })()
 

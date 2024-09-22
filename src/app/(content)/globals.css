@@ -77,14 +77,13 @@ h5 {
 }
 
 h6 {
-	font-family: var(--font-gilroy-bold);
 	font-size: 1.25rem;
 }
 
 h1,
 h2,
 h3 {
-	line-height: 1;
+	line-height: 1.25;
 }
 
 a {
@@ -106,6 +105,7 @@ a:focus-visible {
 	html {
 		scroll-behavior: smooth;
 	}
+
 	body {
 		@apply min-h-screen w-screen overflow-x-clip bg-white text-dark;
 		@apply selection:bg-dark selection:text-primary;

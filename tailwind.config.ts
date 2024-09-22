@@ -8,7 +8,6 @@ const config = {
 	darkMode: ['class'],
 	content: ['./src/**/*.{ts,tsx,md,mdx}'],
 	theme: {
-		/** @fix ?? */
 		container: {
 			center: true,
 			padding: `${_padding}rem`,
@@ -78,12 +77,12 @@ const config = {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: { height: '0' },
-					to: { height: 'var(--radix-accordion-content-height)' },
+					from: { opacity: '0', height: '0' },
+					to: { opacity: '1', height: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
-					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: '0' },
+					from: { opacity: '1', height: 'var(--radix-accordion-content-height)' },
+					to: { opacity: '0', height: '0' },
 				},
 			},
 			animation: {

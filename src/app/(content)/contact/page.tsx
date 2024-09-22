@@ -5,6 +5,7 @@ import type { Page } from '~/lib/types'
 import { Image } from '~/components/ui/image'
 
 import { Section } from '~/components/(sections)'
+import { BackgroundImage } from '~/components/background-image'
 import { ContactSection } from '~/components/(sections)/contact-section'
 
 import ContactMarkdown from '~/markdown/contact.mdx'
@@ -21,7 +22,7 @@ const ContactPage: Page = () => (
 			<a className={styles.phone()}>+375 29 633 42 12</a>
 		</div>
 
-		<div className={styles.bgWrapper()}>
+		<BackgroundImage>
 			<Image
 				alt="map"
 				src="/map.png"
@@ -29,7 +30,7 @@ const ContactPage: Page = () => (
 				height={500}
 				className={styles.bgImage()}
 			/>
-		</div>
+		</BackgroundImage>
 	</Section>
 )
 
@@ -45,7 +46,6 @@ const styles = tv({
 			'rounded-full bg-black px-5 py-3 font-gilroy-bold text-white',
 		],
 
-		bgWrapper: 'pointer-events-none absolute left-0 top-0 -z-10 flex h-[90vh] w-screen bg-dark',
 		bgImage: 'h-full w-auto -z-10 select-none !max-w-none opacity-50',
 	},
 })()

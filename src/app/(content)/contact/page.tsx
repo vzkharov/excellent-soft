@@ -1,6 +1,7 @@
 import { tv } from 'tailwind-variants'
 
 import type { Page } from '~/lib/types'
+import { contactConfig } from '~/config/contact'
 
 import { Image } from '~/components/ui/image'
 
@@ -14,12 +15,10 @@ const ContactPage: Page = () => (
 	<Section className={styles.page()}>
 		<div className={styles.inner()}>
 			<ContactSection className={styles.card()}>
-				<div>
-					<ContactMarkdown />
-				</div>
+				<ContactMarkdown />
 			</ContactSection>
 
-			<a className={styles.phone()}>+375 29 633 42 12</a>
+			<a className={styles.phone()}>{contactConfig.phone.value}</a>
 		</div>
 
 		<BackgroundImage>

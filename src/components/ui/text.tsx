@@ -76,7 +76,7 @@ const textVariants = tv({
 			foreground: 'text-white',
 			primary: 'text-primary',
 			secondary: 'text-secondary',
-			// consider usage ?
+
 			link: 'underline hover:text-primary cursor-pointer',
 
 			ghost: 'text-gray-900',
@@ -111,7 +111,7 @@ const textVariants = tv({
 			true: 'font-gilroy-bold',
 		},
 		gradient: {
-			true: 'text-gradient',
+			true: 'text-gradient select-none',
 		},
 		inline: {
 			true: 'inline-block',

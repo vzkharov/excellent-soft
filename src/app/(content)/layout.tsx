@@ -49,8 +49,8 @@ const Root: Layout = ({ children }) => (
 
 export const viewport: Viewport = {
 	themeColor: [
-		{ media: '(prefers-color-scheme: light)', color: 'black' },
 		{ media: '(prefers-color-scheme: dark)', color: 'black' },
+		{ media: '(prefers-color-scheme: light)', color: 'black' },
 	],
 	initialScale: 1,
 	maximumScale: 1,
@@ -59,8 +59,26 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+	title: 'Excellent Soft',
+	abstract: 'Excellent Soft',
+	description: 'Excellent Soft',
+
+	icons: {
+		icon: '/favicon.ico',
+		shortcut: '/favicon.ico',
+	},
+
+	applicationName: '',
+	generator: 'Next.JS',
+
 	referrer: 'origin',
-	authors: [{ name: 'Vadzim Zakharov', url: 'https://github.com/vzkharov' }],
+	metadataBase: new URL(DOMAIN_URL),
+	manifest: new URL('manifest.webmanifest', DOMAIN_URL),
+	robots: { index: true, follow: true },
+	alternates: {
+		canonical: '/',
+	},
+
 	verification: {
 		google: GOOGLE_VERIFICATION,
 		yandex: YANDEX_VERIFICATION,
@@ -70,23 +88,8 @@ export const metadata: Metadata = {
 		},
 	},
 
-	icons: {
-		icon: '/favicon.ico',
-		shortcut: '/favicon.ico',
-	},
-
-	applicationName: '',
-	generator: 'Next.JS',
-	metadataBase: new URL(DOMAIN_URL),
-	robots: { index: true, follow: true },
-	manifest: `${DOMAIN_URL}/manifest.webmanifest`,
 	creator: 'Vadzim Zakharov, https://github.com/vzkharov',
-	title: 'Excellent Soft',
-	abstract: 'Excellent Soft',
-	description: 'Excellent Soft',
-	alternates: {
-		canonical: '/',
-	},
+	authors: [{ name: 'Vadzim Zakharov', url: 'https://github.com/vzkharov' }],
 }
 
 export default Root

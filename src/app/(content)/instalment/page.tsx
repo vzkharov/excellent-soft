@@ -3,6 +3,7 @@ import { tv } from 'tailwind-variants'
 import type { Page } from '~/lib/types'
 
 import { Title } from '~/components/ui/text'
+import { Spacer } from '~/components/ui/spacer'
 import { Section } from '~/components/(sections)'
 import { FeedButton } from '~/components/(buttons)/feed-button'
 
@@ -18,7 +19,6 @@ const InstalmentPage: Page = () => (
 		>
 			<Title
 				as="h2"
-				font="bebas"
 				gradient
 			>
 				Мы идем вам на встречу
@@ -28,15 +28,14 @@ const InstalmentPage: Page = () => (
 		<Section
 			color="dark"
 			bg={styles.info()}
-			className={styles.infoSection()}
+			className={styles.infoContent()}
 		>
-			<div className={styles.infoContent()}>
-				<InstallmentMarkdown />
-				<FeedButton
-					bold
-					variant="shadow"
-				/>
-			</div>
+			<InstallmentMarkdown />
+			<Spacer y="2rem" />
+			<FeedButton
+				bold
+				variant="shadow"
+			/>
 		</Section>
 	</>
 )
@@ -47,9 +46,8 @@ const styles = tv({
 		titleBg: 'relative before:absolute before:bg-gray-100 before:bottom-0 before:inset-x-0 before:h-screen before:-z-10',
 
 		info: 'pt-6 md:pb-24',
-		infoSection:
+		infoContent:
 			'md:rounded-lg bg-gradient-to-r from-background/10 to-gray-200 p-6 md:p-10 text-background',
-		infoContent: 'flex max-w-prose flex-col gap-y-6',
 	},
 })()
 

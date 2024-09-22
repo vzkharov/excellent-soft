@@ -11,21 +11,19 @@ type CarouselSectionProps = Omit<SectionProps, 'children'> & {
 }
 
 const CarouselSection = ({ items, ...props }: CarouselSectionProps) => (
-	<Section {...props}>
-		<Carousel opts={{ align: 'start' }}>
-			<Title as="h3">Примеры того как это может выглядеть</Title>
-			<Spacer y="4rem" />
-			<CarouselContent>
-				{items.map((card) => (
-					<CarouselItem key={card.id}>
-						<CarouselCard {...card} />
-					</CarouselItem>
-				))}
-			</CarouselContent>
-			<Spacer y="4rem" />
-			<CarouselControls />
-		</Carousel>
-	</Section>
+	<Carousel opts={{ align: 'start' }}>
+		<Title as="h3">Примеры того как это может выглядеть</Title>
+		<Spacer y="4rem" />
+		<CarouselContent>
+			{items.map((card) => (
+				<CarouselItem key={card.id}>
+					<CarouselCard {...card} />
+				</CarouselItem>
+			))}
+		</CarouselContent>
+		<Spacer y="4rem" />
+		<CarouselControls />
+	</Carousel>
 )
 
 export { CarouselSection }

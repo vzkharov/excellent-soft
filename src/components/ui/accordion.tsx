@@ -30,7 +30,7 @@ const AccordionTrigger = React.forwardRef<
 		<AccordionPrimitive.Trigger
 			ref={ref}
 			className={cn(
-				'group/accordion-trigger flex flex-1 items-center justify-between px-8 py-8 font-medium leading-none transition-all hover:underline data-[state=open]:pb-4',
+				'group/accordion-trigger flex flex-1 items-center justify-between px-8 py-8 text-left font-medium leading-none transition-all hover:underline data-[state=open]:pb-4',
 				className,
 			)}
 			{...props}
@@ -49,7 +49,7 @@ const AccordionCloseIcon = React.forwardRef<
 		ref={ref}
 		{...props}
 		className={cn(
-			'flex aspect-square h-14 w-14 items-center justify-center rounded-full bg-white',
+			'flex aspect-square h-14 w-14 flex-none items-center justify-center rounded-full bg-white',
 			className,
 		)}
 	>

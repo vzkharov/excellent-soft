@@ -12,12 +12,12 @@ const Logo = ({ className, ...props }: StyleProps) => (
 		className={cn('relative block h-fit w-max flex-none select-none', className)}
 	>
 		<Image
-			width={1000}
-			height={1000}
+			width={300}
+			height={100}
 			alt="logo"
 			loading="eager"
 			src="/logo.png"
-			className="aspect-[3/1] h-9 object-cover lg:h-11"
+			className="aspect-[3/1] h-9 w-auto object-contain lg:h-11"
 		/>
 	</Link>
 )

@@ -30,10 +30,10 @@ const FeedButton = ({ size, bold, variant, className, dir = 'x', ...props }: Fee
 )
 
 const feedButtonVariants = tv({
-	base: 'flex gap-x-3 gap-y-1.5',
+	base: 'flex gap-x-3 gap-y-2',
 	variants: {
 		dir: {
-			x: 'flex-row items-center max-md:flex-col max-md:items-start',
+			x: 'flex-row items-center flex-wrap',
 			y: 'flex-col w-full',
 		},
 	},

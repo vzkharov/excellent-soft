@@ -9,7 +9,7 @@ const BackgroundImage = ({ children, className, ...props }: BackgroundImageProps
 	<div
 		aria-hidden
 		className={cn(
-			'pointer-events-none absolute left-0 top-0 -z-10 flex h-[90vh] w-screen bg-dark',
+			'pointer-events-none absolute left-0 top-0 -z-10 flex h-[90vh] min-h-[900px] w-screen bg-dark',
 			className,
 		)}
 	>

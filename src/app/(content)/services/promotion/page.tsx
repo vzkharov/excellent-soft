@@ -46,11 +46,11 @@ const ServicePromotionPage: Page = () => (
 						id={tab.id}
 						value={tab.id}
 					>
-						<AccordionTrigger>
+						<AccordionTrigger className="max-md:px-6">
 							<span className="translate-y-1">{tab.title}</span>
 							<AccordionCloseIcon />
 						</AccordionTrigger>
-						<AccordionContent>
+						<AccordionContent className="max-md:px-6">
 							{tab.markdown}
 							<Spacer y="2rem" />
 							<FeedButton

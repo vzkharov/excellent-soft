@@ -1,5 +1,3 @@
-import { tv } from 'tailwind-variants'
-
 import type { Page } from '~/lib/types'
 
 import { Footer } from '~/components/footer'
@@ -13,6 +11,8 @@ import { ProjectSection } from '~/modules/project-section'
 import { WelcomeSection } from './_sections/welcome-section'
 import { ProcessSection } from './_sections/process-section'
 import { DevelopmentSection } from './_sections/development-section'
+
+import { styles } from './styles'
 
 const HomePage: Page = () => (
 	<>
@@ -52,11 +52,5 @@ const HomePage: Page = () => (
 		<Footer />
 	</>
 )
-
-const styles = tv({
-	slots: {
-		section: 'pt-24 first-of-type:pb-40 pb-20 text-white',
-	},
-})()
 
 export default HomePage

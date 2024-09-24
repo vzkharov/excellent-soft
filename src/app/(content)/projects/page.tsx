@@ -1,5 +1,4 @@
 import { Suspense } from 'react'
-import { tv } from 'tailwind-variants'
 
 import type { Page } from '~/lib/types'
 import { createMetadata } from '~/lib/metadata'
@@ -15,6 +14,8 @@ import { Section } from '~/components/(sections)'
 import { ProjectSection } from '~/modules/project-section'
 import { ProjectFilterType } from '~/modules/project-filter-type'
 import { ProjectFilterPurpose } from '~/modules/project-filter-purpose'
+
+import { styles } from './styles'
 
 const ProjectsPage: Page = async () => (
 	<>
@@ -37,14 +38,6 @@ const ProjectsPage: Page = async () => (
 		<Footer />
 	</>
 )
-
-const styles = tv({
-	slots: {
-		title: 'pb-6 pt-12',
-		filters: 'flex flex-col gap-y-5 py-2.5',
-		filterFallback: 'h-11',
-	},
-})()
 
 export const metadata = createMetadata(navigation.projects)
 

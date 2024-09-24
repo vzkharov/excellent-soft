@@ -6,31 +6,26 @@ import { cn } from '~/lib/utils'
 import type { StyleProps } from '~/lib/types'
 
 import { useCookie, type SetCookieOptions } from '~/hooks/use-cookie'
-import { useResponsive } from '~/hooks/use-responsive'
 
 import { CookiesBanner } from './cookies-banner'
 
 const Cookies = ({ style, className }: StyleProps) => {
-	const { isDesktop } = useResponsive()
 	const [agreed, setAgreed] = useCookie<boolean>(COOKIES_AGREED_KEY)
 
 	const confirm = useCallback(() => {
 		setAgreed(true, cookieOptions)
 	}, [setAgreed])
 
-	if (agreed) {
-		return null
-	}
+	console.log(agreed)
 
 	return (
 		<div
-			key="cookies"
-			style={{
-				...style,
-				paddingBottom: isDesktop ? 20 : 0,
-			}}
+			id={COOKIES_ID}
+			style={style}
 			className={cn(
-				'fixed inset-x-0 bottom-0 z-50 mx-auto h-fit md:max-w-3xl lg:max-w-5xl',
+				'fixed inset-x-0 bottom-0 z-50 mx-auto h-fit max-w-2xl translate-y-48 sm:pb-5',
+				agreed ? '' : 'translate-y-0',
+				'transition-transform duration-300 ease-out',
 				className,
 			)}
 		>
@@ -39,6 +34,7 @@ const Cookies = ({ style, className }: StyleProps) => {
 	)
 }
 
+const COOKIES_ID = 'cookies'
 const COOKIES_AGREED_KEY = 'cookies_agreed'
 const ONE_YEAR_IN_MS = 365 * 24 * 60 * 60 * 1000
 

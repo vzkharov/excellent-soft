@@ -10,6 +10,7 @@ import type { Layout } from '~/lib/types'
 
 import { Footer } from '~/components/footer'
 import { Header } from '~/components/header'
+import { Cookies } from '~/components/cookies'
 
 import { Providers } from './providers'
 
@@ -43,6 +44,8 @@ const Root: Layout = ({ children }) => (
 				<main>{children}</main>
 				<Footer />
 			</Providers>
+
+			<Cookies />
 		</body>
 	</html>
 )

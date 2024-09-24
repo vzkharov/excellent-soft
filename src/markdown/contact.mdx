@@ -3,32 +3,38 @@ import { contactConfig } from '~/config/contact'
 import { Text } from '~/components/ui/text'
 import { Link } from '~/components/ui/link'
 import { Spacer } from '~/components/ui/spacer'
+import { Button } from '~/components/ui/button'
+import { ArrowDownIcon } from '~/components/ui/icons/arrow-down-icon'
 
 import { ContactGroup } from '~/components/contact-group'
 
 ### Контакты
 
-<Spacer y="1.25rem" />
+<Spacer y="md" />
 
-<Text font="gilroy-bold">Минск</Text>
+**Минск**
 
 ул. Я Коласа, д. 73/3, пом. 1
 
-<Spacer y="1.25rem" />
+<Spacer y="md" />
 
 Для сотрудничества и резюме: <br />
 
-<Link
-	href={contactConfig.email.href}
-	className="font-gilroy underline"
->
-	{contactConfig.email.value}
-</Link>
+[{contactConfig.email.value}]()
 
-<Spacer y="1.25rem" />
+<Spacer y="md" />
 
-Скачать реквизиты
+<div className="flex items-center gap-x-3">
+	<span>Скачать реквизиты</span>
+	<Button
+		size="icon"
+		variant="shadow"
+    >
+    	<ArrowDownIcon size="1.25em" />
+    </Button>
 
-<Spacer y="1.25rem" />
+</div>
+
+<Spacer y="md" />
 
 <ContactGroup />

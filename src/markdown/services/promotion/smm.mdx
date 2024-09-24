@@ -3,11 +3,11 @@ import { Spacer } from '~/components/ui/spacer'
 
 ##### Для чего нужно продвижение в соц. сетях?
 
-<Spacer y="1.25rem" />
+<Spacer y="md" />
 
 Продвижение в социальных сетях необходимо для достижения ряда целей:
 
-<Spacer y="1.25rem" />
+<Spacer y="md" />
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-1.5">
 	{[
@@ -39,11 +39,11 @@ import { Spacer } from '~/components/ui/spacer'
 
 </div>
 
-<Spacer y="2.5rem" />
+<Spacer y="2xl" />
 
 ##### Процесс работы:
 
-<Spacer y="2rem" />
+<Spacer y="xl" />
 
 <div className="grid grid-cols-1 gap-1.5 md:grid-cols-2">
 	{[
@@ -56,6 +56,7 @@ import { Spacer } from '~/components/ui/spacer'
 	].map((item, idx) => (
 		<Card
 			key={idx}
+			idx={idx + 1}
 			title={item}
 			size="md"
 			variant="default"
@@ -63,6 +64,6 @@ import { Spacer } from '~/components/ui/spacer'
 	))}
 </div>
 
-<Spacer y="2rem" />
+<Spacer y="xl" />
 
 ##### Развиваем бизнес в: Instagram, TikTok, Facebook, ВКонтакте

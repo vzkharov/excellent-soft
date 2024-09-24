@@ -54,9 +54,9 @@ const buttonVariants = tv({
 			},
 		},
 		size: {
-			sm: { button: 'px-5 py-2 h-10', text: 'text-xs' },
-			md: { button: 'px-6 py-2 h-11', text: 'text-sm' },
-			lg: { button: 'px-16 py-3 h-13', text: 'text-md' },
+			sm: { button: 'px-5 h-10', text: 'text-xs' },
+			md: { button: 'px-6 h-11', text: 'text-sm' },
+			lg: { button: 'md:px-16 py-3 h-13 max-md:w-full', text: 'text-md' },
 			icon: { button: 'h-9 w-9' },
 		},
 		bold: {
@@ -65,7 +65,7 @@ const buttonVariants = tv({
 		},
 		full: {
 			true: { button: 'w-full' },
-			false: { button: 'w-max' },
+			false: { button: '' },
 		},
 	},
 	defaultVariants: {

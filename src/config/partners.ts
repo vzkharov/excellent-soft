@@ -24,7 +24,7 @@ const partnersConfig = [
 	{
 		id: 'startup',
 		title: 'Стартапы',
-		description: 'Полный спектр услуг по запуску MVP \n для любого веб-стартапа',
+		description: 'Полный спектр услуг по запуску MVP для любого веб-стартапа',
 	},
 ] satisfies PartnerConfig[]
 

@@ -1,17 +1,20 @@
 import { tv, type VariantProps } from 'tailwind-variants'
 
 import type { StyleProps, ReactChildren } from '~/lib/types'
+import { Step } from '../step'
 
 type CardProps = StyleProps &
 	CardVariants & {
 		title: string
 		children?: string
 
-		startContent?: ReactChildren
+		idx?: number
 		endContent?: ReactChildren
+		startContent?: ReactChildren
 	}
 
 const Card = ({
+	idx,
 	title,
 	children,
 	endContent,
@@ -30,7 +33,17 @@ const Card = ({
 		>
 			{startContent}
 			<div className={styles.header()}>
-				{title ? <h5 className={styles.title()}>{title}</h5> : null}
+				{title ? (
+					<h5 className={styles.title()}>
+						{title}
+						{idx ? (
+							<Step
+								count={idx}
+								variant="shadow"
+							/>
+						) : null}
+					</h5>
+				) : null}
 				{children ? <p>{children}</p> : null}
 			</div>
 			{endContent}
@@ -40,9 +53,9 @@ const Card = ({
 
 const cardVariants = tv({
 	slots: {
-		card: 'rounded-md flex items-center gap-2 cursor-default',
-		header: 'space-y-5 self-start',
-		title: '',
+		card: 'relative rounded-md flex items-center gap-2 cursor-default',
+		header: 'flex-1 space-y-5 self-start',
+		title: 'w-full flex items-center justify-between',
 	},
 	variants: {
 		variant: {

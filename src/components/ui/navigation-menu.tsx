@@ -1,7 +1,6 @@
 import * as React from 'react'
-
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu'
-import { cva } from 'class-variance-authority'
+import { tv } from 'tailwind-variants'
 
 import { cn } from '~/lib/utils'
 
@@ -41,8 +40,8 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
-const navigationMenuTriggerStyle = cva(
-	[
+const navigationMenuTriggerStyle = tv({
+	base: [
 		'group inline-flex w-max items-center justify-center select-none',
 		'rounded-full px-4 py-1 font-gilroy-bold',
 		'focus:outline-none',
@@ -50,22 +49,20 @@ const navigationMenuTriggerStyle = cva(
 		'hover:text-dark focus:text-dark',
 		'aria-checked:bg-white aria-checked:text-dark',
 	],
-	{
-		variants: {
-			as: {
-				link: 'hover:bg-white focus:bg-white',
-				button: [
-					'hover:bg-primary focus:bg-primary',
-					'data-[state=open]:bg-primary data-[state=open]:text-dark',
-					'data-[active]:bg-primary data-[active]:text-dark ',
-				],
-			},
-		},
-		defaultVariants: {
-			as: 'link',
+	variants: {
+		as: {
+			link: 'hover:bg-white focus:bg-white',
+			button: [
+				'hover:bg-primary focus:bg-primary',
+				'data-[state=open]:bg-primary data-[state=open]:text-dark',
+				'data-[active]:bg-primary data-[active]:text-dark ',
+			],
 		},
 	},
-)
+	defaultVariants: {
+		as: 'link',
+	},
+})
 
 const NavigationMenuTrigger = React.forwardRef<
 	React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,

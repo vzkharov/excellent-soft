@@ -30,7 +30,7 @@ const ServiceCard = ({ step, icon, href, title, description, className }: Servic
 			height={32}
 			className={styles.icon()}
 		/>
-		<Spacer y="1.5rem" />
+		<Spacer y="lg" />
 
 		<Text
 			bold
@@ -39,16 +39,15 @@ const ServiceCard = ({ step, icon, href, title, description, className }: Servic
 			{title}
 		</Text>
 
-		<Spacer y="0.75rem" />
+		<Spacer y="xs" />
 
 		<Text color="foreground">{description}</Text>
 
-		<Spacer y="auto" />
-		<Spacer y="2rem" />
+		<Spacer y="xl" />
 
 		<Separator className={styles.divider()} />
 
-		<Spacer y="1.5rem" />
+		<Spacer y="lg" />
 
 		<Step count={step} />
 	</Link>

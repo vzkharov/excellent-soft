@@ -17,5 +17,14 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => ({
 	h2: ({ children }) => <h2 className="max-w-prose">{children}</h2>,
 	h1: ({ children }) => <h1 className="max-w-prose">{children}</h1>,
 
+	a: ({ children, ...props }) => (
+		<a
+			{...props}
+			className="font-gilroy underline"
+		>
+			{children}
+		</a>
+	),
+
 	...components,
 })

@@ -17,7 +17,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = '@excellent-soft/input'
 
 const inputVariants = tv({
-	base: 'flex h-11 w-full border-b border-gray-300 bg-transparent transition-colors placeholder:text-gray-700 focus-visible:border-white focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',
+	base: 'flex h-11 w-full border-b !rounded-none border-gray-300 bg-transparent transition-colors placeholder:text-gray-700 focus-visible:border-white focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',
 	variants: {
 		variant: {
 			default: 'text-dark border-gray-700 placeholder:text-gray-300 focus-visible:border-dark',

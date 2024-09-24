@@ -36,7 +36,7 @@ const FeatureCard = ({ title, step, icon, className, ...props }: FeatureCardProp
 
 const styles = tv({
 	slots: {
-		card: 'flex h-full flex-col items-center gap-y-7 rounded-md bg-dark px-7 py-10 text-center font-gilroy-bold',
+		card: 'flex h-full flex-col items-center gap-y-4 md:gap-y-7 rounded-md bg-dark px-4 py-10 text-center font-gilroy-bold',
 		icon: 'h-10 w-auto',
 	},
 })()

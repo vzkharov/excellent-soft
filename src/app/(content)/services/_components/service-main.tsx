@@ -1,5 +1,3 @@
-import type { ReactChildren } from '~/lib/types'
-
 import { Title } from '~/components/ui/text'
 import { Spacer } from '~/components/ui/spacer'
 
@@ -16,9 +14,9 @@ type ServiceMainProps = {
 const ServiceMain = ({ tabs, title, features }: ServiceMainProps) => (
 	<>
 		<ServiceNavigation items={tabs} />
-		<Spacer y="4rem" />
+		<Spacer y="3xl" />
 		<Title as="h2">{title}</Title>
-		<Spacer y="2rem" />
+		<Spacer y="xl" />
 		<ServiceFeatures items={features} />
 	</>
 )

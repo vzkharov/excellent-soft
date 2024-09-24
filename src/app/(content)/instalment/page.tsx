@@ -3,7 +3,7 @@ import { tv } from 'tailwind-variants'
 import type { Page } from '~/lib/types'
 
 import { Title } from '~/components/ui/text'
-import { Spacer } from '~/components/ui/spacer'
+import { Spacer } from '~/components/ui/spacer/spacer'
 import { Section } from '~/components/(sections)'
 import { FeedButton } from '~/components/(buttons)/feed-button'
 
@@ -31,7 +31,7 @@ const InstalmentPage: Page = () => (
 			className={styles.infoContent()}
 		>
 			<InstallmentMarkdown />
-			<Spacer y="2rem" />
+			<Spacer y="xl" />
 			<FeedButton
 				bold
 				variant="shadow"

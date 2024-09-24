@@ -1,10 +1,11 @@
 import { tv, type VariantProps } from 'tailwind-variants'
 
 import { padIndex } from '~/helpers/string'
+import type { StyleProps } from '~/lib/types'
 
-import { Text, type TextProps } from '~/components/ui/text'
+import { Text } from '~/components/ui/text'
 
-type StepProps = Pick<TextProps, 'style' | 'className' | 'size' | 'gradient'> &
+type StepProps = StyleProps &
 	StepVariants & {
 		count?: number
 	}
@@ -19,13 +20,13 @@ const Step = ({ className, count = 1, variant = 'default', ...props }: StepProps
 )
 
 const stepVariants = tv({
-	base: 'w-fit',
+	base: 'w-fit text-sm',
 	variants: {
 		variant: {
 			default: 'p-px font-gilroy-bold hover:bg-primary hover:text-dark',
 			primary: 'p-px font-gilroy-bold bg-primary text-dark',
 
-			shadow: 'bg-gray-900 rounded-full px-4 py-1',
+			shadow: "bg-dark/10 text-gray-300 rounded-full px-3 py-0.5 before:inline-flex before:content-['/'] select-none",
 		},
 	},
 	defaultVariants: {

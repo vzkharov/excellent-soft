@@ -1,16 +1,12 @@
 import type { CSSProperties } from 'react'
 import { tv, type VariantProps } from 'tailwind-variants'
-import { renderSplittedText } from '~/helpers/string'
 
+import { renderSplittedText } from '~/helpers/string'
 import type { As, MergeWithHTMLProps } from '~/lib/types'
 
-type Props<T extends As> = VariantProps<typeof textVariants> &
-	Partial<{
-		as: T
-
-		size: CSSProperties['fontSize']
-		weight: CSSProperties['fontWeight']
-	}>
+type Props<T extends As> = VariantProps<typeof textVariants> & {
+	as?: T
+}
 
 type TextProps<T extends As = 'p'> = MergeWithHTMLProps<T, Props<T>>
 

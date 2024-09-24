@@ -11,7 +11,7 @@ const ProcessSection = () => (
 			Что входит в разработку <br /> «Под ключ»?
 		</Title>
 
-		<Spacer y="1.5rem" />
+		<Spacer y="lg" />
 
 		<div className={styles.imgWrapper()}>
 			<Image
@@ -23,7 +23,7 @@ const ProcessSection = () => (
 			/>
 		</div>
 
-		<Spacer y="2rem" />
+		<Spacer y="xl" />
 
 		<Button
 			bold

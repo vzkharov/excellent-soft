@@ -1,3 +1,5 @@
+import { tv } from 'tailwind-variants'
+
 import type { Page } from '~/lib/types'
 
 import { Section } from '~/components/(sections)'
@@ -13,15 +15,22 @@ import { DevelopmentSection } from './_sections/development-section'
 
 const HomePage: Page = () => (
 	<>
-		<WelcomeSection className="pb-40 pt-24 text-white" />
+		<Section className={styles.section()}>
+			<WelcomeSection />
+		</Section>
 
 		<Section color="brand" />
 
-		<DevelopmentSection className="pb-20 pt-24" />
+		<Section
+			color="dark"
+			className={styles.section()}
+		>
+			<DevelopmentSection />
+		</Section>
 
 		<Section
 			color="dark"
-			className="overflow-x-visible pb-20 pt-24"
+			className={styles.section()}
 		>
 			<ProcessSection />
 		</Section>
@@ -40,5 +49,11 @@ const HomePage: Page = () => (
 		<FaqSection color="metal" />
 	</>
 )
+
+const styles = tv({
+	slots: {
+		section: 'pt-24 first-of-type:pb-40 pb-20 text-white',
+	},
+})()
 
 export default HomePage

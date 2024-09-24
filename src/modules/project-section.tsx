@@ -4,6 +4,8 @@ import { projectsConfig } from '~/config/projects'
 
 import { ProjectCard } from '~/components/(cards)/project-card'
 import { Section, type SectionProps } from '~/components/(sections)'
+import Link from 'next/link'
+import { navigation } from '~/config/navigation'
 
 type ProjectSectionProps = Omit<SectionProps, 'title'> & {
 	withTitle?: boolean
@@ -25,7 +27,12 @@ const ProjectSection = ({ className, withTitle = false, ...props }: ProjectSecti
 			))}
 		</div>
 
-		<div className={styles.button()}>Больше проектов</div>
+		<Link
+			href={navigation.works.href}
+			className={styles.button()}
+		>
+			Больше проектов
+		</Link>
 	</Section>
 )
 
@@ -34,7 +41,7 @@ const styles = tv({
 		section: 'py-16 space-y-16 md:py-24 md:space-y-24',
 		grid: 'grid grid-cols-1 md:grid-cols-2 gap-x-9 gap-y-12',
 		card: 'md:odd:mt-16',
-		button: 'mx-auto cursor-pointer flex items-center justify-center aspect-square h-48 w-48 md:h-64 md:w-64 rounded-full bg-gradient-to-r from-gradient-start to-gradient-end font-gilroy-bold text-md text-dark hover:from-primary hover:to-primary focus:from-primary focus:to-primary',
+		button: 'mx-auto cursor-pointer flex items-center justify-center aspect-square h-64 w-64 rounded-full bg-gradient-to-r from-gradient-start to-gradient-end font-gilroy-bold text-md !text-dark hover:from-primary hover:to-primary focus:from-primary focus:to-primary',
 	},
 })()
 

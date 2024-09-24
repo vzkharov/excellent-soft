@@ -23,7 +23,7 @@ const Footer = () => (
 			title="Опишите задачу"
 			className={styles.container()}
 		>
-			<Spacer y="4rem" />
+			<Spacer y="3xl" />
 
 			<ContactSection>
 				<div className="space-y-7">
@@ -34,14 +34,14 @@ const Footer = () => (
 				</div>
 			</ContactSection>
 
-			<Spacer y="6rem" />
+			<Spacer y="4xl" />
 
 			<footer className={styles.footer()}>
 				<Logo className={styles.logo()} />
 
 				<div className={styles.footerSection()}>
-					<Text font="gilroy-bold">Время работы:</Text>
-					<Text>Пн. - пт.: 10.00 - 18.00</Text>
+					<Text font="gilroy-bold">{'Время работы:'}</Text>
+					<Text>{'Пн. - пт.: 10.00 - 18.00'}</Text>
 				</div>
 
 				<div className={styles.footerSection()}>
@@ -59,23 +59,12 @@ const Footer = () => (
 				<ContactGroup />
 			</footer>
 
-			<Spacer y="0.75rem" />
+			<Spacer y="md" />
 
 			<OrganizationCopyright />
 		</Section>
 	</>
 )
-
-const footerConfig = [
-	{
-		name: '',
-		nodes: ['Время работы:', 'Пн. - пт.: 10.00 - 18.00'],
-	},
-	{
-		name: '',
-		nodes: ['Политика конфиденциальности', 'Пн. - пт.: 10.00 - 18.00'],
-	},
-]
 
 const styles = tv({
 	slots: {

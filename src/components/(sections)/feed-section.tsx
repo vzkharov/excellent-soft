@@ -21,7 +21,7 @@ const FeedSection = () => (
 
 const styles = tv({
 	slots: {
-		container: 'flex items-center justify-center p-9',
+		container: 'flex items-center justify-center py-9',
 		button: 'max-md:w-full max-md:px-0',
 	},
 })()

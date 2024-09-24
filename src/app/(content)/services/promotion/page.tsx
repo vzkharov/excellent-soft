@@ -2,19 +2,10 @@ import type { Page } from '~/lib/types'
 
 import { Title } from '~/components/ui/text'
 import { Spacer } from '~/components/ui/spacer'
-
-import {
-	Accordion,
-	AccordionCloseIcon,
-	AccordionContent,
-	AccordionItem,
-	AccordionTrigger,
-} from '~/components/ui/accordion'
-
 import { Section } from '~/components/(sections)'
-import { FeedButton } from '~/components/(buttons)/feed-button'
 
 import { ServiceMain } from '../_components/service-main'
+import { ServiceAccordion, ServiceAccordionItem } from '../_components/service-accordion'
 
 import { tabs, features } from './_data'
 
@@ -33,34 +24,19 @@ const ServicePromotionPage: Page = () => (
 		<Section>
 			<Title as="h2">Что мы предлагаем?</Title>
 
-			<Spacer y="2rem" />
+			<Spacer y="xl" />
 
-			<Accordion
-				type="multiple"
-				className="space-y-2"
-				defaultValue={['seo']}
-			>
+			<ServiceAccordion defaultValue={[tabs[0]?.id || '']}>
 				{tabs.map((tab) => (
-					<AccordionItem
+					<ServiceAccordionItem
 						key={tab.id}
-						id={tab.id}
 						value={tab.id}
+						title={tab.title}
 					>
-						<AccordionTrigger className="max-md:px-6">
-							<span className="translate-y-1.5">{tab.title}</span>
-							<AccordionCloseIcon />
-						</AccordionTrigger>
-						<AccordionContent className="max-md:px-6">
-							{tab.markdown}
-							<Spacer y="2rem" />
-							<FeedButton
-								bold
-								variant="outlined"
-							/>
-						</AccordionContent>
-					</AccordionItem>
+						{tab.markdown}
+					</ServiceAccordionItem>
 				))}
-			</Accordion>
+			</ServiceAccordion>
 		</Section>
 	</>
 )

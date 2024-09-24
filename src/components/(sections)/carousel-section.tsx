@@ -4,16 +4,14 @@ import { Carousel, CarouselContent, CarouselControls, CarouselItem } from '~/com
 
 import { CarouselCard, type CarouselCardConfig } from '~/components/(cards)/carousel-card'
 
-import { Section, type SectionProps } from './index'
-
-type CarouselSectionProps = Omit<SectionProps, 'children'> & {
+type CarouselSectionProps = {
 	items: CarouselCardConfig[]
 }
 
-const CarouselSection = ({ items, ...props }: CarouselSectionProps) => (
+const CarouselSection = ({ items }: CarouselSectionProps) => (
 	<Carousel opts={{ align: 'start' }}>
 		<Title as="h3">Примеры того как это может выглядеть</Title>
-		<Spacer y="4rem" />
+		<Spacer y="3xl" />
 		<CarouselContent>
 			{items.map((card) => (
 				<CarouselItem key={card.id}>
@@ -21,7 +19,7 @@ const CarouselSection = ({ items, ...props }: CarouselSectionProps) => (
 				</CarouselItem>
 			))}
 		</CarouselContent>
-		<Spacer y="4rem" />
+		<Spacer y="3xl" />
 		<CarouselControls />
 	</Carousel>
 )

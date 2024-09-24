@@ -1,11 +1,11 @@
 'use client'
 
 import * as React from 'react'
-import { tv, VariantProps } from 'tailwind-variants'
+import { tv, type VariantProps } from 'tailwind-variants'
 import useEmblaCarousel, { type UseEmblaCarouselType } from 'embla-carousel-react'
 
-import { Button, type ButtonProps } from '~/components/ui/button'
-import { ArrowDownIcon } from '~/components/ui/icons/arrow-down-icon'
+import { ArrowDownIcon } from './icons/arrow-down-icon'
+import { Button, type ButtonProps } from './button'
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>

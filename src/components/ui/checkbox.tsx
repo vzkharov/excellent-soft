@@ -4,8 +4,6 @@ import * as React from 'react'
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
 import { tv, type VariantProps } from 'tailwind-variants'
 
-import { cn } from '~/lib/utils'
-
 import { CheckIcon } from './icons/check-icon'
 
 type CheckboxProps = React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> & CheckboxVariants
@@ -18,7 +16,7 @@ const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root
 			className={checkboxVariants({ variant, className })}
 			{...props}
 		>
-			<CheckboxPrimitive.Indicator className={cn('flex items-center justify-center text-current')}>
+			<CheckboxPrimitive.Indicator className="flex items-center justify-center text-current">
 				<CheckIcon className="h-4 w-4" />
 			</CheckboxPrimitive.Indicator>
 		</CheckboxPrimitive.Root>

@@ -51,12 +51,7 @@ const ProjectCard = ({ style, className, ...project }: ProjectCardProps) => (
 
 		<Button
 			size="sm"
-			// variant="foreground"
-			/**
-			 * @fix
-			 * @description use button only variant
-			 */
-			// className="gap-x-2 border-foreground bg-foreground px-5 py-2.5 text-xs text-background hover:bg-background hover:text-foreground"
+			variant="default"
 		>
 			Смотреть кейс
 			<ArrowDownIcon className="-rotate-90" />

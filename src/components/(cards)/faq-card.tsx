@@ -26,7 +26,7 @@ const FaqCard = ({ id, image, title, content, className, ...props }: FaqCardProp
 		</AccordionTrigger>
 		<AccordionContent className={styles.content()}>
 			<div className={styles.markdown()}>{content}</div>
-			<Spacer y="2rem" />
+			<Spacer y="xl" />
 			<FeedButton
 				bold
 				variant="shadow"

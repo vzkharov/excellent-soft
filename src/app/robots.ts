@@ -4,11 +4,10 @@ import { DOMAIN_URL } from '~/env'
 
 const robots = (): MetadataRoute.Robots => ({
 	rules: {
-		userAgent: '*',
 		allow: '/',
+		userAgent: '*',
 	},
-
-	sitemap: `${DOMAIN_URL}/sitemap.xml`,
+	sitemap: new URL('sitemap.xml', DOMAIN_URL).toString(),
 })
 
 export default robots

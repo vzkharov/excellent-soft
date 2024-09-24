@@ -4,11 +4,11 @@ import { Spacer } from '~/components/ui/spacer'
 Контекстная реклама нужна для привлечения целевой аудитории к вашему продукту или услуге. Работает через платные объявления,
 которые отображаются в поисковых системах и на других платформах на основе релевантности ключевых слов и интересов пользователей.
 
-<Spacer y="2.5rem" />
+<Spacer y="2xl" />
 
 ##### Процесс настройки рекламы
 
-<Spacer y="1.25rem" />
+<Spacer y="md" />
 
 <div className="grid grid-cols-1 gap-1.5 md:grid-cols-2">
 	{[
@@ -21,6 +21,7 @@ import { Spacer } from '~/components/ui/spacer'
 	].map((item, idx) => (
 		<Card
 			key={idx}
+			idx={idx + 1}
 			title={item}
 			size="md"
 			variant="default"

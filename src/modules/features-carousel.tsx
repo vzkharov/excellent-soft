@@ -5,7 +5,6 @@ import { featuresConfig } from '~/config/development'
 
 import { Title } from '~/components/ui/text'
 import { FeatureCard } from '~/components/(cards)/feature-card'
-import { Carousel, CarouselContent, CarouselItem } from '~/components/ui/carousel'
 
 const FeaturesCarousel = ({ className, ...props }: StyleProps) => (
 	<div
@@ -16,28 +15,24 @@ const FeaturesCarousel = ({ className, ...props }: StyleProps) => (
 			Какие <span className="text-primary">фичи</span> реализуем?
 		</Title>
 
-		<Carousel className={styles.carousel()}>
-			<CarouselContent>
-				{featuresConfig.map((card, idx) => (
-					<CarouselItem key={card.id}>
-						<FeatureCard
-							{...card}
-							step={idx + 1}
-							className={styles.card()}
-						/>
-					</CarouselItem>
-				))}
-			</CarouselContent>
-		</Carousel>
+		<div className={styles.grid()}>
+			{featuresConfig.map((card, idx) => (
+				<FeatureCard
+					{...card}
+					key={card.id}
+					step={idx + 1}
+				/>
+			))}
+		</div>
 	</div>
 )
 
 const styles = tv({
 	slots: {
-		section: "relative text-center overflow-hidden flex flex-col items-center justify-center gap-10 rounded-md bg-black/20 py-36 after:absolute after:bottom-0 after:h-px after:w-full after:max-w-screen-md after:bg-primary after:content-['']",
-		carousel: 'max-w-screen-md',
+		section: "relative text-center overflow-hidden flex flex-col items-center justify-center gap-10 rounded-md bg-black/20 py-24 md:py-36 after:absolute after:bottom-0 after:h-px after:w-full after:max-w-screen-md after:bg-primary after:content-['']",
 
-		card: 'w-[174px]',
+		card: 'w-full',
+		grid: 'max-w-screen-md grid grid-cols-2 gap-6 max-md:px-5 md:grid-cols-4',
 	},
 })()
 

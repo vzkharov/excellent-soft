@@ -1,17 +1,14 @@
 import { BackgroundImage } from '~/components/background-image'
 
-/**
- * @fix with background-image
- */
 const SplineBackground = () => (
 	<BackgroundImage>
 		<video
-			preload="metadata"
-			src="/spline.mp4"
-			muted
-			playsInline
 			loop
+			muted
 			autoPlay
+			playsInline
+			src="/spline.mp4"
+			preload="metadata"
 			className="h-full w-full object-cover"
 		/>
 	</BackgroundImage>

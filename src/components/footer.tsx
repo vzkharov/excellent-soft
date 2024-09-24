@@ -47,6 +47,7 @@ const Footer = () => (
 				<div className={styles.footerSection()}>
 					{[legalConfig.privacy, legalConfig.cookie].map((link) => (
 						<Link
+							full
 							key={link.id}
 							href={link.url}
 							className="font-gilroy text-xs leading-none"

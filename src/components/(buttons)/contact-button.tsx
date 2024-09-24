@@ -18,7 +18,7 @@ const ContactButton = (props: ButtonProps) => (
 			<div className={styles.body()}>
 				<Text>С нами можно связаться любым удобным способом:</Text>
 
-				<li>Написать нам в Telegram или WhatsApp</li>
+				<li>Написать нам в Telegram или WhatsApp</li>
 				<li>Либо мы вам перезвоним</li>
 			</div>
 
@@ -29,7 +29,12 @@ const ContactButton = (props: ButtonProps) => (
 					color="default"
 					placeholder="Ваш номер телефона"
 				/>
-				<Button bold>Перезвонить мне</Button>
+				<Button
+					bold
+					className={styles.submitButton()}
+				>
+					Перезвонить мне
+				</Button>
 			</DialogFooter>
 		</DialogContent>
 	</Dialog>
@@ -39,7 +44,8 @@ const styles = tv({
 	slots: {
 		content: 'px-10 pb-12 pt-10',
 		body: 'flex flex-col gap-y-3',
-		footer: 'flex flex-row md:flex-row',
+		footer: 'flex flex-col items-stretch gap-y-4 md:flex-row',
+		submitButton: 'w-full md:w-fit',
 	},
 })()
 

@@ -67,7 +67,7 @@ const styles = tv({
 	slots: {
 		navLink: navigationMenuTriggerStyle({ as: 'link' }),
 		popoverContent: 'w-[180px] py-3',
-		popoverLink: 'px-5 py-1.5 text-gray-700',
+		popoverLink: 'px-5 py-1.5 text-gray-700 hover:text-white focus:text-white',
 		popoverTrigger: navigationMenuTriggerStyle({ as: 'button' }),
 	},
 })()

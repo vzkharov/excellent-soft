@@ -53,9 +53,9 @@ const navigationMenuTriggerStyle = tv({
 		as: {
 			link: 'hover:bg-white focus:bg-white',
 			button: [
-				'hover:bg-primary focus:bg-primary',
-				'data-[state=open]:bg-primary data-[state=open]:text-dark',
-				'data-[active]:bg-primary data-[active]:text-dark ',
+				'hover:bg-white focus:bg-white',
+				'data-[state=open]:bg-white data-[state=open]:text-dark',
+				'data-[active]:bg-white data-[active]:text-dark ',
 			],
 		},
 	},

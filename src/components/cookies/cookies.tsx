@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 import { cn } from '~/lib/utils'
 import type { StyleProps } from '~/lib/types'
@@ -11,12 +11,15 @@ import { CookiesBanner } from './cookies-banner'
 
 const Cookies = ({ style, className }: StyleProps) => {
 	const [agreed, setAgreed] = useCookie<boolean>(COOKIES_AGREED_KEY)
+	const [clientAgreed, setClientAgreed] = useState<boolean>(true)
+
+	useEffect(() => {
+		setClientAgreed(agreed)
+	}, [agreed])
 
 	const confirm = useCallback(() => {
 		setAgreed(true, cookieOptions)
 	}, [setAgreed])
-
-	console.log(agreed)
 
 	return (
 		<div
@@ -24,7 +27,7 @@ const Cookies = ({ style, className }: StyleProps) => {
 			style={style}
 			className={cn(
 				'fixed inset-x-0 bottom-0 z-50 mx-auto h-fit max-w-2xl translate-y-48 sm:pb-5',
-				agreed ? '' : 'translate-y-0',
+				clientAgreed ? '' : 'translate-y-0',
 				'transition-transform duration-300 ease-out',
 				className,
 			)}

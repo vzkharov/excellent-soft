@@ -1,4 +1,7 @@
+import Link from 'next/link'
 import { tv } from 'tailwind-variants'
+
+import { navigation } from '~/config/navigation'
 
 import { Image } from '~/components/ui/image'
 import { Title } from '~/components/ui/text'
@@ -25,14 +28,16 @@ const ProcessSection = () => (
 
 		<Spacer y="xl" />
 
-		<Button
-			bold
-			size="lg"
-			variant="primary"
-			className={styles.button()}
-		>
-			Подробнее о разработке
-		</Button>
+		<Link href={navigation.development.href}>
+			<Button
+				bold
+				size="lg"
+				variant="primary"
+				className={styles.button()}
+			>
+				Подробнее о разработке
+			</Button>
+		</Link>
 	</>
 )
 

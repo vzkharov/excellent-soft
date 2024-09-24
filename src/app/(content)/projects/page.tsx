@@ -2,6 +2,9 @@ import { Suspense } from 'react'
 import { tv } from 'tailwind-variants'
 
 import type { Page } from '~/lib/types'
+import { createMetadata } from '~/lib/metadata'
+
+import { navigation } from '~/config/navigation'
 
 import { Title } from '~/components/ui/text'
 import { Separator } from '~/components/ui/separator'
@@ -42,5 +45,7 @@ const styles = tv({
 		filterFallback: 'h-11',
 	},
 })()
+
+export const metadata = createMetadata(navigation.projects)
 
 export default ProjectsPage

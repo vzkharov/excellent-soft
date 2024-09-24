@@ -1,6 +1,9 @@
 import { tv } from 'tailwind-variants'
 
 import type { Page } from '~/lib/types'
+import { createMetadata } from '~/lib/metadata'
+
+import { navigation } from '~/config/navigation'
 
 import { Title } from '~/components/ui/text'
 import { Spacer } from '~/components/ui/spacer/spacer'
@@ -50,5 +53,7 @@ const styles = tv({
 			'md:rounded-lg bg-gradient-to-r from-background/10 to-gray-200 p-6 md:p-10 text-background',
 	},
 })()
+
+export const metadata = createMetadata(navigation.payment)
 
 export default PaymentPage

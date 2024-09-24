@@ -1,6 +1,9 @@
 import { tv } from 'tailwind-variants'
 
 import type { Page } from '~/lib/types'
+import { createMetadata } from '~/lib/metadata'
+
+import { navigation } from '~/config/navigation'
 import { contactConfig } from '~/config/contact'
 
 import { Image } from '~/components/ui/image'
@@ -48,5 +51,7 @@ const styles = tv({
 		bgImage: 'h-full w-auto -z-10 select-none !max-w-none opacity-50',
 	},
 })()
+
+export const metadata = createMetadata(navigation.contact)
 
 export default ContactPage

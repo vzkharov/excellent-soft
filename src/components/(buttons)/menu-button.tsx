@@ -36,7 +36,7 @@ const MenuButton = () => {
 						navigation.development,
 						navigation.design,
 						navigation.promotion,
-						navigation.works,
+						navigation.projects,
 						navigation.payment,
 						navigation.contact,
 					].map((link) => (

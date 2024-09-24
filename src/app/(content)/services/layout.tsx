@@ -1,18 +1,12 @@
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 
 import type { Layout } from '~/lib/types'
+import { createMetadata } from '~/lib/metadata'
 
-import { Section } from '~/components/(sections)'
+import { navigation } from '~/config/navigation'
 
 const ServiceLayout: Layout = ({ children }) => <div className="flex flex-col gap-y-24 pb-20 pt-4">{children}</div>
 
-export const metadata: Metadata = {
-	title: 'Services - Excellent Soft',
-	abstract: 'Services - Excellent Soft',
-	description: 'Services - Excellent Soft',
-	alternates: {
-		canonical: '/',
-	},
-}
+export const metadata: Metadata = createMetadata(navigation.services, true)
 
 export default ServiceLayout

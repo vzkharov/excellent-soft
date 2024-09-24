@@ -1,4 +1,7 @@
 import type { Page } from '~/lib/types'
+import { createMetadata } from '~/lib/metadata'
+
+import { navigation } from '~/config/navigation'
 
 import { Title } from '~/components/ui/text'
 import { Spacer } from '~/components/ui/spacer'
@@ -44,5 +47,7 @@ const ServicePromotionPage: Page = () => (
 		<Footer />
 	</>
 )
+
+export const metadata = createMetadata(navigation.promotion)
 
 export default ServicePromotionPage

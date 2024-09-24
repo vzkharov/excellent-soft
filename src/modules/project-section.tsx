@@ -28,7 +28,7 @@ const ProjectSection = ({ className, withTitle = false, ...props }: ProjectSecti
 		</div>
 
 		<Link
-			href={navigation.works.href}
+			href={navigation.projects.href}
 			className={styles.button()}
 		>
 			Больше проектов

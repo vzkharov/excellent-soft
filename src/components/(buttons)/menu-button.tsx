@@ -37,13 +37,13 @@ const MenuButton = () => {
 						navigation.design,
 						navigation.promotion,
 						navigation.works,
-						navigation.instalment,
+						navigation.payment,
 						navigation.contact,
 					].map((link) => (
 						<li key={link.id}>
 							<Link
-								gradient
 								href={link.href}
+								variant="gradient"
 								onClick={() => setOpen(false)}
 								className={styles.link()}
 							>

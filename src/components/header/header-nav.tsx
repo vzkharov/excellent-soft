@@ -47,7 +47,7 @@ const HeaderNav = () => {
 						</ul>
 					</NavigationMenuContent>
 				</NavigationMenuItem>
-				{[navigation.works, navigation.instalment].map((link) => (
+				{[navigation.works, navigation.payment].map((link) => (
 					<NavigationMenuItem key={link.id}>
 						<Link
 							href={link.href}

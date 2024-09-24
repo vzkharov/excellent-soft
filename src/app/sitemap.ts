@@ -40,7 +40,7 @@ const sitemap = (): MetadataRoute.Sitemap => {
 			lastModified,
 			priority: 0.2,
 			changeFrequency: 'monthly',
-			url: createSitemapPath('/instalment'),
+			url: createSitemapPath('/payment'),
 		},
 		{
 			lastModified,

@@ -15,9 +15,9 @@ const navigation = {
 		href: '/projects',
 		name: 'Портфолио',
 	},
-	instalment: {
-		id: 'instalment',
-		href: '/instalment',
+	payment: {
+		id: 'payment',
+		href: '/payment',
 		name: 'В рассрочку',
 	},
 	contact: {

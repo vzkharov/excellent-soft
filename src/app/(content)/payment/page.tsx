@@ -7,9 +7,9 @@ import { Spacer } from '~/components/ui/spacer/spacer'
 import { Section } from '~/components/(sections)'
 import { FeedButton } from '~/components/(buttons)/feed-button'
 
-import InstallmentMarkdown from '~/markdown/instalment.mdx'
+import PaymentMarkdown from '~/markdown/payment.mdx'
 
-const InstalmentPage: Page = () => (
+const PaymentPage: Page = () => (
 	<>
 		<Section
 			as="div"
@@ -30,7 +30,7 @@ const InstalmentPage: Page = () => (
 			bg={styles.info()}
 			className={styles.infoContent()}
 		>
-			<InstallmentMarkdown />
+			<PaymentMarkdown />
 			<Spacer y="xl" />
 			<FeedButton
 				bold
@@ -51,4 +51,4 @@ const styles = tv({
 	},
 })()
 
-export default InstalmentPage
+export default PaymentPage

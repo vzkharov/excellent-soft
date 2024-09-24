@@ -4,12 +4,13 @@ import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 
 import type { Provider } from '~/lib/types'
+import { navigation } from '~/config/navigation'
 
 const pageColors: Record<string, string> = {
 	DEFAULT: 'bg-white',
-	'/': 'bg-gray-100',
-	'/contact': 'bg-gray-100',
-	'/instalment': 'bg-gray-100',
+	[navigation.index.href]: 'bg-gray-100',
+	[navigation.contact.href]: 'bg-gray-100',
+	[navigation.payment.href]: 'bg-gray-100',
 }
 
 const BodyColorProvider: Provider = ({ children }) => {

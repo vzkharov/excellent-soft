@@ -1,3 +1,5 @@
+import { tv } from 'tailwind-variants'
+
 import type { StyleProps } from '~/lib/types'
 import { jobsConfig } from '~/config/development'
 
@@ -10,7 +12,7 @@ const Jobs = (props: StyleProps) => (
 			{jobsConfig.map((card) => (
 				<CarouselItem
 					key={card.id}
-					className="w-[288px]"
+					className={styles.item()}
 				>
 					<DevelopJobCard {...card} />
 				</CarouselItem>
@@ -18,5 +20,11 @@ const Jobs = (props: StyleProps) => (
 		</CarouselContent>
 	</Carousel>
 )
+
+const styles = tv({
+	slots: {
+		item: 'w-[288px]',
+	},
+})()
 
 export { Jobs }

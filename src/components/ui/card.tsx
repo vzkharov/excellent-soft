@@ -1,7 +1,8 @@
 import { tv, type VariantProps } from 'tailwind-variants'
 
 import type { StyleProps, ReactChildren } from '~/lib/types'
-import { Step } from '../step'
+
+import { Step } from './step'
 
 type CardProps = StyleProps &
 	CardVariants & {

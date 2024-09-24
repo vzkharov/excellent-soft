@@ -3,7 +3,7 @@ import { tv } from 'tailwind-variants'
 
 import type { StyleProps } from '~/lib/types'
 
-import { Step } from '~/components/step'
+import { Step } from '~/components/ui/step'
 import { Text } from '~/components/ui/text'
 import { Image } from '~/components/ui/image'
 import { Spacer } from '~/components/ui/spacer'

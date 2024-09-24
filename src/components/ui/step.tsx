@@ -3,7 +3,7 @@ import { tv, type VariantProps } from 'tailwind-variants'
 import { padIndex } from '~/helpers/string'
 import type { StyleProps } from '~/lib/types'
 
-import { Text } from '~/components/ui/text'
+import { Text } from './text'
 
 type StepProps = StyleProps &
 	StepVariants & {

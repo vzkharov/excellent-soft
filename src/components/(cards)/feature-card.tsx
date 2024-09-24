@@ -2,8 +2,8 @@ import { tv } from 'tailwind-variants'
 
 import type { StyleProps } from '~/lib/types'
 
-import { Step } from '~/components/step'
 import { Text } from '~/components/ui/text'
+import { Step } from '~/components/ui/step'
 import { Image } from '~/components/ui/image'
 
 type FeatureCardProps = StyleProps & {
@@ -15,10 +15,12 @@ type FeatureCardProps = StyleProps & {
 const FeatureCard = ({ title, step, icon, className, ...props }: FeatureCardProps) => (
 	<article
 		{...props}
+		title={title}
+		aria-label={title}
 		className={styles.card({ className })}
 	>
 		<Image
-			alt=""
+			alt={title}
 			src={icon}
 			width={40}
 			height={40}

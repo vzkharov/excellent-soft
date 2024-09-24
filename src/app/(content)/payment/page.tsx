@@ -5,6 +5,8 @@ import { navigation } from '~/config/navigation'
 
 import { Title } from '~/components/ui/text'
 import { Spacer } from '~/components/ui/spacer/spacer'
+
+import { Footer } from '~/components/footer'
 import { Section } from '~/components/(sections)'
 import { FeedButton } from '~/components/(buttons)/feed-button'
 
@@ -40,6 +42,8 @@ const PaymentPage: Page = () => (
 				variant="shadow"
 			/>
 		</Section>
+
+		<Footer />
 	</>
 )
 

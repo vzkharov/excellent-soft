@@ -1,33 +1,15 @@
 import './globals.css'
 
-import type { Metadata, Viewport } from 'next'
-
-import localFont from 'next/font/local'
-
-import { DOMAIN_URL, FACEBOOK_VERIFICATION, GOOGLE_VERIFICATION, YANDEX_VERIFICATION } from '~/env'
+import type { Viewport } from 'next'
 
 import type { Layout } from '~/lib/types'
+import { rootMetadata } from '~/lib/metadata'
 
 import { Header } from '~/components/header'
 import { Cookies } from '~/components/cookies'
 
 import { Providers } from './providers'
-
-const gilroy = localFont({
-	src: './_fonts/gilroy-regular.ttf',
-	display: 'swap',
-	variable: '--font-gilroy',
-})
-const gilroyBold = localFont({
-	src: './_fonts/gilroy-bold.ttf',
-	display: 'swap',
-	variable: '--font-gilroy-bold',
-})
-const bebasFont = localFont({
-	src: './_fonts/aa-bebas-neue.ttf',
-	display: 'swap',
-	variable: '--font-bebas',
-})
+import { fontsClassName } from './_fonts'
 
 const Root: Layout = ({ children }) => (
 	<html
@@ -35,7 +17,7 @@ const Root: Layout = ({ children }) => (
 		lang="ru"
 		suppressHydrationWarning
 		suppressContentEditableWarning
-		className={[gilroy.variable, gilroyBold.variable, bebasFont.variable].join(' ')}
+		className={fontsClassName}
 	>
 		<body>
 			<Providers>
@@ -48,61 +30,17 @@ const Root: Layout = ({ children }) => (
 	</html>
 )
 
+export const metadata = rootMetadata
+
 export const viewport: Viewport = {
-	themeColor: [
-		{ media: '(prefers-color-scheme: dark)', color: 'black' },
-		{ media: '(prefers-color-scheme: light)', color: 'black' },
-	],
 	initialScale: 1,
 	maximumScale: 1,
 	userScalable: false,
 	width: 'device-width',
-}
-
-export const metadata: Metadata = {
-	title: {
-		default: 'Excellent Soft • Дизайн, разработка, продвижение',
-		template: '%s • Excellent Soft',
-	},
-	abstract: 'Excellent Soft',
-	description:
-		'Excellent Soft предлагает первоклассные услуги по дизайну, разработке и продвижению, чтобы воплотить ваши идеи в жизнь',
-
-	openGraph: {
-		siteName: 'Excellent Soft',
-		url: new URL(DOMAIN_URL),
-		ttl: 88640,
-		locale: 'ru',
-	},
-	twitter: {
-		card: 'summary',
-		site: '@excellent-soft',
-	},
-
-	icons: {
-		icon: '/favicon.ico',
-		shortcut: '/favicon.ico',
-	},
-
-	referrer: 'origin',
-	metadataBase: new URL(DOMAIN_URL),
-	robots: { index: true, follow: true },
-	manifest: new URL('manifest.webmanifest', DOMAIN_URL),
-	alternates: {
-		canonical: '/',
-	},
-
-	verification: {
-		google: GOOGLE_VERIFICATION,
-		yandex: YANDEX_VERIFICATION,
-
-		other: {
-			['facebook-domain-verification']: FACEBOOK_VERIFICATION,
-		},
-	},
-
-	creator: 'Vadzim Zakharov, https://github.com/vzkharov',
-	authors: [{ name: 'Vadzim Zakharov', url: 'https://github.com/vzkharov' }],
+	themeColor: [
+		{ media: '(prefers-color-scheme: dark)', color: 'black' },
+		{ media: '(prefers-color-scheme: light)', color: 'black' },
+	],
 }
 
 export default Root

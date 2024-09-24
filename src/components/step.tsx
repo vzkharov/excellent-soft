@@ -26,7 +26,7 @@ const stepVariants = tv({
 			default: 'p-px font-gilroy-bold hover:bg-primary hover:text-dark',
 			primary: 'p-px font-gilroy-bold bg-primary text-dark',
 
-			shadow: "bg-dark/10 text-gray-300 rounded-full px-3 py-0.5 before:inline-flex before:content-['/'] select-none",
+			shadow: "bg-dark/5 text-gray-300 rounded-full px-4 py-0.5 before:inline-flex before:content-['/'] select-none",
 		},
 	},
 	defaultVariants: {

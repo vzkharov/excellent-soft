@@ -55,7 +55,7 @@ const cardVariants = tv({
 	slots: {
 		card: 'relative rounded-md flex items-center gap-2 cursor-default',
 		header: 'flex-1 space-y-5 self-start',
-		title: 'w-full flex items-center justify-between',
+		title: 'w-full flex items-center justify-between gap-x-2',
 	},
 	variants: {
 		variant: {
@@ -75,8 +75,8 @@ const cardVariants = tv({
 				title: 'text-sm',
 			},
 			md: {
-				card: 'py-10 px-8',
-				title: '',
+				card: 'max-md:py-5 max-md:px-5 py-10 px-8',
+				title: 'max-md:text-md',
 			},
 		},
 	},

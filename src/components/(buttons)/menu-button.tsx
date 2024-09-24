@@ -51,16 +51,16 @@ const MenuButton = () => {
 							</Link>
 						</li>
 					))}
-
-					<div className={styles.feedWrapper()}>
-						<FeedButton
-							bold
-							dir="y"
-							variant="shadow"
-							className={styles.feed()}
-						/>
-					</div>
 				</ul>
+
+				<div className={styles.feedWrapper()}>
+					<FeedButton
+						bold
+						dir="y"
+						variant="shadow"
+						className={styles.feed()}
+					/>
+				</div>
 			</PopoverContent>
 		</Popover>
 	)

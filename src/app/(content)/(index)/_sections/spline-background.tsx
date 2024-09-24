@@ -7,7 +7,7 @@ const SplineBackground = () => (
 			muted
 			autoPlay
 			playsInline
-			src="/bg.mp4"
+			src="/spline.mp4"
 			preload="metadata"
 			className="h-full w-full object-cover"
 		/>

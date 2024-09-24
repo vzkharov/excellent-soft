@@ -8,7 +8,6 @@ import { DOMAIN_URL, FACEBOOK_VERIFICATION, GOOGLE_VERIFICATION, YANDEX_VERIFICA
 
 import type { Layout } from '~/lib/types'
 
-import { Footer } from '~/components/footer'
 import { Header } from '~/components/header'
 import { Cookies } from '~/components/cookies'
 
@@ -42,7 +41,6 @@ const Root: Layout = ({ children }) => (
 			<Providers>
 				<Header />
 				<main>{children}</main>
-				<Footer />
 			</Providers>
 
 			<Cookies />

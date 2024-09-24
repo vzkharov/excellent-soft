@@ -1,7 +1,9 @@
 import type { Page } from '~/lib/types'
 
+import { Footer } from '~/components/footer'
 import { Section } from '~/components/(sections)'
 import { FeedSection } from '~/components/(sections)/feed-section'
+
 import { DesignCarousel } from '~/modules/design-carousel'
 
 import { ServiceMain } from '../_components/service-main'
@@ -25,6 +27,8 @@ const ServiceDesignPage: Page = () => (
 		<Section>
 			<DesignCarousel />
 		</Section>
+
+		<Footer />
 	</>
 )
 

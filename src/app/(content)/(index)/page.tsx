@@ -2,6 +2,7 @@ import { tv } from 'tailwind-variants'
 
 import type { Page } from '~/lib/types'
 
+import { Footer } from '~/components/footer'
 import { Section } from '~/components/(sections)'
 import { FeedSection } from '~/components/(sections)/feed-section'
 
@@ -47,6 +48,8 @@ const HomePage: Page = () => (
 		<Section color="brand" />
 
 		<FaqSection color="metal" />
+
+		<Footer />
 	</>
 )
 

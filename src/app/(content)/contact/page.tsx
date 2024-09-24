@@ -21,7 +21,7 @@ const ContactPage: Page = () => (
 			<a className={styles.phone()}>{contactConfig.phone.value}</a>
 		</div>
 
-		<BackgroundImage>
+		<BackgroundImage className="h-screen">
 			<Image
 				alt="map"
 				src="/map.png"

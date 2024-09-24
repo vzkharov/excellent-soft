@@ -5,6 +5,8 @@ import type { Page } from '~/lib/types'
 
 import { Title } from '~/components/ui/text'
 import { Separator } from '~/components/ui/separator'
+
+import { Footer } from '~/components/footer'
 import { Section } from '~/components/(sections)'
 
 import { ProjectSection } from '~/modules/project-section'
@@ -28,6 +30,8 @@ const ProjectsPage: Page = async () => (
 		</Section>
 
 		<ProjectSection />
+
+		<Footer />
 	</>
 )
 

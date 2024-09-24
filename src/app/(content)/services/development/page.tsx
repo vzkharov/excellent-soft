@@ -1,5 +1,6 @@
 import type { Page } from '~/lib/types'
 
+import { Footer } from '~/components/footer'
 import { Section } from '~/components/(sections)'
 import { DevelopmentCarousel } from '~/modules/development-carousel'
 
@@ -22,6 +23,8 @@ const ServiceDevelopmentPage: Page = () => (
 		<Section>
 			<DevelopmentCarousel />
 		</Section>
+
+		<Footer />
 	</>
 )
 

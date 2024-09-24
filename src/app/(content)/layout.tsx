@@ -62,9 +62,20 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-	title: 'Excellent Soft',
+	title: 'Excellent Soft | Дизайн, разработка, продвижение',
 	abstract: 'Excellent Soft',
-	description: 'Excellent Soft',
+	description:
+		'Excellent Soft предлагает первоклассные услуги по дизайну, разработке и продвижению, чтобы воплотить ваши идеи в жизнь',
+
+	openGraph: {
+		siteName: 'Excellent Soft',
+		url: new URL(DOMAIN_URL),
+		ttl: 88640,
+		locale: 'ru',
+	},
+	twitter: {
+		site: '@excellent-soft',
+	},
 
 	icons: {
 		icon: '/favicon.ico',

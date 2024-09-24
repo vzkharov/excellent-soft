@@ -55,7 +55,7 @@ const ServiceCard = ({ step, icon, href, title, description, className }: Servic
 
 const styles = tv({
 	slots: {
-		card: 'group block h-full rounded-md bg-gray-200/60 py-10 backdrop-blur-lg [&>*]:ml-5',
+		card: 'group block h-full rounded-md bg-gradient-to-b from-gray-300/60 to-gray-200/60 backdrop-blur-lg  py-10 [&>*]:ml-5',
 		icon: 'h-8 w-auto',
 		divider: "relative opacity-50 !mx-0 before:absolute before:bottom-0 before:ml-5 before:h-[3px] before:w-5 before:bg-white before:content-['']",
 		step: 'w-fit px-px group-hover:bg-primary group-hover:text-dark',

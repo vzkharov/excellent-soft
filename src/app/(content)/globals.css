@@ -7,18 +7,8 @@
 		--background: 0 0% 100%;
 		--foreground: 225 12% 19%;
 
-		--card: 0 0% 100%;
-		/** fix ? */
-		--popover: 222 9% 38%;
-		--popover-foreground: 230 13% 72%;
-		--muted: 240 4.8% 95.9%;
-
 		--border: 218 44% 94%;
-		--input: 240 5.9% 90%;
-		--ring: 240 10% 3.9%;
-		--radius: 1.25rem;
 
-		/* valid */
 		--primary: 76 100% 69%;
 		--secondary: 223 100% 74%;
 		--accent: 0 0% 100%;
@@ -110,7 +100,6 @@ a:focus-visible {
 		@apply min-h-screen w-screen overflow-x-clip bg-white text-dark;
 		@apply selection:bg-dark selection:text-primary;
 
-		scroll-behavior: smooth;
 		font-size: 16px;
 		font-family: var(--font-gilroy);
 	}

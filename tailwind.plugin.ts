@@ -19,16 +19,6 @@ const _plugin = () =>
 				justifyContent: 'center',
 			},
 
-			// @fix
-			'.bg-glass': {
-				backdropFilter: 'blur(16px)',
-				backgroundColor: 'rgb(30 30 36 / 0.5)',
-			},
-			// @fix
-			'.bg-overlay': {
-				backgroundColor: 'rgb(140 140 180 / 0.15)',
-			},
-
 			'.text-gradient': {
 				color: 'transparent',
 				backgroundClip: 'text',

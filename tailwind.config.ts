@@ -17,24 +17,12 @@ const config = {
 		},
 		extend: {
 			colors: {
-				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
-				ring: 'hsl(var(--ring))',
-
-				muted: 'hsl(var(--muted))',
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))',
-				},
-				card: 'hsl(var(--card))',
-
-				// valid
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				border: 'hsl(var(--border))',
 
 				primary: 'hsl(var(--primary))',
 				secondary: 'hsl(var(--secondary))',
-				accent: 'hsl(var(--accent))',
 
 				dark: 'hsl(var(--dark))',
 				gray: {

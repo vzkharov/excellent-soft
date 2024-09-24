@@ -60,7 +60,10 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-	title: 'Excellent Soft | Дизайн, разработка, продвижение',
+	title: {
+		default: 'Excellent Soft • Дизайн, разработка, продвижение',
+		template: '%s • Excellent Soft',
+	},
 	abstract: 'Excellent Soft',
 	description:
 		'Excellent Soft предлагает первоклассные услуги по дизайну, разработке и продвижению, чтобы воплотить ваши идеи в жизнь',
@@ -80,13 +83,10 @@ export const metadata: Metadata = {
 		shortcut: '/favicon.ico',
 	},
 
-	applicationName: '',
-	generator: 'Next.JS',
-
 	referrer: 'origin',
 	metadataBase: new URL(DOMAIN_URL),
-	manifest: new URL('manifest.webmanifest', DOMAIN_URL),
 	robots: { index: true, follow: true },
+	manifest: new URL('manifest.webmanifest', DOMAIN_URL),
 	alternates: {
 		canonical: '/',
 	},

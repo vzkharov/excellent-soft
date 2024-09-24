@@ -75,6 +75,7 @@ export const metadata: Metadata = {
 		locale: 'ru',
 	},
 	twitter: {
+		card: 'summary',
 		site: '@excellent-soft',
 	},
 

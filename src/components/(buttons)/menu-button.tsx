@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { tv } from 'tailwind-variants'
 
 import { navigation } from '~/config/navigation'
@@ -12,57 +13,70 @@ import { Popover, PopoverContent, PopoverTrigger } from '~/components/ui/popover
 
 import { FeedButton } from '~/components/(buttons)/feed-button'
 
-const MenuButton = () => (
-	<Popover>
-		<PopoverTrigger className={styles.button()}>
-			<XIcon className="hidden group-aria-expanded:block" />
-			<MenuIcon className="group-aria-expanded:hidden" />
-		</PopoverTrigger>
-		<PopoverContent
-			align="end"
-			width={240}
-			sideOffset={10}
-			className={styles.popoverContent()}
+const MenuButton = () => {
+	const [open, setOpen] = useState<boolean>(false)
+
+	return (
+		<Popover
+			open={open}
+			onOpenChange={setOpen}
 		>
-			<ul>
-				{[
-					navigation.development,
-					navigation.design,
-					navigation.promotion,
-					navigation.works,
-					navigation.instalment,
-					navigation.contact,
-				].map((link) => (
-					<li key={link.id}>
-						<Link
-							href={link.href}
-							className={styles.link()}
-						>
-							<span className="group-hover:text-gradient">{link.name}</span>
-						</Link>
-					</li>
-				))}
-				<div className="mx-4 mt-1">
-					<FeedButton
-						dir="y"
-						bold
-						variant="shadow"
-						// fix
-						className="w-full justify-between px-4 text-left [&>*]:justify-between"
-					/>
-				</div>
-			</ul>
-		</PopoverContent>
-	</Popover>
-)
+			<PopoverTrigger className={styles.button()}>
+				<XIcon className={styles.buttonCloseIcon()} />
+				<MenuIcon className={styles.buttonOpenIcon()} />
+			</PopoverTrigger>
+			<PopoverContent
+				align="end"
+				width={240}
+				sideOffset={10}
+				className={styles.popoverContent()}
+			>
+				<ul>
+					{[
+						navigation.development,
+						navigation.design,
+						navigation.promotion,
+						navigation.works,
+						navigation.instalment,
+						navigation.contact,
+					].map((link) => (
+						<li key={link.id}>
+							<Link
+								gradient
+								href={link.href}
+								onClick={() => setOpen(false)}
+								className={styles.link()}
+							>
+								{link.name}
+							</Link>
+						</li>
+					))}
+
+					<div className={styles.feedWrapper()}>
+						<FeedButton
+							bold
+							dir="y"
+							variant="shadow"
+							className={styles.feed()}
+						/>
+					</div>
+				</ul>
+			</PopoverContent>
+		</Popover>
+	)
+}
 
 const styles = tv({
 	slots: {
 		button: 'group flex h-14 w-14 items-center justify-center rounded-full',
-		buttonOpenIcon: '',
-		buttonCloseIcon: '',
+		buttonOpenIcon: 'group-aria-expanded:hidden',
+		buttonCloseIcon: 'hidden group-aria-expanded:block',
+
 		popoverContent: 'w-[240px] rounded-lg py-5',
-		link: 'w-full px-8 py-2 group',
+		link: 'w-full px-8 py-2',
+
+		feed: 'w-full justify-between px-4 text-left [&>*]:justify-between',
+		feedWrapper: 'mx-4 mt-1',
 	},
 })()
 

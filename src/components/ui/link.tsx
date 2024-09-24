@@ -5,11 +5,11 @@ type LinkProps = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof Inter
 	InternalLinkProps &
 	LinkVariants & {}
 
-const Link = ({ href, className, full = false, ...props }: LinkProps) => (
+const Link = ({ href, className, full = false, gradient = false, ...props }: LinkProps) => (
 	<InternalLink
 		href={href}
 		{...props}
-		className={linkVariants({ full, className })}
+		className={linkVariants({ full, gradient, className })}
 	/>
 )
 
@@ -17,9 +17,11 @@ const linkVariants = tv({
 	base: 'inline-block whitespace-nowrap w-full',
 	variants: {
 		full: { true: 'w-full', false: '' },
+		gradient: { true: 'hover:text-gradient focus:text-gradient' },
 	},
 	defaultVariants: {
 		full: false,
+		gradient: false,
 	},
 })
 

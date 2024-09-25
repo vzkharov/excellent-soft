@@ -43,31 +43,31 @@
 
 h1 {
 	font-family: var(--font-bebas);
-	font-size: 6rem;
+	@apply text-3xl sm:text-4xl;
 }
 
 h2 {
 	font-family: var(--font-bebas);
-	font-size: 4rem;
+	@apply text-2xl sm:text-3xl;
 }
 
 h3 {
 	font-family: var(--font-bebas);
-	font-size: 3rem;
+	@apply text-2xl;
 }
 
 h4 {
 	font-family: var(--font-gilroy-bold);
-	font-size: 2rem;
+	@apply text-xl;
 }
 
 h5 {
 	font-family: var(--font-gilroy-bold);
-	font-size: 1.5rem;
+	@apply text-lg;
 }
 
 h6 {
-	font-size: 1.25rem;
+	@apply text-md;
 }
 
 h1,

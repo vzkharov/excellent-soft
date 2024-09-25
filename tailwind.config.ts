@@ -47,7 +47,7 @@ const config = {
 				xl: '2rem',
 				'2xl': '3rem',
 				'3xl': '4rem',
-				'4xl': '64rem',
+				'4xl': '6rem',
 			},
 			maxWidth: {
 				prose: '85ch',

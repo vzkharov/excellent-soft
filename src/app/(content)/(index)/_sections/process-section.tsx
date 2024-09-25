@@ -10,30 +10,37 @@ import { Spacer } from '~/components/ui/spacer'
 
 const ProcessSection = () => (
 	<>
-		<Title as="h2">
+		<Title
+			as="h2"
+			className={styles.title()}
+		>
 			Что входит в разработку <br /> «Под ключ»?
 		</Title>
 
-		<Spacer y="lg" />
+		<Spacer y="xl" />
 
 		<div className={styles.imgWrapper()}>
-			<Image
-				alt="process"
-				src="/process.png"
-				width={2560}
-				height={800}
-				className={styles.img()}
-			/>
+			<div className={styles.imgContent()}>
+				<Image
+					alt="process"
+					src="/process.png"
+					width={2560}
+					height={800}
+					className={styles.img()}
+				/>
+			</div>
 		</div>
 
 		<Spacer y="xl" />
 
-		<Link href={navigation.development.href}>
+		<Link
+			href={navigation.development.href}
+			className={styles.link()}
+		>
 			<Button
 				bold
 				size="lg"
 				variant="primary"
-				className={styles.button()}
 			>
 				Подробнее о разработке
 			</Button>
@@ -43,9 +50,11 @@ const ProcessSection = () => (
 
 const styles = tv({
 	slots: {
-		imgWrapper: 'relative h-96 overflow-x-visible',
-		img: 'absolute top-0 h-96 w-auto object-cover',
-		button: 'block mx-auto',
+		title: 'max-md:text-2xl',
+		imgWrapper: 'relative h-80 md:h-96 flex-center w-full select-none',
+		imgContent: 'container absolute -ml-0 w-screen overflow-x-auto px-0 pl-4',
+		img: 'inline-block h-72 w-auto max-w-none object-cover ',
+		link: 'w-full md:w-fit mx-auto flex-center',
 	},
 })()
 

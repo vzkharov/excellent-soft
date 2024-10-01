@@ -3,12 +3,19 @@
 import { useState } from 'react'
 import { tv } from 'tailwind-variants'
 
-import { Text } from '~/components/ui/text'
 import { Input } from '~/components/ui/input'
 import { Button, type ButtonProps } from '~/components/ui/button'
-import { Dialog, DialogTitle, DialogHeader, DialogTrigger, DialogContent } from '~/components/ui/dialog'
+import {
+	Dialog,
+	DialogTitle,
+	DialogHeader,
+	DialogTrigger,
+	DialogContent,
+	DialogDescription,
+} from '~/components/ui/dialog'
 
 import { HubSpotForm, SubmitButton } from '~/modules/hub-spot-form'
+import ContactModalDescription from '~/markdown/contact/modal-description.mdx'
 
 const ContactButton = (props: ButtonProps) => {
 	const [open, setOpen] = useState<boolean>(false)
@@ -26,17 +33,11 @@ const ContactButton = (props: ButtonProps) => {
 					<DialogTitle>Давайте обсудим вашу идею!</DialogTitle>
 				</DialogHeader>
 
-				<div className={styles.body()}>
-					<Text>С нами можно связаться любым удобным способом:</Text>
+				<DialogDescription className={styles.body()}>
+					<ContactModalDescription />
+				</DialogDescription>
 
-					<li>Написать нам в Telegram или WhatsApp</li>
-					<li>Либо мы вам перезвоним</li>
-				</div>
-
-				<HubSpotForm
-					onSettled={() => setOpen(false)}
-					className={styles.footer()}
-				>
+				<HubSpotForm className={styles.footer()}>
 					<Input
 						type="tel"
 						name="phone"
@@ -45,6 +46,7 @@ const ContactButton = (props: ButtonProps) => {
 					/>
 					<SubmitButton
 						bold
+						onClick={() => setOpen(false)}
 						className={styles.submitButton()}
 					>
 						Перезвонить мне

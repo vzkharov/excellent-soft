@@ -10,7 +10,7 @@ import { Section } from '~/components/(sections)'
 import { BackgroundImage } from '~/components/background-image'
 import { ContactSection } from '~/components/(sections)/contact-section'
 
-import ContactMarkdown from '~/markdown/contact.mdx'
+import ContactMarkdown from '~/markdown/contact/section.mdx'
 
 import { styles } from './styles'
 

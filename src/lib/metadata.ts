@@ -51,8 +51,9 @@ const rootMetadata: Metadata = {
 	},
 
 	icons: {
-		icon: '/favicon.ico',
+		icon: '/icon.png',
 		shortcut: '/favicon.ico',
+		apple: '/apple-icon.png',
 	},
 
 	referrer: 'origin',

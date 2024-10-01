@@ -3,7 +3,6 @@ import { createMetadata } from '~/lib/metadata'
 
 import { navigation } from '~/config/navigation'
 
-import { Footer } from '~/components/footer'
 import { Section } from '~/components/(sections)'
 import { FeedSection } from '~/components/(sections)/feed-section'
 
@@ -36,7 +35,6 @@ const ServiceDesignPage: Page = () => (
 		<Section>
 			<DesignCarousel />
 		</Section>
-
 		<Section>
 			<DesignProcess />
 		</Section>

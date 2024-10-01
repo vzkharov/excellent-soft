@@ -1,10 +1,10 @@
-import type { ContactFields } from './types'
+import type { HubSpotFields } from '../hub-spot-form/types'
 
 type FormConfig = {
 	type?: string
 	required?: boolean
 
-	name: ContactFields
+	name: HubSpotFields
 	placeholder: string
 }
 
@@ -21,6 +21,7 @@ const formConfig = [
 		placeholder: 'Телефон/WhatsApp/Telegram',
 	},
 	{
+		required: true,
 		type: 'email',
 		name: 'email',
 		placeholder: 'Ваш e-mail',

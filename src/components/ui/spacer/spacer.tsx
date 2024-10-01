@@ -15,10 +15,15 @@ type SpacerProps = MergeWithHTMLProps<
 	}>
 >
 
-const Spacer = ({ x, y, full, className, ...props }: SpacerProps) => (
+const Spacer = ({ x, y, full, style, className, ...props }: SpacerProps) => (
 	<div
 		{...props}
 		aria-hidden
+		style={{
+			marginTop: typeof y === 'number' ? y : undefined,
+			marginLeft: typeof x === 'number' ? x : undefined,
+			...style,
+		}}
 		className={cn(
 			'relative, select-none',
 			styles.spacer,

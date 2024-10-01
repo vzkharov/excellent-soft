@@ -1,44 +1,61 @@
+'use client'
+
+import { useState } from 'react'
 import { tv } from 'tailwind-variants'
 
-import { Text } from '~/components/ui/text'
 import { Input } from '~/components/ui/input'
 import { Button, type ButtonProps } from '~/components/ui/button'
-import { Dialog, DialogTitle, DialogHeader, DialogTrigger, DialogContent, DialogFooter } from '~/components/ui/dialog'
+import {
+	Dialog,
+	DialogTitle,
+	DialogHeader,
+	DialogTrigger,
+	DialogContent,
+	DialogDescription,
+} from '~/components/ui/dialog'
 
-const ContactButton = (props: ButtonProps) => (
-	<Dialog>
-		<DialogTrigger asChild>
-			<Button {...props} />
-		</DialogTrigger>
-		<DialogContent className={styles.content()}>
-			<DialogHeader>
-				<DialogTitle>Давайте обсудим вашу идею!</DialogTitle>
-			</DialogHeader>
+import { HubSpotForm, SubmitButton } from '~/modules/hub-spot-form'
+import ContactModalDescription from '~/markdown/contact/modal-description.mdx'
 
-			<div className={styles.body()}>
-				<Text>С нами можно связаться любым удобным способом:</Text>
+const ContactButton = (props: ButtonProps) => {
+	const [open, setOpen] = useState<boolean>(false)
 
-				<li>Написать нам в Telegram или WhatsApp</li>
-				<li>Либо мы вам перезвоним</li>
-			</div>
+	return (
+		<Dialog
+			open={open}
+			onOpenChange={setOpen}
+		>
+			<DialogTrigger asChild>
+				<Button {...props} />
+			</DialogTrigger>
+			<DialogContent className={styles.content()}>
+				<DialogHeader>
+					<DialogTitle>Давайте обсудим вашу идею!</DialogTitle>
+				</DialogHeader>
 
-			<DialogFooter className={styles.footer()}>
-				<Input
-					type="tel"
-					name="phone"
-					color="default"
-					placeholder="Ваш номер телефона"
-				/>
-				<Button
-					bold
-					className={styles.submitButton()}
-				>
-					Перезвонить мне
-				</Button>
-			</DialogFooter>
-		</DialogContent>
-	</Dialog>
-)
+				<DialogDescription className={styles.body()}>
+					<ContactModalDescription />
+				</DialogDescription>
+
+				<HubSpotForm className={styles.footer()}>
+					<Input
+						type="tel"
+						name="phone"
+						color="default"
+						placeholder="Ваш номер телефона"
+					/>
+					<SubmitButton
+						bold
+						onClick={() => setOpen(false)}
+						className={styles.submitButton()}
+					>
+						Перезвонить мне
+					</SubmitButton>
+				</HubSpotForm>
+			</DialogContent>
+		</Dialog>
+	)
+}
 
 const styles = tv({
 	slots: {

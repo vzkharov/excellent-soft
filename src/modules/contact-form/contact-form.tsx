@@ -1,17 +1,14 @@
 import { tv } from 'tailwind-variants'
 
 import { Input } from '~/components/ui/input'
-import { Button } from '~/components/ui/button'
-
 import { AgreementCheckbox } from '~/components/agreement-checkbox'
 
+import { HubSpotForm, SubmitButton, type HubSpotFormProps } from '~/modules/hub-spot-form'
+
 import { formConfig } from './utils'
-// import { submitHubspot } from './action'
 
-type ContactFormProps = React.HTMLAttributes<HTMLFormElement>
-
-const ContactForm = ({ className, ...props }: ContactFormProps) => (
-	<form
+const ContactForm = ({ className, ...props }: HubSpotFormProps) => (
+	<HubSpotForm
 		{...props}
 		className={styles.form({ className })}
 	>
@@ -25,13 +22,14 @@ const ContactForm = ({ className, ...props }: ContactFormProps) => (
 		))}
 
 		<AgreementCheckbox
+			required
 			id="agreement"
 			name="agreement"
 			variant="foreground"
 			className={styles.agreement()}
 		/>
 
-		<Button
+		<SubmitButton
 			bold
 			full
 			size="lg"
@@ -39,8 +37,8 @@ const ContactForm = ({ className, ...props }: ContactFormProps) => (
 			className={styles.submitButton()}
 		>
 			Отправить
-		</Button>
-	</form>
+		</SubmitButton>
+	</HubSpotForm>
 )
 
 const styles = tv({

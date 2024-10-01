@@ -4,12 +4,12 @@ import type { Viewport } from 'next'
 
 import type { Layout } from '~/lib/types'
 import { rootMetadata } from '~/lib/metadata'
+import { fontsClassName } from '~/lib/_fonts'
 
 import { Header } from '~/components/header'
 import { Cookies } from '~/components/cookies'
 
 import { Providers } from './providers'
-import { fontsClassName } from './_fonts'
 
 const Root: Layout = ({ children }) => (
 	<html

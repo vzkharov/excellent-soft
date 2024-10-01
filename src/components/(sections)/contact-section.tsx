@@ -1,6 +1,6 @@
 import { tv } from 'tailwind-variants'
 
-import { ContactForm } from '~/components/contact-form'
+import { ContactForm } from '~/modules/contact-form'
 
 type ContactSectionProps = React.HTMLAttributes<HTMLDivElement>
 

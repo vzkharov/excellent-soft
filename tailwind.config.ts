@@ -17,27 +17,27 @@ const config = {
 		},
 		extend: {
 			colors: {
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
-				border: 'hsl(var(--border))',
+				background: 'hsl(0 0% 100%)',
+				foreground: 'hsl(225 12% 19%)',
+				border: 'hsl(218 44% 94%)',
 
-				primary: 'hsl(var(--primary))',
-				secondary: 'hsl(var(--secondary))',
+				primary: 'hsl(76 100% 69%)',
+				secondary: 'hsl(223 100% 74%)',
 
-				dark: 'hsl(var(--dark))',
+				dark: 'hsl(225 12% 19%)',
 				gray: {
-					100: 'hsl(var(--gray-100))',
-					200: 'hsl(var(--gray-200))',
-					300: 'hsl(var(--gray-300))',
+					100: 'hsl(225 12% 19%)',
+					200: 'hsl(222 10% 25%)',
+					300: 'hsl(222 9% 38%)',
 
-					700: 'hsl(var(--gray-700))',
-					800: 'hsl(var(--gray-800))',
-					900: 'hsl(var(--gray-900))',
+					700: 'hsl(230 13% 72%)',
+					800: 'hsl(217 24% 87%)',
+					900: 'hsl( 218 44% 94%)',
 				},
-				white: 'hsl(var(--white))',
+				white: 'hsl(0 0% 100%)',
 
-				'gradient-start': 'hsl(var(--gradient-start))',
-				'gradient-end': 'hsl(var(--gradient-end))',
+				'gradient-start': 'hsl(180 73% 80%)',
+				'gradient-end': 'hsl(223 99% 74%)',
 			},
 			fontSize: {
 				xs: '0.875rem',

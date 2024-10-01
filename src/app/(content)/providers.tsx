@@ -1,19 +1,14 @@
 'use client'
 
-import { Toaster } from 'sonner'
-
 import type { Provider } from '~/lib/types'
 
+import { ToastProvider } from '~/modules/toast-provider'
 import { BodyColorProvider } from '~/modules/body-color-provider'
 
 const Providers: Provider = ({ children }) => (
 	<BodyColorProvider>
 		{children}
-
-		<Toaster
-			richColors
-			position="bottom-center"
-		/>
+		<ToastProvider />
 	</BodyColorProvider>
 )
 

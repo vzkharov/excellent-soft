@@ -1,3 +1,4 @@
+import { Image } from '~/components/ui/image'
 import { Spacer } from '~/components/ui/spacer'
 import { Title, Text } from '~/components/ui/text'
 
@@ -44,13 +45,15 @@ const TechnologyGroup = ({ title, items }: TechnologyGroupProps) => (
 			{items.map((item, idx) => (
 				<div
 					key={`technology-${idx}`}
-					className="flex flex-col items-start"
+					className="flex flex-col items-start grayscale filter transition-all hover:grayscale-0"
 				>
 					<div className="flex flex-row items-center justify-center space-x-5">
-						<img
+						<Image
 							src={item.logo}
 							alt={item.name}
-							className="h-12 w-12"
+							width={45}
+							height={45}
+							className="h-12 w-auto"
 						/>
 						<Text bold>{item.name}</Text>
 					</div>

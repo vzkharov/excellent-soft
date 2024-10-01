@@ -1,7 +1,7 @@
 'use client'
 
 import { toast } from 'sonner'
-import { useCallback, type FormEvent } from 'react'
+import { useCallback } from 'react'
 import { useFormStatus } from 'react-dom'
 
 import type { MergeWithHTMLProps } from '~/lib/types'
@@ -20,21 +20,27 @@ type HubSpotFormProps = MergeWithHTMLProps<'form', Props>
 
 const HubSpotForm = ({ children, onError, onSuccess, onSettled, ...props }: HubSpotFormProps) => {
 	const handleSubmit = useCallback(
-		async (e: FormEvent<HTMLFormElement>) => {
-			e.preventDefault()
-
-			onSettled?.()
-
-			const formData = new FormData(e.currentTarget)
+		async (formData: FormData) => {
 			const promise = submitHubspot(formData)
 
-			toast.promise(promise, {
-				loading: 'Отправляем Вашу заявку в обработку...',
-				error: 'Ваша заявка принята и находится в обработке!',
-				success: 'Ваша заявка принята и находится в обработке!',
-			})
+			const toastId = toast.loading('Отправляем Вашу заявку в обработку...')
 
-			await promise.then(onSuccess).catch(onError)
+			await promise
+				.then((data) => {
+					const success = data.success
+
+					if (success) {
+						toast.success('Успешно!', { id: toastId, description: data.message })
+						onSuccess?.()
+					} else {
+						toast.error('Что-то пошло не так', {
+							id: toastId,
+							description: data.message,
+						})
+						onError?.()
+					}
+				})
+				.finally(onSettled)
 		},
 		[onError, onSuccess, onSettled],
 	)
@@ -42,7 +48,7 @@ const HubSpotForm = ({ children, onError, onSuccess, onSettled, ...props }: HubS
 	return (
 		<form
 			{...props}
-			onSubmit={handleSubmit}
+			action={handleSubmit}
 		>
 			{children}
 		</form>

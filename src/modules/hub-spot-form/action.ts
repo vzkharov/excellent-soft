@@ -9,15 +9,17 @@ import ContactEmail from '~/emails/contact-email'
 
 import type { HubSpotState } from './types'
 
-const submitHubspot = async (formData: FormData) => {
+type Response = { success: boolean; status: number; message: string }
+
+const submitHubspot = async (formData: FormData): Promise<Response> => {
 	const body = extractFormData<HubSpotState>(formData)
 
 	if (!body.email && !body.phone) {
-		throw new Error('Заполните форму!')
+		return constructResponse(false, messages.validationError)
 	}
 
 	if (!HUB_SPOT_FROM_EMAIL || !HUB_SPOT_TO_EMAIL) {
-		throw new Error('Что-то пошло не так. Подождите пока мы это исправим')
+		return constructResponse(false, messages.variablesError)
 	}
 
 	const { error } = await resend.emails.send({
@@ -28,10 +30,24 @@ const submitHubspot = async (formData: FormData) => {
 	})
 
 	if (error) {
-		throw new Error('Что-то пошло не так. Попробуйте еще раз.')
+		return constructResponse(false, messages.internalError)
 	}
 
-	return { status: 200, message: 'Ваша заявка принята и находится в обработке!' }
+	return constructResponse(true, messages.success)
 }
+
+const constructResponse = (success: boolean, message: string) => ({
+	message,
+	success,
+	status: success ? 200 : 400,
+})
+
+const messages = {
+	variablesError: 'Подождите пока мы это исправим.',
+	internalError: 'Попробуйте еще раз чуть позже.',
+	validationError: 'Проверьте указаны ли все необходимые поля.',
+
+	success: 'Ваша заявка принята и находится в обработке.',
+} as const
 
 export { submitHubspot }

@@ -24,11 +24,11 @@ const _plugin = () =>
 				backgroundClip: 'text',
 				WebkitBackgroundClip: 'text',
 				WebkitTextFillColor: 'transparent',
-				backgroundImage: `linear-gradient(to right, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%)`,
+				backgroundImage: `linear-gradient(to right, hsl(180 73% 80%) 0%, hsl(223 99% 74%) 100%)`,
 			},
 
 			'.bg-gradient-brand': {
-				backgroundImage: `linear-gradient(to right, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%)`,
+				backgroundImage: `linear-gradient(to right, hsl(180 73% 80%) 0%, hsl(223 99% 74%) 100%)`,
 			},
 		})
 	})

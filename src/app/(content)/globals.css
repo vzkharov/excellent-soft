@@ -2,45 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	:root {
-		--background: 0 0% 100%;
-		--foreground: 225 12% 19%;
-
-		--border: 218 44% 94%;
-
-		--primary: 76 100% 69%;
-		--secondary: 223 100% 74%;
-		--accent: 0 0% 100%;
-
-		--dark: 225 12% 19%;
-		--gray-0: 225 12% 19%;
-		--gray-100: 225 12% 19%;
-		--gray-200: 222 10% 25%;
-		--gray-300: 222 9% 38%;
-
-		--gray-700: 230 13% 72%;
-		--gray-800: 217 24% 87%;
-		--gray-900: 218 44% 94%;
-		--gray-1: 0 0% 100%;
-		--white: 0 0% 100%;
-
-		--lime: 76 100% 69%;
-		--blue: 223 100% 74%;
-
-		--gradient-start: 180 73% 80%;
-		--gradient-end: 223 99% 74%;
-
-		--indent-xs: 0.5rem;
-		--indent-sm: 1rem;
-		--indent-md: 1.25rem;
-		--indent-lg: 1.5rem;
-		--indent-xl: 2rem;
-		--indent-2xl: 2.5rem;
-		--indent-3xl: 4rem;
-	}
-}
-
 h1 {
 	font-family: var(--font-bebas);
 	@apply text-3xl sm:text-4xl;

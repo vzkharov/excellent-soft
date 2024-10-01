@@ -23,7 +23,8 @@
 		"allowJs": true,
 		"jsx": "preserve",
 		"paths": {
-			"~/*": ["./src/*"]
+			"~/*": ["./src/*"],
+			"~/tailwind/config": ["./tailwind.config.ts"]
 		},
 		"forceConsistentCasingInFileNames": true
 	},

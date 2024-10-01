@@ -23,7 +23,9 @@ const HubSpotForm = ({ children, onError, onSuccess, onSettled, ...props }: HubS
 		async (formData: FormData) => {
 			const promise = submitHubspot(formData)
 
-			const toastId = toast.loading('Отправляем Вашу заявку в обработку...')
+			const toastId = toast.loading('Загрузка...', {
+				description: 'Отправляем Вашу заявку на сервер...',
+			})
 
 			await promise
 				.then((data) => {

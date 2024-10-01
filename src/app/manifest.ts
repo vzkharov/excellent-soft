@@ -11,7 +11,7 @@ const manifest = (): MetadataRoute.Manifest => ({
 	theme_color: '#fff',
 	icons: [
 		{
-			sizes: 'any',
+			sizes: '64x64',
 			src: '/favicon.ico',
 			type: 'image/x-icon',
 		},

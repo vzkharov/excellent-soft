@@ -1,3 +1,11 @@
+import EcoMarkdown from '~/markdown/services/development/eco.mdx'
+import B2bMarkdown from '~/markdown/services/development/b2b.mdx'
+import EcommerceMarkdown from '~/markdown/services/development/ecommerce.mdx'
+import ChatbotMarkdown from '~/markdown/services/development/chat-bot.mdx'
+import VoiceMarkdown from '~/markdown/services/development/voice.mdx'
+import TechMarkdown from '~/markdown/services/development/tech.mdx'
+import SmmMarkdown from '~/markdown/services/development/smm.mdx'
+
 const features = [
 	{
 		title: 'Веб сайты',
@@ -14,37 +22,70 @@ const tabs = [
 		id: 'eco',
 		title: 'Экономичные решения',
 		href: '#eco',
+		markdown: <EcoMarkdown />,
 	},
 	{
 		id: 'b2b',
 		title: 'B2B сайты',
 		href: '#b2b',
+		markdown: <B2bMarkdown />,
 	},
 	{
 		id: 'ecommerce',
 		title: 'Интернет-магазины',
 		href: '#ecommerce',
+		markdown: <EcommerceMarkdown />,
 	},
 	{
 		id: 'chat-bot',
 		title: 'Чат-боты',
 		href: '#chat',
+		markdown: <ChatbotMarkdown />,
 	},
 	{
 		id: 'voice',
 		title: 'Голосовой интерфейс',
 		href: '#voice',
-	},
-	{
-		id: 'tech',
-		title: 'Наши технологии',
-		href: '#tech',
-	},
-	{
-		id: 'smm',
-		title: 'Процесс разработки',
-		href: '#smm',
+		markdown: <VoiceMarkdown />,
 	},
 ]
 
-export { tabs, features }
+const techStack = [
+	{
+		title: 'Frontend',
+		items: [
+			{ name: 'React', logo: '/tech/react.svg' },
+			{ name: 'Angular', logo: '/tech/angular.svg' },
+			{ name: 'Vue.js', logo: '/tech/vuejs.svg' },
+			{ name: 'JavaScript', logo: '/tech/js.svg' },
+		],
+	},
+	{
+		title: 'Backend',
+		items: [
+			{ name: 'PHP', logo: '/tech/php.svg' },
+			{ name: 'Node.js', logo: '/tech/nodejs.svg' },
+			{ name: 'Java', logo: '/tech/java.svg' },
+			{ name: '.NET', logo: '/tech/dotnet.svg' },
+			{ name: 'Python', logo: '/tech/python.svg' },
+			{ name: 'C/C++', logo: '/tech/cpp.svg' },
+			{ name: 'Unity', logo: '/tech/unity.svg' },
+			{ name: 'Ruby', logo: '/tech/ruby.svg' },
+		],
+	},
+	{
+		title: 'CMS',
+		items: [{ name: 'Wordpress', logo: '/tech/wordpress.svg' }],
+	},
+	{
+		title: 'Серверная часть',
+		items: [
+			{ name: 'Gitlab', logo: '/tech/gitlab.svg' },
+			{ name: 'Github', logo: '/tech/github.svg' },
+			{ name: 'Kubernetes', logo: '/tech/kuber.svg' },
+			{ name: 'Docker', logo: '/tech/docker.svg' },
+		],
+	},
+]
+
+export { tabs, features, techStack }

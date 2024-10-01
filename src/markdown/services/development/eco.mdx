@@ -1,0 +1,49 @@
+import { Spacer } from '~/components/ui/spacer'
+import { Text } from '~/components/ui/text'
+import { Button } from '~/components/ui/button'
+import { ArrowDownIcon } from '~/components/ui/icons/arrow-down-icon'
+
+<div className="flex flex-col gap-y-10">
+	{[
+		{ title: 'No-code решения для старта бизнеса', text: 'Промо - страницы, сайты визитки на Tilda.' },
+		{
+			title: 'Готовая структура и продуманные функции на WordPress',
+			text: 'Логика работы ресурса, его актуальные возможности и обширный спектр функций тщательно разработаны с учетом особенностей схожих компаний и отраслей. ',
+		},
+		{
+			title: 'Адаптивная верстка и дизайн под фирменный стиль',
+			text: 'Сайт будет доступен на всех видах устройств (компьютеры,  планшеты, телефоны).',
+		},
+		{
+			title: 'Интеграция с торговыми площадками',
+			text: 'Возможна синхронизация каталога с известными торговыми онлайн платформами.',
+		},
+		{
+			title: 'Система управления сайтом ',
+			text: 'Даже начинающий контент-менеджер освоит ее очень быстро. Удобные настройки, готовые плагины, нет проблем с тех поддержкой.',
+		},
+	].map((item, idx) => (
+		<div key={idx}>
+			<Text
+				bold
+				as="h5"
+			>
+				{`${idx + 1}. ${item.title}`}
+			</Text>
+			<Spacer y="md" />
+			{item.text}
+			{idx === 2 && (
+				<>
+					<Spacer y="md" />
+					<Button
+						size="sm"
+						variant="default"
+					>
+						Смотреть кейс
+						<ArrowDownIcon className="-rotate-90" />
+					</Button>
+				</>
+			)}
+		</div>
+	))}
+</div>

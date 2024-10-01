@@ -6,7 +6,6 @@ import { navigation } from '~/config/navigation'
 import { Title } from '~/components/ui/text'
 import { Spacer } from '~/components/ui/spacer'
 
-import { Footer } from '~/components/footer'
 import { Section } from '~/components/(sections)'
 
 import { ServiceMain } from '../_components/service-main'
@@ -43,8 +42,6 @@ const ServicePromotionPage: Page = () => (
 				))}
 			</ServiceAccordion>
 		</Section>
-
-		<Footer />
 	</>
 )
 

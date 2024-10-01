@@ -32,8 +32,13 @@ const ServiceTechnology = ({ techStack }: ServiceTechnologyProps) => (
 )
 
 const TechnologySection = ({ title, items }: TechnologySectionData) => (
-	<div className="py-5">
-		<Title as="h4">{title}</Title>
+	<div className="py-5 pl-2">
+		<Text
+			bold
+			as="h5"
+		>
+			{title}
+		</Text>
 		<Spacer y="xl" />
 		<div className="grid grid-cols-2 gap-8 md:grid-cols-4">
 			{items.map((item, idx) => (

@@ -3,6 +3,8 @@ import { Spacer } from '~/components/ui/spacer'
 import { Text } from '~/components/ui/text'
 import { Button } from '~/components/ui/button'
 import { Image } from '~/components/ui/image'
+import { CheckCircleIcon } from '~/components/ui/icons/check-circle-icon'
+import { CheckIcon } from '~/components/ui/icons/check-icon'
 
 ### UX-аудит/Редизайн
 
@@ -46,15 +48,8 @@ key={[idx, 'auditneed'].join('-')}
 size="sm"
 variant="dark"
 title={item.title}
-startContent={
-<Image
-    						alt="tick"
-    						src="/icons/tick.svg"
-    						width={40}
-    						height={40}
-    						className="mr-4 h-10 w-auto"
-    					/>
-} >
+startContent={<CheckCircleIcon color="#D5FF5F" size="40px" />}
+>
 {item.content}
 </Card>
 ))}
@@ -134,12 +129,9 @@ startContent={
 			variant="grey"
 			title=""
 			startContent={
-				<Image
-					alt="tick"
-					src="/icons/blueTick.svg"
-					width={20}
-					height={20}
-					className="mr-2 h-5 w-auto"
+				<CheckCircleIcon
+					color="#7681ED"
+					size="20px"
 				/>
 			}
 		>

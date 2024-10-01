@@ -16,6 +16,12 @@ const bebasFont = localFont({
 	variable: '--font-bebas',
 })
 
+const vars = {
+	gilroy: gilroy.variable,
+	gilroyBold: gilroy.variable,
+	bebasFont: gilroy.variable,
+}
+
 const fontsClassName = [gilroy.variable, gilroyBold.variable, bebasFont.variable].join(' ')
 
-export { fontsClassName }
+export { vars, fontsClassName }

@@ -22,15 +22,12 @@ Button.displayName = '@excellent-soft/button'
 
 const buttonVariants = tv({
 	slots: {
-		button: 'group/button w-fit box-border rounded-full border border-transparent select-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50',
+		button: 'group/button w-fit box-border rounded-full border border-transparent select-none focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 active:scale-[.95] duration-300 ease-in-out transition-transform',
 		text: 'w-full h-full inline-flex gap-x-2 items-center justify-center whitespace-nowrap',
 	},
 
 	variants: {
 		variant: {
-			secondary: 'bg-gray-800 text-gray-200 border-0 hover:text-transparent [&_svg]:hover:fill-pr hover:bg-clip-text hover:bg-gradient-to-r hover:from-gradient-start hover:to-gradient-end hover:border-transparent relative after:content-[""] after:absolute after:w-full after:h-full after:rounded-button after:bg-transparent after:-z-20 hover:after:bg-gradient-to-r hover:after:from-gradient-start hover:after:to-gradient-end before:content-[""] before:absolute before:w-[calc(100%-2px)] before:h-[calc(100%-2px)] before:bg-transparent before:-z-10 before:rounded-button hover:before:bg-gray-800',
-
-			// valid
 			default: {
 				button: 'bg-dark border-dark hover:bg-transparent focus-visible:bg-transparent',
 				text: 'text-white group-hover/button:text-dark group-focus-visible:text-dark',
@@ -43,13 +40,12 @@ const buttonVariants = tv({
 				button: 'bg-primary border-primary hover:bg-transparent focus-visible:bg-transparent ',
 				text: 'text-dark group-hover/button:text-primary group-focus-visible:text-primary',
 			},
-
 			shadow: {
-				button: 'bg-gray-300/30 active:bg-transparent',
+				button: 'bg-gray-300/30',
 				text: 'text-gray-700 group-hover/button:text-gradient group-hover/button:[&>svg]:text-secondary',
 			},
 			gradient: {
-				button: 'border-transparent text-dark hover:border-secondary bg-gradient-to-r  from-gradient-start to-gradient-end hover:bg-none',
+				button: 'border-transparent text-dark hover:border-secondary bg-gradient-to-r from-gradient-start to-gradient-end hover:bg-none',
 				text: 'group-hover/button:text-gradient',
 			},
 		},

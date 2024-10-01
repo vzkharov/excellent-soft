@@ -6,13 +6,13 @@ type Technology = {
 	logo: string
 }
 
-type TechnologySectionData = {
+type TechnologyGroupProps = {
 	title: string
 	items: Technology[]
 }
 
 type ServiceTechnologyProps = {
-	techStack: TechnologySectionData[]
+	techStack: TechnologyGroupProps[]
 }
 
 const ServiceTechnology = ({ techStack }: ServiceTechnologyProps) => (
@@ -22,7 +22,7 @@ const ServiceTechnology = ({ techStack }: ServiceTechnologyProps) => (
 		<Spacer y="xl" />
 
 		{techStack.map((item, idx) => (
-			<TechnologySection
+			<TechnologyGroup
 				key={`tech-${idx}`}
 				title={item.title}
 				items={item.items}
@@ -31,7 +31,7 @@ const ServiceTechnology = ({ techStack }: ServiceTechnologyProps) => (
 	</section>
 )
 
-const TechnologySection = ({ title, items }: TechnologySectionData) => (
+const TechnologyGroup = ({ title, items }: TechnologyGroupProps) => (
 	<div className="py-5 pl-2">
 		<Text
 			bold

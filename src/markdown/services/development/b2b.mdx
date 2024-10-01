@@ -1,8 +1,6 @@
 import { Spacer } from '~/components/ui/spacer'
 import { Text } from '~/components/ui/text'
-import { Button } from '~/components/ui/button'
 import { Card } from '~/components/ui/card'
-import { ArrowDownIcon } from '~/components/ui/icons/arrow-down-icon'
 import { CheckCircleIcon } from '~/components/ui/icons/check-circle-icon'
 
 <div className="flex flex-col">
@@ -24,7 +22,7 @@ import { CheckCircleIcon } from '~/components/ui/icons/check-circle-icon'
 			text: 'Если ваша компания работает сразу в двух направлениях — розничном и оптовом — мы реализуем оптимальные онлайн-продажи. В зависимости от особенностей бизнеса мы создаем проекты 2-в-1, где объединятся B2B и B2C, или разрабатываем две площадки, рассчитанные на разные аудитории.',
 		},
 	].map((item, idx) => (
-		<div key={idx}>
+		<div key={[idx, 'b2c'].join('-')}>
 			<Text
 				bold
 				as="h5"

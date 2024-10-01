@@ -1,10 +1,8 @@
 import EcoMarkdown from '~/markdown/services/development/eco.mdx'
 import B2bMarkdown from '~/markdown/services/development/b2b.mdx'
+import VoiceMarkdown from '~/markdown/services/development/voice.mdx'
 import EcommerceMarkdown from '~/markdown/services/development/ecommerce.mdx'
 import ChatbotMarkdown from '~/markdown/services/development/chat-bot.mdx'
-import VoiceMarkdown from '~/markdown/services/development/voice.mdx'
-import TechMarkdown from '~/markdown/services/development/tech.mdx'
-import SmmMarkdown from '~/markdown/services/development/smm.mdx'
 
 const features = [
 	{

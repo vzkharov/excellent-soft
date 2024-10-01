@@ -15,9 +15,7 @@ import { OrganizationCopyright } from '~/components/organization-copyright'
 
 const Footer = () => (
 	<>
-		<div className="-mb-24">
-			<FeedSection />
-		</div>
+		<FeedSection />
 
 		<Section
 			as="div"

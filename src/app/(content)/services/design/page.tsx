@@ -30,8 +30,6 @@ const ServiceDesignPage: Page = () => (
 		<Section>
 			<DesignCarousel />
 		</Section>
-
-		<Footer />
 	</>
 )
 

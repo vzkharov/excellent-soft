@@ -98,11 +98,11 @@ import { CheckCircleIcon } from '~/components/ui/icons/check-circle-icon'
 			content: 'Имеется ли у вас собственная служба доставки и как она функционирует? Заключены ли договора с внешними курьерскими службами, платёжными системами и банками?',
 		},
 	].map((item, idx) => (
-		<div className="px-5 py-2">
-			<ul
-				key={[idx, 'developway'].join('-')}
-				className="list-disc"
-			>
+		<div
+			className="px-5 py-2"
+			key={[idx, 'developway'].join('-')}
+		>
+			<ul className="list-disc">
 				<li>
 					<strong>{item.title}</strong>
 				</li>
@@ -156,7 +156,7 @@ import { CheckCircleIcon } from '~/components/ui/icons/check-circle-icon'
 		},
 	].map((item, idx) => (
 		<Card
-			key={`${idx}-optimize`}
+			key={[idx, 'optimize'].join('-')}
 			size="sm"
 			variant="outlined"
 			title={item.title}

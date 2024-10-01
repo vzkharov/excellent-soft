@@ -55,6 +55,7 @@ a:focus-visible {
 
 	html {
 		scroll-behavior: smooth;
+		scroll-padding-top: 120px;
 	}
 
 	body {

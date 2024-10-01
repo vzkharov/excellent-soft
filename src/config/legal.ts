@@ -8,12 +8,12 @@ const legalConfig = {
 	cookie: {
 		id: 'cookie',
 		name: 'Настройки cookie',
-		url: '',
+		url: '/legal',
 	},
 	privacy: {
 		id: 'pricacy',
 		name: 'Политика конфиденциальности',
-		url: '',
+		url: '/legal',
 	},
 } satisfies Record<string, LegalConfig>
 

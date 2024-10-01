@@ -7,7 +7,7 @@ import { Step } from './step'
 type CardProps = StyleProps &
 	CardVariants & {
 		title: string
-		children?: string
+		children?: ReactChildren
 
 		idx?: number
 		endContent?: ReactChildren
@@ -45,7 +45,7 @@ const Card = ({
 						) : null}
 					</h5>
 				) : null}
-				{children ? <p>{children}</p> : null}
+				{children ? <div>{children}</div> : null}
 			</div>
 			{endContent}
 		</article>
@@ -68,6 +68,15 @@ const cardVariants = tv({
 			},
 			outlined: {
 				card: 'bg-transparent border border-dark hover:border-transparent hover:bg-primary',
+			},
+			dark: {
+				card: 'bg-[#5A5F6B] text-white',
+			},
+			grey: {
+				card: 'bg-[#F3F3F3]',
+			},
+			white: {
+				card: 'bg-white/50',
 			},
 		},
 		size: {

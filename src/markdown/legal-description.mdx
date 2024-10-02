@@ -1,0 +1,103 @@
+import { Text } from '~/components/ui/text'
+import { Link } from '~/components/ui/link'
+import { Spacer } from '~/components/ui/spacer'
+
+<Text
+	bold
+	as="h5"
+	id="cookies"
+>
+	Что такое файлы cookie?
+</Text>
+
+    		<Spacer y="xl" />
+    		<Text>
+    			Файлы cookie — это небольшие текстовые файлы, которые используются для хранения
+    			небольших фрагментов информации. Файлы сookie, как правило,  собираются,
+    			систематизируются, хранятся, изменяются, используются, обезличиваются, блокируются,
+    			удаляются с использованием средств автоматизации. Файлы cookie сохраняются на вашем
+    			устройстве, в тот момент, когда когда загружается в вашем браузере интернет-сайт  ООО
+    			"Экселлент Софт" (esoft.by, далее — сайт). Эти файлы cookie помогают нам обеспечить
+    			правильную работу веб-сайта, сделать веб-сайт более безопасным, улучшить
+    			пользовательский опыт и понять, как работает веб-сайт, а также проанализировать, что
+    			работает, а что требует улучшения.
+    		</Text>
+    		<Spacer y="3xl" />
+    		<Text
+    			bold
+    			as="h5"
+    			id="why-cookies"
+    		>
+    			Зачем мы обрабатываем файлы cookie?
+    		</Text>
+    		<Spacer y="xl" />
+    		<Text>
+    			Как и большинство онлайн-сервисов, наш сайт использует файлы cookie для различных целей.
+    			Файлы cookie в основном необходимы для правильной работы сайта, и они не собирают
+    			никаких ваших персональных данных.
+    		</Text>
+    		<Spacer y="md" />
+    		<Text>
+    			Файлы cookie на нашем сайте используются в основном для понимания того, как работает
+    			сайт, как вы взаимодействуете с нашим сайтом, для обеспечения безопасности наших услуг,
+    			предоставления рекламы, которая вам актуальна, и в целом для предоставления вам
+    			улучшенного пользовательского опыта и ускорения вашего будущего взаимодействия с нашим
+    			сайтом.
+    		</Text>
+    		<Spacer y="3xl" />
+    		<Text
+    			bold
+    			as="h5"
+    			id="how-cookies"
+    		>
+    			Как настроить блокировку или включить уведомления об обработке файлов cookie?
+    		</Text>
+    		<Spacer y="xl" />
+    		<Text>
+    			Ниже мы приведём список ссылок (ссылки являются внешними), по которым вы сможете
+    			настроить свои браузеры в отношении блокировки и/или уведомлений о файлах cookie.
+    		</Text>
+
+<Spacer y="md" />
+
+<ul className="list-none space-y-2">
+	{[
+		{
+			name: '[Firefox]',
+			url: 'https://support.mozilla.org/ru/kb/udalenie-kukov-dlya-udaleniya-informacii-kotoruyu-',
+		},
+		{
+			name: '[Chrome]',
+			url: 'https://support.google.com/chrome/answer/95647?hl=ru',
+		},
+		{
+			name: '[Opera]',
+			url: 'https://help.opera.com/ru/latest/web-preferences/#Управление-файлами-cookie',
+		},
+		{
+			name: '[Safari]',
+			url: 'https://support.apple.com/ru-ru/guide/safari/sfri11471/mac',
+		},
+		{
+			name: '[Microsoft Edge]',
+			url: 'https://support.microsoft.com/ru-ru/microsoft-edge/удаление-файлов-cookie-в-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09',
+		},
+		{
+			name: '[Internet Explorer]',
+			url: 'https://support.microsoft.com/ru-ru/windows/удаление-файлов-cookie-и-управление-ими-168dab11-0753-043d-7c16-ede5947fc64d',
+		},
+	].map((browser) => (
+		<li key={browser.name}>
+			<Text>
+				{browser.name}{' '}
+				<Link
+					href={browser.url}
+					variant="underline"
+					className="block w-full truncate"
+				>
+					({browser.url})
+				</Link>
+			</Text>
+		</li>
+	))}
+</ul>

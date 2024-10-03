@@ -18,31 +18,31 @@ const faqConfig = [
 		id: '1',
 		title: 'Запустить новый продукт на рынок',
 		content: <Faq01 />,
-		image: '',
+		image: '/faq/1.png',
 	},
 	{
 		id: '2',
 		title: 'Обновить старый сайт',
 		content: <Faq02 />,
-		image: '',
+		image: '/faq/2.png',
 	},
 	{
 		id: '3',
 		title: 'Привести больше клиентов',
 		content: <Faq03 />,
-		image: '',
+		image: '/faq/3.png',
 	},
 	{
 		id: '4',
 		title: 'Оптимизировать бизнес-процессы',
 		content: <Faq04 />,
-		image: '',
+		image: '/faq/4.png',
 	},
 	{
 		id: '5',
 		title: 'Привлечь потенциальных партнеров',
 		content: <Faq05 />,
-		image: '',
+		image: '/faq/5.png',
 	},
 ] satisfies FaqConfig[]
 

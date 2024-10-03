@@ -2,8 +2,10 @@ import { tv } from 'tailwind-variants'
 
 import { Text } from '~/components/ui/text'
 import { Spacer } from '~/components/ui/spacer/spacer'
+import { Section } from '@react-email/components'
+import { Link } from '~/components/ui/link'
 
-const ContentSection = () => (
+const LegalNavigation = () => (
 	<>
 		<div className={styles.section()}>
 			<div className={styles.sticky()}>
@@ -34,9 +36,12 @@ const ContentSection = () => (
 						},
 					].map((item, idx) => (
 						<li key={[idx, 'content'].join('-')}>
-							<a href={item.href}>
-								<Text>{item.title}</Text>
-							</a>
+							<Link
+								className="font-gilroy"
+								href={item.href}
+							>
+								{item.title}
+							</Link>
 						</li>
 					))}
 				</ul>
@@ -45,11 +50,11 @@ const ContentSection = () => (
 	</>
 )
 
-export { ContentSection }
+export { LegalNavigation }
 
 const styles = tv({
 	slots: {
-		section: 'hidden md:block md:w-1/2',
+		section: 'hidden md:block md:w-unset md:max-w-[420px]',
 		sticky: 'sticky top-28',
 		list: 'list-none space-y-2',
 	},

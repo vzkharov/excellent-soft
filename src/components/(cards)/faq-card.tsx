@@ -62,11 +62,3 @@ const styles = tv({
 })()
 
 export { FaqCard }
-
-// ;<Image
-// 	alt={title}
-// 	src={image}
-// 	width={356}
-// 	height={214}
-// 	className="absolute -top-10 right-0 h-72 w-fit"
-// />

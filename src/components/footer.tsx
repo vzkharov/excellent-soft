@@ -1,6 +1,7 @@
+import { Fragment } from 'react'
 import { tv } from 'tailwind-variants'
 
-import { legalConfig } from '~/config/legal'
+import { navigation } from '~/config/navigation'
 
 import { Link } from '~/components/ui/link'
 import { Spacer } from '~/components/ui/spacer'
@@ -14,7 +15,7 @@ import { ContactSection } from '~/components/(sections)/contact-section'
 import { OrganizationCopyright } from '~/components/organization-copyright'
 
 const Footer = () => (
-	<>
+	<Fragment>
 		<FeedSection />
 
 		<Section
@@ -26,10 +27,11 @@ const Footer = () => (
 			<Spacer y="3xl" />
 
 			<ContactSection>
-				<div className="space-y-7">
+				<div>
 					<Title as="h2">
 						Мы уже <br /> приступили <br /> к работе!
 					</Title>
+					<Spacer y="2xl" />
 					<Text color="link">hello@esoft.by</Text>
 				</div>
 			</ContactSection>
@@ -40,17 +42,17 @@ const Footer = () => (
 				<Logo className={styles.logo()} />
 
 				<div className={styles.footerSection()}>
-					<Text font="gilroy-bold">{'Время работы:'}</Text>
+					<Text bold>{'Время работы:'}</Text>
 					<Text>{'Пн. - пт.: 10.00 - 18.00'}</Text>
 				</div>
 
 				<div className={styles.footerSection()}>
-					{[legalConfig.privacy, legalConfig.cookie].map((link) => (
+					{[navigation.privacy, navigation.cookie].map((link) => (
 						<Link
 							full
 							key={link.id}
-							href={link.url}
-							className="font-gilroy text-xs leading-none"
+							href={link.href}
+							className={styles.footerLink()}
 						>
 							{link.name}
 						</Link>
@@ -64,7 +66,7 @@ const Footer = () => (
 
 			<OrganizationCopyright />
 		</Section>
-	</>
+	</Fragment>
 )
 
 const styles = tv({
@@ -73,9 +75,10 @@ const styles = tv({
 		container: 'pb-8 pt-14 text-white',
 		contactForm: 'max-w-xl',
 
-		footer: 'flex flex-col md:flex-row justify-between gap-y-8 gap-x-4 pt-6 border-t border-gray-900/10',
 		logo: 'h-9',
+		footer: 'flex flex-col md:flex-row justify-between gap-y-8 gap-x-4 pt-6 border-t border-gray-900/10',
 		footerSection: 'text-xs space-y-2',
+		footerLink: 'font-gilroy text-xs leading-none',
 	},
 })()
 

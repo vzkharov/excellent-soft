@@ -5,13 +5,19 @@ type LinkProps = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof Inter
 	InternalLinkProps &
 	LinkVariants & {}
 
-const Link = ({ href, className, full = false, variant = 'default', ...props }: LinkProps) => (
-	<InternalLink
-		href={href}
-		{...props}
-		className={linkVariants({ full, variant, className })}
-	/>
-)
+const Link = ({ href, className, full = false, truncate = false, variant = 'default', ...props }: LinkProps) => {
+	const lastSegment = href.toString().split('/').at(-1) as string
+	const isFile = lastSegment.includes('.pdf')
+
+	return (
+		<InternalLink
+			href={href}
+			{...props}
+			download={isFile ? lastSegment : null}
+			className={linkVariants({ full, truncate, variant, className })}
+		/>
+	)
+}
 
 const linkVariants = tv({
 	base: 'inline-block whitespace-nowrap',
@@ -22,9 +28,11 @@ const linkVariants = tv({
 			gradient: 'hover:text-gradient focus:text-gradient',
 		},
 		full: { true: 'w-full', false: '' },
+		truncate: { true: 'w-full overflow-hidden text-ellipsis whitespace-nowrap' },
 	},
 	defaultVariants: {
 		full: false,
+		truncate: false,
 		variant: 'default',
 	},
 })

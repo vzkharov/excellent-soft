@@ -10,12 +10,54 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => ({
 	li: ({ children }) => <li className="max-w-prose">{children}</li>,
 
 	p: ({ children }) => <p className="max-w-prose">{children}</p>,
-	h6: ({ children }) => <h6 className="max-w-prose">{children}</h6>,
-	h5: ({ children }) => <h5 className="max-w-prose">{children}</h5>,
-	h4: ({ children }) => <h4 className="max-w-prose">{children}</h4>,
-	h3: ({ children }) => <h3 className="max-w-prose">{children}</h3>,
-	h2: ({ children }) => <h2 className="max-w-prose">{children}</h2>,
-	h1: ({ children }) => <h1 className="max-w-prose">{children}</h1>,
+	h6: ({ children }) => (
+		<h6
+			id={slugify(children)}
+			className="max-w-prose"
+		>
+			{children}
+		</h6>
+	),
+	h5: ({ children }) => (
+		<h5
+			id={slugify(children)}
+			className="max-w-prose"
+		>
+			{children}
+		</h5>
+	),
+	h4: ({ children }) => (
+		<h4
+			id={slugify(children)}
+			className="max-w-prose"
+		>
+			{children}
+		</h4>
+	),
+	h3: ({ children }) => (
+		<h3
+			id={slugify(children)}
+			className="max-w-prose"
+		>
+			{children}
+		</h3>
+	),
+	h2: ({ children }) => (
+		<h2
+			id={slugify(children)}
+			className="max-w-prose"
+		>
+			{children}
+		</h2>
+	),
+	h1: ({ children }) => (
+		<h1
+			id={slugify(children)}
+			className="max-w-prose"
+		>
+			{children}
+		</h1>
+	),
 
 	a: ({ children, ...props }) => (
 		<a
@@ -28,3 +70,7 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => ({
 
 	...components,
 })
+
+export function slugify(children: React.ReactNode): string | undefined {
+	return children?.toString().replace(/ /g, '_').toLowerCase()
+}

@@ -42,24 +42,45 @@ const navigation = {
 	},
 	design: {
 		id: 'design',
-		href: '/services/design',
+		href: '/services/design#',
 		name: 'Дизайн',
 		description:
 			'Наша команда создает потрясающие с визуальной точки зрения и удобные для пользователя дизайны, которые отражают суть вашего бренда. От макетов до высококачественных макетов мы создаем привлекательный пользовательский опыт с учетом потребностей вашей аудитории.',
 	},
 	development: {
 		id: 'development',
-		href: '/services/development',
+		href: '/services/development#',
 		name: 'Веб-разработка',
 		description:
 			'Мы создаем надежные, масштабируемые и безопасные веб-сайты и приложения с использованием современных технологий. Наши решения оптимизированы по производительности и обеспечивают бесперебойную работу на всех устройствах.',
 	},
 	promotion: {
 		id: 'promotion',
-		href: '/services/promotion',
+		href: '/services/promotion#',
 		name: 'Продвижение',
 		description:
-			'Boost your online presence with our comprehensive digital marketing strategies. We focus on SEO, social media, and content marketing to drive traffic and increase conversions.',
+			'Повысьте свое присутствие в Интернете с помощью наших комплексных стратегий цифрового маркетинга. Мы уделяем особое внимание SEO, социальным сетям и контент-маркетингу для привлечения трафика и увеличения конверсий.',
+	},
+	legal: {
+		id: 'legal',
+		href: '/legal#',
+		name: 'Политика конфиденциональности',
+		description: 'Здесь вы можете найти всю необходимую юридическую информацию',
+	},
+	cookie: {
+		id: 'cookie',
+		href: '/legal#',
+		name: 'Настройки cookie',
+	},
+	privacy: {
+		id: 'pricacy',
+		href: '/legal/privacy-policy.pdf',
+		name: 'Политика конфиденциальности',
+	},
+	requisites: {
+		id: 'requisites',
+		href: '/legal/requisites.pdf',
+		name: 'Скачать реквизиты',
 	},
 } satisfies Record<string, NavigationLinkConfig>
 

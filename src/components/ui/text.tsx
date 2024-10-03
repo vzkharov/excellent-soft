@@ -1,4 +1,3 @@
-import type { CSSProperties } from 'react'
 import { tv, type VariantProps } from 'tailwind-variants'
 
 import { renderSplittedText } from '~/helpers/string'

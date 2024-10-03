@@ -26,7 +26,7 @@ const Cookies = ({ style, className }: StyleProps) => {
 			id={COOKIES_ID}
 			style={style}
 			className={cn(
-				'fixed inset-x-0 bottom-0 z-50 mx-auto h-fit max-w-2xl translate-y-48 sm:pb-5',
+				'fixed inset-x-0 bottom-0 z-50 ml-auto h-fit max-w-2xl translate-y-48 sm:pb-5 sm:pr-5',
 				clientAgreed ? '' : 'translate-y-0',
 				'transition-transform duration-300 ease-out',
 				className,

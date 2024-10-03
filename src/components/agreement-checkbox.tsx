@@ -2,7 +2,7 @@ import { tv } from 'tailwind-variants'
 
 import type { StyleProps } from '~/lib/types'
 
-import { legalConfig } from '~/config/legal'
+import { navigation } from '~/config/navigation'
 
 import { Text } from '~/components/ui/text'
 import { Link } from '~/components/ui/link'
@@ -25,9 +25,9 @@ const AgreementCheckbox = ({ id, className, ...props }: AgreementCheckboxProps) 
 			Отправляя заявку, вы соглашаетесь с нашей&nbsp;
 			<Link
 				className={styles.link()}
-				href={legalConfig.privacy.url}
+				href={navigation.privacy.href}
 			>
-				{legalConfig.privacy.name}
+				{navigation.privacy.name}
 			</Link>
 		</Text>
 	</div>

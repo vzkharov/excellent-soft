@@ -5,6 +5,7 @@ import type { StyleProps } from '~/lib/types'
 import { Text } from '~/components/ui/text'
 import { Link } from '~/components/ui/link'
 import { Button } from '~/components/ui/button'
+import { navigation } from '~/config/navigation'
 
 type CookiesBannerProps = StyleProps & {
 	confirm?: (event: React.FormEvent<HTMLFormElement>) => unknown
@@ -22,10 +23,8 @@ const CookiesBanner = ({ style, confirm, className }: CookiesBannerProps) => (
 		<Text className={styles.text()}>
 			Мы используем{' '}
 			<Link
-				// fix
-				target="_blank"
-				href="/cookies.pdf"
 				variant="underline"
+				href={navigation.legal.href}
 			>
 				cookies
 			</Link>

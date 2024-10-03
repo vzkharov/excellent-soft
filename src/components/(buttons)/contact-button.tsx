@@ -33,7 +33,11 @@ const ContactButton = (props: ButtonProps) => {
 					<DialogTitle>Давайте обсудим вашу идею!</DialogTitle>
 				</DialogHeader>
 
-				<DialogDescription className={styles.body()}>
+				<DialogDescription
+					asChild
+					aria-describedby="mo"
+					className={styles.body()}
+				>
 					<ContactModalDescription />
 				</DialogDescription>
 

@@ -82,6 +82,11 @@ const navigation = {
 		href: '/legal/requisites.pdf',
 		name: 'Скачать реквизиты',
 	},
+	portfolio: {
+		id: 'portfolio',
+		href: '/portfolio',
+		name: 'Портфолио',
+	},
 } satisfies Record<string, NavigationLinkConfig>
 
 export { navigation }

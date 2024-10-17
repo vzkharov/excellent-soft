@@ -1,0 +1,485 @@
+import { Text } from '~/components/ui/text'
+import { Card } from '~/components/ui/card'
+import { Title } from '~/components/ui/text'
+import { Image } from '~/components/ui/image'
+import { Button } from '~/components/ui/button'
+import { Spacer } from '~/components/ui/spacer'
+import { Section } from '~/components/(sections)'
+
+<Section className="flex flex-col py-10">
+    <div className="flex flex-col md:flex-row">
+        <div className="max-md:mb-10 md:min-w-[430px]">
+            <Text
+                as="h6"
+                className="font-gilroy md:font-gilroy-bold"
+            >
+                Обзор проекта
+            </Text>
+        </div>
+        <div className="flex flex-col md:flex-1">
+            <Title
+                as="h2"
+                uppercase
+            >
+                бутик-отель премиум класса
+            </Title>
+
+            <Spacer y="xl" />
+
+            <Button
+                size="sm"
+                variant="default"
+            >
+                Смотреть сайт
+            </Button>
+
+            <Spacer y="xl" />
+
+            <Text>
+                Sarpedor Boutique Hotel — это роскошный курорт, расположенный в
+                живописной бухте Торба, Бодрум. Отель предлагает стильные номера и люксы
+                с захватывающими видами на Эгейское море, сочетая современный комфорт с
+                средиземноморской элегантностью. Гости могут наслаждаться высококлассной
+                гастрономией, включая блюда местной и международной кухни, расслабляться
+                в спа с индивидуальными процедурами или отдыхать на частном пляже.
+            </Text>
+
+            <Spacer y="md" />
+
+            <Text>
+                Также доступны различные виды активного отдыха, такие как водные виды
+                спорта и круизы, обеспечивая незабываемый отдых в спокойной и красивой
+                обстановке.
+            </Text>
+
+            <Spacer y="xl" />
+
+            <div className="grid grid-cols-2">
+                <div className=" flex flex-col gap-y-3">
+                    <Text
+                        bold
+                        as="h6"
+                    >
+                        Клиент:
+                    </Text>
+
+                    <ul className="list-none space-y-2">
+                        <li>Это</li>
+                    </ul>
+                </div>
+                <div className=" flex flex-col gap-y-3">
+                    <Text
+                        bold
+                        as="h6"
+                    >
+                        Услуги:
+                    </Text>
+                    <ul className="list-none space-y-2">
+                        <li>Исследования</li>
+                        <li>Разработка макета</li>
+                        <li>Дизайн сайта</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <Spacer y="xl" />
+
+    <div className="grid gap-5 md:grid-cols-2">
+        <Image
+            alt="process"
+            src="/portfolio/1.png"
+            width={546}
+            height={546}
+        />
+        <Image
+            alt="process"
+            src="/portfolio/2.png"
+            width={546}
+            height={546}
+        />
+    </div>
+
+</Section>
+
+<Spacer y="xl" />
+
+<Section className="flex flex-col py-10">
+    <div className="flex flex-col md:flex-row">
+        <div className="max-md:mb-10 md:min-w-[430px]">
+            <Text
+                bold
+                as="h6"
+                className="font-gilroy md:font-gilroy-bold"
+            >
+                Запрос бизнеса
+            </Text>
+        </div>
+        <div className="flex flex-col md:flex-1">
+            <Title
+                as="h2"
+                uppercase
+            >
+                бизнес-потребности
+            </Title>
+
+            <Spacer y="xl" />
+
+            <Text>
+                Для сайта Sarpedor Hotel необходимы улучшения для увеличения
+                бронирований через оптимизацию и SEO, создание удобной навигации и
+                мобильной версии для улучшенного UX/UI, интеграция эффективной системы
+                онлайн-бронирования, внедрение мультиязыковой поддержки для
+                международных гостей, а также активное продвижение специальных
+                предложений, свадеб и мероприятий.
+            </Text>
+
+            <Spacer y="md" />
+
+            <Text
+                bold
+                as="h6"
+            >
+                Наша роль
+            </Text>
+
+            <Spacer y="md" />
+
+            <Text>
+                Для сайта Sarpedor Hotel необходимы улучшения для увеличения
+                бронирований через оптимизацию и SEO, создание удобной навигации и
+                мобильной версии для улучшенного UX/UI, интеграция эффективной системы
+                онлайн-бронирования, внедрение мультиязыковой поддержки для
+                международных гостей, а также активное продвижение специальных
+                предложений, свадеб и мероприятий.
+            </Text>
+        </div>
+    </div>
+
+    <Spacer y="xl" />
+
+    <Image
+        alt="process"
+        src="/portfolio/3.png"
+        width={1116}
+        height={550}
+    />
+
+</Section>
+
+<Spacer y="xl" />
+
+<Section
+    bg="bg-[#E8EDF6]"
+    className="py-16"
+>
+    <Text
+        bold
+        as="h6"
+        className="font-gilroy md:font-gilroy-bold"
+    >
+        Проект
+    </Text>
+
+    <Spacer y="md" />
+
+    <Title
+        as="h2"
+        uppercase
+    >
+        проблемы и решения
+    </Title>
+
+    <Spacer y="xl" />
+
+    <div className="grid gap-10 md:grid-cols-2 md:gap-5">
+        <div className="grid grid-rows-[auto_1fr_1fr] gap-5">
+            <Text
+                bold
+                as="h6"
+            >
+                Проблема
+            </Text>
+            {[
+                'На начальном этапе мы проводим общий анализ вашего продукта, уделяя особое внимание его общей структуре и дизайну. Мы оцениваем информационную архитектуру на предмет логической организации и интуитивной навигации, а также оцениваем визуальный дизайн, чтобы убедиться, что он соответствует вашему брендингу и текущим тенденциям.',
+                'Оцениваем сильные и слабые стороны приложений ваших конкурентов, чтобы определить отраслевые стандарты и лучшие практики. Анализируем и обсуждаем эффективные и неэффективные стратегии внедрения, чтобы предоставить вам лучшие решения, адаптированные к вашему сегменту. Комплексный анализ помогает нам улучшить взаимодействие с пользователем вашего приложения, гарантируя, что оно будет выделяться на рынке и оставаться высококонкурентным.',
+            ].map((item, idx) => (
+                <Card
+                    key={idx}
+                    size="md"
+                    variant="outlined"
+                    idx={idx + 1}
+                    title=" "
+                >
+                    {item}
+                </Card>
+            ))}
+        </div>
+        <div className=" grid grid-rows-[auto_1fr_1fr] gap-5">
+            <Text
+                bold
+                as="h6"
+            >
+                Решение
+            </Text>
+            {[
+                'Этот этап обычно включает сбор информации о пользователях и целевом рынке, например, демографических данных и предпочтений пользователей.',
+                'Выявляем основные проблемы во всех ключевых пользовательских сценариев, сотрудничаем с командой, чтобы решить, какие сценарии анализировать, и создаем наборы экранов для детального изучения. Мы проверяем и переносим ключевые проблемы в Figma, добавляя проблемы интерфейса, основываясь на нашем опыте, общепринятых шаблонах UX и тенденциях рынка, и повторяем процесс для последующих сценариев.',
+            ].map((item, idx) => (
+                <Card
+                    key={idx}
+                    size="md"
+                    variant="outlined"
+                    idx={idx + 1}
+                    title=" "
+                >
+                    {item}
+                </Card>
+            ))}
+        </div>
+    </div>
+
+</Section>
+
+<Spacer y="3xl" />
+
+<Section className="flex flex-col py-10">
+    <div className="flex flex-col md:flex-row">
+        <div className="max-md:mb-10 md:min-w-[430px]">
+            <Text
+                bold
+                as="h6"
+                className="font-gilroy md:font-gilroy-bold"
+            >
+                Исследования
+            </Text>
+        </div>
+        <div className="flex flex-col md:flex-1">
+            <Title
+                as="h2"
+                uppercase
+            >
+                процесс иследований
+            </Title>
+
+            <Spacer y="xl" />
+
+            <Text>
+                Процесс исследования включает несколько этапов. Сначала мы провели
+                анализ текущего сайта, чтобы оценить его дизайн, структуру и
+                функциональность. Далее проанализировали конкурентов для выявления
+                лучших практик в отрасли. Понимание целевой аудитории помогло нам
+                адаптировать дизайн и функции под потребности пользователей, включая
+                международных гостей.
+            </Text>
+
+            <Spacer y="md" />
+
+            <Text>
+                Провели SEO-аудит для улучшения видимости сайта. На основе этих данных
+                создали прототип, учитывающий требования отеля, такие как
+                онлайн-бронирование и мультиязыковая поддержка.
+            </Text>
+
+            <Spacer y="md" />
+
+            <div className="scrollbar-hide flex max-w-full space-x-4 overflow-x-auto">
+                {['Сравнительный анализ', 'Бизнес анализ', 'Карта сайта'].map(
+                    (item, idx) => (
+                        <Button
+                            variant="outlined"
+                            size="sm"
+                            key={idx}
+                        >
+                            {item}
+                        </Button>
+                    ),
+                )}
+            </div>
+        </div>
+    </div>
+
+    <Spacer y="xl" />
+
+    <Image
+        alt="process"
+        src="/portfolio/4.png"
+        width={1116}
+        height={550}
+    />
+
+</Section>
+
+<Spacer y="xl" />
+
+<Section className="flex flex-col py-10">
+    <div className="flex flex-col md:flex-row">
+        <div className="max-md:mb-10 md:min-w-[430px]">
+            <Text
+                bold
+                as="h6"
+                className="font-gilroy md:font-gilroy-bold"
+            >
+                Этапы проектирования
+            </Text>
+        </div>
+        <div className="flex flex-col md:flex-1">
+            <Title
+                as="h2"
+                uppercase
+            >
+                дизайн
+            </Title>
+
+            <Spacer y="xl" />
+
+            <Text>
+                Этап проектирования "Дизайн" для сайта Sarpedor Hotel начинается с
+                исследования бренда и целевой аудитории, чтобы создать визуальную
+                концепцию, соответствующую имиджу отеля. Затем разрабатываются макеты
+                страницы с акцентом на интуитивную навигацию и привлекательные
+                визуальные элементы. Особое внимание уделяется UX/UI-дизайну для
+                обеспечения удобного взаимодействия и адаптивности на всех устройствах.
+            </Text>
+
+            <Spacer y="md" />
+
+            <Text>
+                Выбирается подходящая цветовая палитра и шрифты, чтобы подчеркнуть
+                атмосферу роскоши и отдыха, завершая этот этап утверждением дизайна для
+                последующей разработки.
+            </Text>
+
+            <Spacer y="md" />
+
+            <div className="scrollbar-hide flex max-w-full space-x-4 overflow-x-auto">
+                {['Ворфреймы', 'Мудборды', 'Дизайн концепция', 'Дизайн интерфейса'].map(
+                    (item, idx) => (
+                        <Button
+                            variant="outlined"
+                            size="sm"
+                            key={idx}
+                        >
+                            {item}
+                        </Button>
+                    ),
+                )}
+            </div>
+        </div>
+    </div>
+
+    <Image
+        alt="process"
+        src="/portfolio/5.png"
+        width={1116}
+        height={550}
+    />
+
+</Section>
+
+<Spacer y="xl" />
+
+<Section className="flex flex-col py-10">
+    <div className="flex flex-col md:flex-row">
+        <div className="max-md:mb-10 md:min-w-[430px]">
+            <Text
+                bold
+                as="h6"
+                className="font-gilroy md:font-gilroy-bold"
+            >
+                Функционал
+            </Text>
+        </div>
+        <div className="flex flex-col md:flex-1">
+            <Title
+                as="h2"
+                uppercase
+            >
+                какие фичи внедрили
+            </Title>
+
+            <Spacer y="xl" />
+
+            <Text>
+                Мы внедрили несколько ключевых функций для сайта Sarpedo Hotel. Среди
+                них интеграция онлайн-системы бронирования для удобства пользователей и
+                мультиязыковая поддержка для международных гостей. Визуальная
+                привлекательность была усилена слайдерами с высококачественными
+                изображениями отеля.
+            </Text>
+
+            <Spacer y="md" />
+
+            <Text>
+                Внедрение формы обратной связи облегчило коммуникацию с гостями, а также
+                позволило им легко отправлять запросы. Интеграция виджетов соцсетей
+                помогло отелю укрепить свою онлайн-репутацию, а интерактивная карта
+                обеспечить удобную навигацию по окрестностям.
+            </Text>
+        </div>
+    </div>
+
+</Section>
+
+<Spacer y="xl" />
+
+<Section className="flex flex-col py-10">
+    <div className="flex flex-col md:flex-row">
+        <div className="max-md:mb-10 md:min-w-[430px]">
+            <Text
+                bold
+                as="h6"
+                className="font-gilroy md:font-gilroy-bold"
+            >
+                Результат
+            </Text>
+        </div>
+        <div className="flex flex-col md:flex-1">
+            <Title
+                as="h2"
+                uppercase
+            >
+                промостраница которая отвечает интересам клиентов
+            </Title>
+
+            <Spacer y="xl" />
+
+            <Text>
+                Результат работы после создания сайта для Sarpedor Hotel включает
+                полностью обновленный и адаптивный дизайн, интеграцию
+                онлайн-бронирования и мультиязыковой поддержки для удобства
+                международных пользователей. Сайт обладает улучшенной SEO-оптимизацией
+                для привлечения большего числа гостей, содержит обновлённые визуальные
+                элементы, такие как слайдеры изображений, и имеет встроенные формы
+                обратной связи для быстрой коммуникации.
+            </Text>
+
+            <Spacer y="md" />
+
+            <Text>
+                Также интегрированы социальные сети для усиления онлайн-репутации отеля
+                и интерактивная карта для удобной навигации по территории и
+                окрестностям.
+            </Text>
+
+            <Spacer y="xl" />
+
+            <Button
+                variant="gradient"
+                size="lg"
+                bold
+            >
+                Смотреть сайт
+            </Button>
+        </div>
+    </div>
+    <Spacer y="xl" />
+    <Image
+        alt="process"
+        src="/portfolio/6.png"
+        width={1116}
+        height={550}
+    />
+
+</Section>

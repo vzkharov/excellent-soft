@@ -19,7 +19,7 @@ const ProjectLayout: Layout = ({ children }) => (
 	</>
 )
 
-export const styles = tv({
+ const styles = tv({
 	slots: {
 		content: 'flex flex-col gap-y-8 pt-4',
 		link: 'my-20 mx-auto flex aspect-square h-64 w-64 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-gradient-start to-gradient-end font-gilroy-bold text-md !text-dark hover:from-primary hover:to-primary focus:from-primary focus:to-primary',

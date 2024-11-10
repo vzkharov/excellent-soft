@@ -3,10 +3,8 @@ import { redirect } from 'next/navigation'
 import type { Page } from '~/lib/types'
 import { createMetadata } from '~/lib/metadata'
 
-import { navigation } from '~/config/navigation'
 import { projectsConfig } from '~/config/projects'
 
-import { Link } from '~/components/ui/link'
 import { Title } from '~/components/ui/text'
 import { Section } from '~/components/(sections)'
 import { NavigationTabs } from '~/components/navigation-tabs'
@@ -19,8 +17,6 @@ import { ProjectResearch } from './_sections/project-research'
 import { ProjectFeatures } from './_sections/project-features'
 import { ProjectOverview } from './_sections/project-overview'
 import { ProjectDevelopment } from './_sections/project-development'
-
-import { styles } from './styles'
 
 type Params = {
 	slug: string
@@ -78,13 +74,6 @@ const ProjectsPage: Page<Params> = async ({ params }) => {
 			<Section>
 				<ProjectResults {...project} />
 			</Section>
-
-			<Link
-				href={navigation.projects.href}
-				className={styles.link()}
-			>
-				Больше проектов
-			</Link>
 		</>
 	)
 }

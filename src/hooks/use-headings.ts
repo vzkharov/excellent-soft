@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState, useTransition } from 'react'
+import { useEffect, useRef, useState, useTransition } from 'react'
 
 type HeadingConfig = {
 	id: string
@@ -9,15 +9,15 @@ type HeadingConfig = {
 }
 
 const useHeadings = (_levels: number[] = [1, 2, 3, 4, 5, 6]) => {
+	const levels = useRef(_levels)
+
 	const [headings, setHeadings] = useState<HeadingConfig[]>([])
 	const [isPending, startTransition] = useTransition()
-
-	const levels = useMemo(() => _levels, [_levels])
 
 	useEffect(() => {
 		startTransition(() => {
 			const elements = Array.from(
-				document.querySelectorAll(levels.map((level) => 'h' + level).join(', ')),
+				document.querySelectorAll(levels.current.map((level) => 'h' + level).join(', ')),
 			)
 			const headingData = elements.map((element) => ({
 				id: element.id,
@@ -26,7 +26,7 @@ const useHeadings = (_levels: number[] = [1, 2, 3, 4, 5, 6]) => {
 			}))
 			setHeadings(headingData)
 		})
-	}, [levels])
+	}, [])
 
 	return [headings, isPending] as const
 }

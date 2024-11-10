@@ -24,8 +24,12 @@ AccordionItem.displayName = 'AccordionItem'
 const AccordionTrigger = React.forwardRef<
 	React.ElementRef<typeof AccordionPrimitive.Trigger>,
 	React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
-	<AccordionPrimitive.Header className="flex">
+>(({ id, className, children, ...props }, ref) => (
+	<AccordionPrimitive.Header
+		id={id}
+		aria-label={props['aria-label']}
+		className="flex"
+	>
 		<AccordionPrimitive.Trigger
 			ref={ref}
 			className={accordionStyles.trigger({ className })}

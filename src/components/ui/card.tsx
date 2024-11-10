@@ -37,7 +37,7 @@ const Card = ({
 				{title ? (
 					<h5 className={styles.title()}>
 						{title}
-						{idx ? (
+						{typeof idx === 'number' ? (
 							<Step
 								count={idx}
 								variant="shadow"

@@ -31,11 +31,12 @@ type ServiceAccordionItemProps = {
 }
 
 const ServiceAccordionItem = ({ value, title, children }: ServiceAccordionItemProps) => (
-	<AccordionItem
-		id={value}
-		value={value}
-	>
-		<AccordionTrigger className="max-md:px-6">
+	<AccordionItem value={value}>
+		<AccordionTrigger
+			id={value}
+			aria-label={title}
+			className="max-md:px-6"
+		>
 			<span className="translate-y-1.5">{title}</span>
 			<AccordionCloseIcon />
 		</AccordionTrigger>

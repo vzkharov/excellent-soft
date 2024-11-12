@@ -24,6 +24,7 @@ const ContactGroup = ({ className, ...props }: ContactGroupProps) => (
 				<Link
 					key={link.id}
 					href={link.href}
+					target="_blank"
 					className={styles.link()}
 				>
 					<Image

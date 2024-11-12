@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { tv, type VariantProps } from 'tailwind-variants'
 
 import { cn } from '~/lib/utils'
@@ -15,16 +16,21 @@ const FeedButton = ({ size, bold, variant, className, dir = 'x', ...props }: Fee
 		className={feedButtonVariants({ dir })}
 	>
 		{[feedConfig.phone, feedConfig.telegram, feedConfig.whatsapp].map((feed) => (
-			<Button
+			<Link
 				key={feed.id}
-				size={size}
-				bold={bold}
-				variant={variant}
-				className={cn('[&>*]:gap-x-3', className)}
+				href={feed.url}
+				target="_blank"
 			>
-				{feed.name}
-				{feed.icon}
-			</Button>
+				<Button
+					size={size}
+					bold={bold}
+					variant={variant}
+					className={cn('[&>*]:gap-x-3', className)}
+				>
+					{feed.name}
+					{feed.icon}
+				</Button>
+			</Link>
 		))}
 	</div>
 )

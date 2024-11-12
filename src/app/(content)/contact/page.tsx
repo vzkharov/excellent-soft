@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import type { Page } from '~/lib/types'
 import { createMetadata } from '~/lib/metadata'
 
@@ -21,7 +23,13 @@ const ContactPage: Page = () => (
 				<ContactMarkdown />
 			</ContactSection>
 
-			<a className={styles.phone()}>{contactConfig.phone.value}</a>
+			<Link
+				target="_blank"
+				href={contactConfig.phone.href}
+				className={styles.phone()}
+			>
+				{contactConfig.phone.value}
+			</Link>
 		</div>
 
 		<BackgroundImage className="h-screen">

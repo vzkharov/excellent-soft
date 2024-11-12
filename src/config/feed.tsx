@@ -13,13 +13,13 @@ const feedConfig = {
 	telegram: {
 		id: 'telegram',
 		name: 'Задать вопрос',
-		url: '',
+		url: 'https://t.me/+375291882527',
 		icon: <TelegramIcon />,
 	},
 	whatsapp: {
 		id: 'whatsapp',
 		name: 'Whats App',
-		url: '',
+		url: 'whatsapp://send?phone=+375291882527&abid=+375291882527',
 		icon: <WhatsAppIcon />,
 	},
 	phone: {

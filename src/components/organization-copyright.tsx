@@ -4,7 +4,7 @@ import { Text, type TextProps } from '~/components/ui/text'
 
 const OrganizationCopyright = (props: Omit<TextProps, 'children'>) => (
 	<Text
-		size="xs"
+		size="xxs"
 		color="muted"
 		{...props}
 	>

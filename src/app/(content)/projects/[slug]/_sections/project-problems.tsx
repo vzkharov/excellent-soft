@@ -11,7 +11,7 @@ const ProjectProblems = (project: Project) => (
 			bold
 			as="h6"
 			id="project"
-			className="font-gilroy md:font-gilroy-bold"
+			className="font-gilroy-bold"
 		>
 			Проект
 		</Text>
@@ -27,39 +27,45 @@ const ProjectProblems = (project: Project) => (
 
 		<Spacer y="xl" />
 
-		<div className="mb-5 grid gap-10 md:grid-cols-2 md:gap-5">
-			{['Проблема', 'Решение'].map((title, idx) => (
+		<div className="grid gap-10 md:grid-cols-2 md:gap-5">
+			<div className="grid grid-rows-[auto_1fr_1fr] gap-5">
 				<Text
-					key={idx}
 					bold
 					as="h6"
 				>
-					{title}
+					Проблема
 				</Text>
-			))}
-		</div>
-
-		{project.problems.map((_item, idx) => (
-			<div
-				key={idx}
-				className="mb-10 grid gap-10 md:mb-6 md:grid-cols-2 md:gap-6"
-			>
-				<Card
-					key={idx}
-					idx={idx + 1}
-					title=" "
-				>
-					{_item.problem}
-				</Card>
-				<Card
-					key={idx}
-					idx={idx + 1}
-					title=" "
-				>
-					{_item.solution}
-				</Card>
+				{project.problems.map((item, idx) => (
+					<Card
+						key={idx}
+						idx={idx + 1}
+						title=" "
+						className="h-full"
+					>
+						{item.problem}
+					</Card>
+				))}
 			</div>
-		))}
+
+			<div className="grid grid-rows-[auto_1fr_1fr] gap-5">
+				<Text
+					bold
+					as="h6"
+				>
+					Решение
+				</Text>
+				{project.problems.map((item, idx) => (
+					<Card
+						key={idx}
+						idx={idx + 1}
+						title=" "
+						className="h-full"
+					>
+						{item.solution}
+					</Card>
+				))}
+			</div>
+		</div>
 	</div>
 )
 

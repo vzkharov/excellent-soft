@@ -24,14 +24,14 @@ const HomePage: Page = () => (
 
 		<Section
 			color="dark"
-			className={styles.section()}
+			className={styles.container()}
 		>
 			<DevelopmentSection />
 		</Section>
 
 		<Section
 			color="dark"
-			className={styles.section()}
+			className={styles.container()}
 		>
 			<ProcessSection />
 		</Section>

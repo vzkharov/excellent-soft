@@ -24,7 +24,7 @@ const ProjectOverview = (project: Project) => (
 			</div>
 			<div className="flex flex-col md:flex-1">
 				<Title
-					as="h2"
+					as="h3"
 					uppercase
 				>
 					{project.overview.title}

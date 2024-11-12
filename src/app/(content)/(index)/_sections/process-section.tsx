@@ -52,7 +52,7 @@ const styles = tv({
 	slots: {
 		title: 'max-md:text-2xl',
 		imgWrapper: 'relative h-80 md:h-96 flex-center w-full select-none',
-		imgContent: 'container absolute -ml-0 w-screen overflow-x-auto px-0 pl-4',
+		imgContent: 'container absolute -ml-0 w-screen overflow-x-auto px-0 pl-4 scrollbar-hidden',
 		img: 'inline-block h-72 w-auto max-w-none object-cover ',
 		link: 'w-full md:w-fit mx-auto flex-center',
 	},

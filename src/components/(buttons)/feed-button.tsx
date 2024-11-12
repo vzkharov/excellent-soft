@@ -14,7 +14,7 @@ const FeedButton = ({ size, bold, variant, className, dir = 'x', ...props }: Fee
 		{...props}
 		className={feedButtonVariants({ dir })}
 	>
-		{[feedConfig.telegram, feedConfig.whatsapp].map((feed) => (
+		{[feedConfig.phone, feedConfig.telegram, feedConfig.whatsapp].map((feed) => (
 			<Button
 				key={feed.id}
 				size={size}

@@ -13,6 +13,7 @@ const Checkbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root
 		<CheckboxPrimitive.Root
 			ref={ref}
 			id={id}
+			defaultChecked
 			className={checkboxVariants({ variant, className })}
 			{...props}
 		>

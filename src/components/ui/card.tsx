@@ -70,10 +70,11 @@ const cardVariants = tv({
 				card: 'bg-transparent border border-dark hover:border-transparent hover:bg-primary',
 			},
 			dark: {
-				card: 'bg-[#5A5F6B] text-white',
+				card: 'bg-[#5A5F6B] text-white gap-5',
+				header: 'space-y-2',
 			},
 			grey: {
-				card: 'bg-[#F3F3F3]',
+				card: 'bg-[#F3F3F3] gap-5',
 			},
 			white: {
 				card: 'bg-white/50',
@@ -82,11 +83,12 @@ const cardVariants = tv({
 		size: {
 			sm: {
 				card: 'px-5 py-4',
+				header: 'space-y-3',
 				title: 'text-sm',
 			},
 			md: {
 				card: 'max-md:py-5 max-md:px-5 py-10 px-8',
-				title: 'max-md:text-md',
+				title: 'text-lg',
 			},
 		},
 	},

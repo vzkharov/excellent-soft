@@ -78,6 +78,7 @@ const textVariants = tv({
 			muted: 'text-gray-700',
 		},
 		size: {
+			xxs: 'text-[10px]',
 			xs: 'text-xs',
 			sm: 'text-sm',
 			md: 'text-md',

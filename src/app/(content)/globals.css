@@ -14,7 +14,7 @@ h2 {
 
 h3 {
 	font-family: var(--font-bebas);
-	@apply text-2xl;
+	@apply text-xl md:text-2xl;
 }
 
 h4 {
@@ -64,5 +64,17 @@ a:focus-visible {
 
 		font-size: 16px;
 		font-family: var(--font-gilroy);
+	}
+}
+
+@layer utilities {
+	/* Chrome, Safari and Opera */
+	.scrollbar-hidden::-webkit-scrollbar {
+		display: none;
+	}
+
+	.scrollbar-hidden {
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE and Edge */
 	}
 }

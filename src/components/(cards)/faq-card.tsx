@@ -52,12 +52,12 @@ const styles = tv({
 	slots: {
 		card: 'bg-transparent px-0 ',
 		trigger: 'px-0 py-12 hover:no-underline',
-		title: 'text-left translate-y-1 group-hover/accordion-trigger:text-gradient group-[[data-state=open]]/accordion-trigger:text-gradient',
+		title: 'text-left translate-y-1 group-hover/accordion-trigger:text-gradient group-[[data-state=open]]/accordion-trigger:text-gradient max-md:text-xl',
 		closeIcon: 'flex-none bg-white/10 group-hover/accordion-trigger:text-secondary group-[[data-state=open]]/accordion-trigger:text-secondary',
 
 		content: ' flex md:flex-row flex-col gap-5 px-0',
 		markdown: 'flex max-w-prose flex-col gap-y-3',
-		image: 'w-full md:h-64 md:w-fit',
+		image: 'w-full  md:h-52 md:w-fit',
 	},
 })()
 

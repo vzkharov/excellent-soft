@@ -327,6 +327,7 @@ const projectsConfig: Project[] = [
 		name: 'Промо - сайт отеля',
 		description: 'Отель на побережье Антальи',
 
+		showImage: true,
 		previewUrl: '',
 		title: 'Sarpedor hotel - промо страница \n для бутик-отеля в анталье',
 		services: ['Исследования', 'Разработка макета', 'Дизайн сайта'],

@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { TelegramIcon } from '~/components/ui/icons/telegram-icon'
 import { WhatsAppIcon } from '~/components/ui/icons/whatsapp-icon'
 
@@ -5,7 +6,7 @@ type FeedConfig = {
 	id: string
 	url: string
 	name: string
-	icon: React.ReactNode
+	icon?: React.ReactNode
 }
 
 const feedConfig = {
@@ -20,6 +21,12 @@ const feedConfig = {
 		name: 'Whats App',
 		url: '',
 		icon: <WhatsAppIcon />,
+	},
+	phone: {
+		id: 'phone',
+		name: '+375 29 188 25 27',
+		url: 'tel:+375291882527',
+		icon: <Fragment />,
 	},
 } satisfies Record<string, FeedConfig>
 

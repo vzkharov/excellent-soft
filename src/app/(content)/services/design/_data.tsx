@@ -21,7 +21,7 @@ const tabs = [
 	{
 		id: 'design-process',
 		title: 'Процесс проектирования сайта',
-		href: '#process',
+		href: '#design-process',
 	},
 	{
 		id: 'ux',
@@ -36,7 +36,7 @@ const tabs = [
 	{
 		id: 'graphic-design',
 		title: 'Графический дизайн',
-		href: '#graphic',
+		href: '#graphic-design',
 	},
 	{
 		id: 'identic',
@@ -44,7 +44,7 @@ const tabs = [
 		href: '#identic',
 	},
 	{
-		id: '3d-animation',
+		id: 'animation',
 		title: '3D анимация',
 		href: '#animation',
 	},

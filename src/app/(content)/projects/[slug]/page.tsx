@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 
 import type { Page } from '~/lib/types'
@@ -78,7 +79,16 @@ const ProjectsPage: Page<Params> = async ({ params }) => {
 	)
 }
 
-export const generateMetadata = ({ params }: { params: Params }) => {
+export const dynamic = 'force-static'
+export const revalidate = false
+
+export const generateStaticParams = (): Params[] => {
+	const projects = projectsConfig
+
+	return projects.map((project) => ({ slug: project.slug }))
+}
+
+export const generateMetadata = ({ params }: { params: Params }): Metadata => {
 	const slug = params.slug
 
 	const project = projectsConfig.find((_project) => _project.slug === slug)

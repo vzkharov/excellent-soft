@@ -32,7 +32,10 @@ const ProjectOverview = (project: Project) => (
 
 				<Spacer y="xl" />
 
-				<Link href={project.previewUrl || '#'}>
+				<Link
+					target="_blank"
+					href={project.previewUrl || '#'}
+				>
 					<Button
 						size="sm"
 						variant="default"

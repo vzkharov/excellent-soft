@@ -251,7 +251,7 @@ const projectsConfig: Project[] = [
 		description: 'Корпоративный веб-сайт',
 
 		showImage: true,
-		previewUrl: '',
+		previewUrl: 'https://brographics.by/',
 		title: 'Сайт - портфолио студии дизайна \n интерьеров',
 		services: ['Исследования', 'Дизайн сайта', 'Верстка и программирование', 'Интеграции', 'Продвижение'],
 		overview: {
@@ -328,7 +328,7 @@ const projectsConfig: Project[] = [
 		description: 'Отель на побережье Антальи',
 
 		showImage: true,
-		previewUrl: '',
+		previewUrl: 'https://sarpedor-hotel.esoft.by/',
 		title: 'Sarpedor hotel - промо страница \n для бутик-отеля в анталье',
 		services: ['Исследования', 'Разработка макета', 'Дизайн сайта'],
 		overview: {

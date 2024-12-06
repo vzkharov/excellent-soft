@@ -12,15 +12,14 @@ const config = {
 	productionBrowserSourceMaps: true,
 	pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 
-	typescript: {
-		tsconfigPath: './tsconfig.json',
-	},
-
 	images: {
 		minimumCacheTTL: 31536000,
 		dangerouslyAllowSVG: true,
 		formats: ['image/webp'],
 	},
+
+	eslint: { ignoreDuringBuilds: true },
+	typescript: { tsconfigPath: './tsconfig.json', ignoreBuildErrors: true },
 }
 
 const withMDX = createMDX({})

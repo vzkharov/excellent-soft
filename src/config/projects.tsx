@@ -169,7 +169,7 @@ const projectsConfig: Project[] = [
 		description: 'Корпоративный веб-сайт с каталогом  и ценами',
 
 		showImage: true,
-		previewUrl: '',
+		previewUrl: 'https://img-print.esoft.by/',
 		title: 'B2B Сайт - каталог производителя \n одежды IMG-print',
 		services: ['Исследования', 'Дизайн сайта', 'Верстка и программирование', 'Интеграции'],
 		overview: {

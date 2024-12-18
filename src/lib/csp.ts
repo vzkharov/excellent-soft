@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 
 const HEADER_CSP: string = 'Content-Security-Policy'
 const HEADER_NONCE: string = 'x-nonce'
-const ALLOWED_DOMAINS: string[] = []
+const ALLOWED_DOMAINS: string[] = ['https://mc.yandex.ru/metrika/tag.js']
 
 const configureCsp = (headers: Headers): NextResponse => {
 	const nonce = Buffer.from(crypto.randomUUID()).toString('base64')

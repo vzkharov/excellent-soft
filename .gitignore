@@ -102,16 +102,6 @@ node_modules
 coverage
 
 ############################
-# Package Manager
-############################
-
-.pnp
-.pnp.js
-yarn.lock
-bun.lockb
-package-lock.json
-
-############################
 # Next
 ############################
 

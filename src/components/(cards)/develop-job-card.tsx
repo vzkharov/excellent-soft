@@ -31,12 +31,10 @@ const DevelopJobCard = ({ title, minDate, description, className }: DevelopJobCa
 
 const styles = tv({
 	slots: {
-		border: 'group/job rounded-md bg-gradient-to-b from-gray-300 via-gray-300 to-primary p-px hover:from-primary hover:via-primary hover:text-dark',
+		border: 'group/job rounded-md bg-gradient-to-b from-white from-20% via-[#7f9938]  to-[#E1E1E1] to-80% p-px',
 		card: [
-			'relative text-center px-8 gap-y-5 pt-16 h-96 flex flex-col items-center rounded-md bg-gradient-to-b from-gray-300 to-gray-200',
-			'group-hover/job:from-primary group-hover/job:to-primary',
-			"after:content-[''] after:absolute after:inset-x-auto after:bottom-14 after:h-[2px] after:w-8 after:bg-primary",
-			'group-hover/job:after:bg-dark',
+			'relative text-center text-dark	bg-white px-8 gap-y-5 pt-16 h-96 flex flex-col items-center rounded-md bg-gradient-to-b from-[hsla(0,0%,100%,0.2)] to-[hsla(0,0%,60%,0.1)]',
+			"after:content-[''] after:absolute after:inset-x-auto after:bottom-14 after:h-[2px] after:w-8 after:bg-dark",
 		],
 	},
 })()

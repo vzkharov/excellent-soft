@@ -72,6 +72,8 @@ const textVariants = tv({
 			primary: 'text-primary',
 			secondary: 'text-secondary',
 
+			black: 'text-black',
+
 			link: 'underline hover:text-primary cursor-pointer',
 
 			ghost: 'text-gray-900',

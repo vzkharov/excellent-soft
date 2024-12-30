@@ -12,7 +12,7 @@ const serviceConfig = {
 		id: 'audit',
 		href: '/services/design',
 		title: 'UX аналитика и аудит',
-		description: 'UX исследования \n UX стратегия',
+		description: 'Анализ конкурентов и ЦА \n Стратегия \n Data-driven подход',
 		icon: '/icons/ux.svg',
 	},
 	design: {

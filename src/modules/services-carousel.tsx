@@ -33,8 +33,8 @@ const ServicesCarousel = (props: StyleProps) => (
 
 const styles = tv({
 	slots: {
-		card: 'h-full',
-		item: 'w-72',
+		card: 'h-fit',
+		item: 'w-72 even:mt-20',
 	},
 })()
 

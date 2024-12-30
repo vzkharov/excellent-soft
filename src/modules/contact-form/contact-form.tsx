@@ -31,9 +31,8 @@ const ContactForm = ({ className, ...props }: HubSpotFormProps) => (
 
 		<SubmitButton
 			bold
-			full
 			size="lg"
-			variant="gradient"
+			variant="outlined"
 			className={styles.submitButton()}
 		>
 			Отправить

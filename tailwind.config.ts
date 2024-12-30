@@ -24,6 +24,8 @@ const config = {
 				primary: 'hsl(76 100% 69%)',
 				secondary: 'hsl(223 100% 74%)',
 
+				onyx: 'hsl(200, 7%, 9%)',
+
 				dark: 'hsl(225 12% 19%)',
 				gray: {
 					100: 'hsl(225 12% 19%)',
@@ -56,6 +58,7 @@ const config = {
 				bebas: ['var(--font-bebas)'],
 				gilroy: ['var(--font-gilroy)'],
 				'gilroy-bold': ['var(--font-gilroy-bold)'],
+				inter: ['var(--font-inter)'],
 			},
 			borderRadius: {
 				lg: '35px',

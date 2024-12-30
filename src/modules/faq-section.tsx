@@ -11,8 +11,7 @@ import { Section, type SectionProps } from '~/components/(sections)'
 
 const FaqSection = ({ className, ...props }: SectionProps) => (
 	<Section
-		color="metal"
-		title="Чем поможем?"
+		color="black"
 		{...props}
 		className={styles.section({ className })}
 	>
@@ -33,8 +32,8 @@ const FaqSection = ({ className, ...props }: SectionProps) => (
 
 const styles = tv({
 	slots: {
-		section: 'py-24',
-		inner: 'mt-8 space-y-2',
+		section: '',
+		inner: 'space-y-2',
 	},
 })()
 

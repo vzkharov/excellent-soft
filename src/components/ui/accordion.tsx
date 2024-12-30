@@ -51,11 +51,11 @@ const AccordionCloseIcon = React.forwardRef<
 		className={accordionStyles.control({ className })}
 	>
 		<PlusIcon
-			size="0.75em"
+			size="2em"
 			className={accordionStyles.plusIcon()}
 		/>
 		<MinusIcon
-			size="0.75em"
+			size="2em"
 			className={accordionStyles.minusIcon()}
 		/>
 	</span>
@@ -83,7 +83,7 @@ const accordionStyles = tv({
 		content: 'group/accordion-content overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
 		contentInner: 'px-8 pb-8 pt-0',
 
-		control: 'flex aspect-square h-14 w-14 flex-none items-center justify-center rounded-full bg-white',
+		control: 'flex aspect-square h-16 w-16 flex-none items-center justify-center bg-transparent',
 		plusIcon: 'block group-[[data-state=open]]/accordion-trigger:hidden',
 		minusIcon: 'hidden group-[[data-state=open]]/accordion-trigger:block',
 	},

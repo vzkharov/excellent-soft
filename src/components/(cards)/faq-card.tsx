@@ -33,7 +33,7 @@ const FaqCard = ({ id, image, title, content, className, ...props }: FaqCardProp
 				<Spacer y="xl" />
 				<FeedButton
 					bold
-					variant="shadow"
+					variant="primary"
 				/>
 			</div>
 
@@ -52,12 +52,12 @@ const styles = tv({
 	slots: {
 		card: 'bg-transparent px-0 ',
 		trigger: 'px-0 py-12 hover:no-underline',
-		title: 'text-left translate-y-1 group-hover/accordion-trigger:text-gradient group-[[data-state=open]]/accordion-trigger:text-gradient max-md:text-xl',
-		closeIcon: 'flex-none bg-white/10 group-hover/accordion-trigger:text-secondary group-[[data-state=open]]/accordion-trigger:text-secondary',
+		title: 'text-left translate-y-1 group-hover/accordion-trigger:text-primary group-[[data-state=open]]/accordion-trigger:text-primary max-md:text-xl',
+		closeIcon: 'flex-none group-hover/accordion-trigger:text-primary group-[[data-state=open]]/accordion-trigger:text-white',
 
 		content: ' flex md:flex-row flex-col gap-5 px-0',
 		markdown: 'flex max-w-prose flex-col gap-y-3',
-		image: 'w-full  md:h-52 md:w-fit',
+		image: 'w-full aspect-[3/2] md:h-52 md:w-fit',
 	},
 })()
 

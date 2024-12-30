@@ -13,6 +13,7 @@ import { ProcessSection } from './_sections/process-section'
 import { DevelopmentSection } from './_sections/development-section'
 
 import { styles } from './styles'
+import { Title } from '~/components/ui/text'
 
 const HomePage: Page = () => (
 	<>
@@ -20,19 +21,25 @@ const HomePage: Page = () => (
 			<WelcomeSection />
 		</Section>
 
-		<Section color="brand" />
+		<FeedSection christmas />
 
 		<Section
-			color="dark"
+			color="white"
 			className={styles.container()}
 		>
 			<DevelopmentSection />
 		</Section>
 
 		<Section
-			color="dark"
+			color="black"
 			className={styles.container()}
 		>
+			<Title as="h2">
+				этапы <span className="text-primary">разработки</span>
+			</Title>
+		</Section>
+
+		<Section color="gray">
 			<ProcessSection />
 		</Section>
 
@@ -45,9 +52,9 @@ const HomePage: Page = () => (
 			color="white"
 		/>
 
-		<Section color="brand" />
+		{/* <Section color="primary" /> */}
 
-		<FaqSection color="metal" />
+		<FaqSection color="black" />
 
 		<Footer />
 	</>

@@ -41,7 +41,7 @@ const ProjectResults = (project: Project) => (
 					<Button
 						bold
 						size="lg"
-						variant="gradient"
+						variant="primary"
 					>
 						Смотреть сайт
 					</Button>

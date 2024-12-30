@@ -18,7 +18,7 @@ const partnersConfig = [
 	},
 	{
 		id: 'marketplace',
-		title: 'Интернет-магазины',
+		title: 'ЕКОМ',
 		description: 'Подберем эффективные технологии под ваш бизнес',
 	},
 	{

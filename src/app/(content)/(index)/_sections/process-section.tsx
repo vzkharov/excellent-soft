@@ -4,21 +4,11 @@ import { tv } from 'tailwind-variants'
 import { navigation } from '~/config/navigation'
 
 import { Image } from '~/components/ui/image'
-import { Title } from '~/components/ui/text'
 import { Button } from '~/components/ui/button'
 import { Spacer } from '~/components/ui/spacer'
 
 const ProcessSection = () => (
 	<>
-		<Title
-			as="h2"
-			className={styles.title()}
-		>
-			Что входит в разработку <br /> «Под ключ»?
-		</Title>
-
-		<Spacer y="xl" />
-
 		<div className={styles.imgWrapper()}>
 			<div className={styles.imgContent()}>
 				<Image
@@ -40,7 +30,7 @@ const ProcessSection = () => (
 			<Button
 				bold
 				size="lg"
-				variant="primary"
+				variant="outlined"
 			>
 				Подробнее о разработке
 			</Button>
@@ -50,11 +40,11 @@ const ProcessSection = () => (
 
 const styles = tv({
 	slots: {
-		title: 'max-md:text-2xl',
-		imgWrapper: 'relative h-80 md:h-96 flex-center w-full select-none',
+		title: 'max-md:text-2xl ',
+		imgWrapper: 'relative h-80 md:h-96 flex-center w-full select-none pt-24',
 		imgContent: 'container absolute -ml-0 w-screen overflow-x-auto px-0 pl-4 scrollbar-hidden',
 		img: 'inline-block h-72 w-auto max-w-none object-cover ',
-		link: 'w-full md:w-fit mx-auto flex-center',
+		link: 'w-full md:w-fit mx-auto flex-center pb-24',
 	},
 })()
 

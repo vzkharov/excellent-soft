@@ -33,11 +33,11 @@ const buttonVariants = tv({
 				text: 'text-white group-hover/button:text-dark group-focus-visible:text-dark',
 			},
 			outlined: {
-				button: 'border-dark hover:bg-dark',
-				text: 'text-dark group-hover/button:text-gradient group-hover/button:font-gilroy-bold group-hover/button:[&>svg]:text-secondary',
+				button: 'border-white hover:bg-white ',
+				text: 'text-white group-hover/button:text-dark  group-hover/button:font-gilroy-bold ',
 			},
 			primary: {
-				button: 'bg-primary border-primary hover:bg-transparent focus-visible:bg-transparent ',
+				button: 'bg-primary border-dark hover:bg-dark hover:border-primary focus-visible:bg-dark  ',
 				text: 'text-dark group-hover/button:text-primary group-focus-visible:text-primary',
 			},
 			shadow: {

@@ -54,10 +54,17 @@ const sectionVariants = tv({
 		color: {
 			white: { base: 'bg-white', content: 'text-dark' },
 			dark: { base: 'bg-dark', content: 'text-white' },
+			black: { base: 'bg-black', content: 'text-white' },
+			gray: { base: 'bg-[#171717]', content: 'text-white' },
+			transparent: { base: 'bg-transparent', content: 'text-white' },
 
 			metal: { base: 'bg-gradient-to-r from-gray-200 to-dark', content: 'text-white' },
 			brand: {
 				base: 'bg-gradient-to-r from-gradient-start to-gradient-end',
+				content: 'min-h-[96px] text-dark',
+			},
+			primary: {
+				base: 'bg-primary',
 				content: 'min-h-[96px] text-dark',
 			},
 		},

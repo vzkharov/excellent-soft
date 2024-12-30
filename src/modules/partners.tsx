@@ -5,15 +5,22 @@ import { partnersConfig } from '~/config/partners'
 
 import { Section } from '~/components/(sections)'
 import { PartnerCard } from '~/components/(cards)/partner-card'
+import { Title } from '~/components/ui/text'
 
 const PartnerSection = ({ className, ...props }: StyleProps) => (
 	<>
 		<Section
 			{...props}
-			color="dark"
-			title="Наши клиенты"
-			className={styles.title({ className })}
-		/>
+			color="black"
+		>
+			<Title
+				as="h2"
+				className={styles.title()}
+				color="foreground"
+			>
+				с какими <span className="text-primary">доменами</span> работаем
+			</Title>
+		</Section>
 
 		{partnersConfig.map((card) => (
 			<PartnerCard
@@ -26,7 +33,7 @@ const PartnerSection = ({ className, ...props }: StyleProps) => (
 
 const styles = tv({
 	slots: {
-		title: 'pb-6 pt-24',
+		title: 'pb-20 pt-24',
 	},
 })()
 

@@ -5,7 +5,7 @@ import { renderSplittedText } from '~/helpers/string'
 
 import { Section } from '~/components/(sections)'
 import { Text, Title } from '~/components/ui/text'
-import { ArrowDownIcon } from '~/components/ui/icons/arrow-down-icon'
+import { ArrowRightIcon } from '../ui/icons/arrow-right-icon'
 
 type PartnerCardProps = StyleProps & {
 	title: string
@@ -15,7 +15,7 @@ type PartnerCardProps = StyleProps & {
 const PartnerCard = ({ title, description, className, ...props }: PartnerCardProps) => (
 	<Section
 		{...props}
-		color="metal"
+		color="black"
 		bg={styles.bg()}
 		className={styles.card({ className })}
 	>
@@ -26,30 +26,28 @@ const PartnerCard = ({ title, description, className, ...props }: PartnerCardPro
 			>
 				{title}
 			</Title>
-			<div className={styles.arrow()}>
-				<ArrowDownIcon className={styles.arrowIcon()} />
-			</div>
+			<Text
+				size="md"
+				font="gilroy-bold"
+				className={styles.description()}
+			>
+				{renderSplittedText(description)}
+			</Text>
 		</div>
 
-		<Text
-			size="md"
-			font="gilroy-bold"
-			className={styles.description()}
-		>
-			{renderSplittedText(description)}
-		</Text>
+		<ArrowRightIcon className={styles.arrowIcon()} />
 	</Section>
 )
 
 const styles = tv({
 	slots: {
-		bg: 'bg-gradient-to-tr',
-		card: 'group flex flex-col md:flex-row items-center justify-between py-16 gap-y-4 gap-x-16 cursor-pointer',
-		header: 'flex max-md:w-full md:flex-1 items-center justify-between',
-		title: 'group-hover:text-gradient translate-y-1 group-hover:underline flex-1',
+		bg: 'bg-black',
+		card: 'group flex md:flex-row items-center justify-between py-16 gap-y-4 gap-x-16 cursor-pointer border-t border-white',
+		header: 'flex max-md:w-full md:flex-1 md:items-center md:justify-between max-md:flex-col max-md:gap-5',
+		title: 'group-hover:text-primary translate-y-1 flex-1',
 
 		arrow: 'flex-none group-hover:bg-gradient-brand flex h-14 w-14 items-center justify-center rounded-full bg-gray-900/10',
-		arrowIcon: 'h-7 w-7 -rotate-90 text-gradient-end group-hover:text-dark',
+		arrowIcon: 'h-14 w-16 text-white transform duration-300 group-hover:text-primary',
 
 		description: 'flex-1 text-sm md:text-md line-clamp-2',
 	},

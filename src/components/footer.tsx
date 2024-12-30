@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { tv } from 'tailwind-variants'
 
 import { navigation } from '~/config/navigation'
-
+import Image from 'next/image'
 import { Link } from '~/components/ui/link'
 import { Spacer } from '~/components/ui/spacer'
 import { Text, Title } from '~/components/ui/text'
@@ -20,13 +20,21 @@ const Footer = () => (
 
 		<Section
 			as="div"
-			color="metal"
+			color="black"
 			title="Опишите задачу"
 			className={styles.container()}
 		>
+			<Image
+				alt="background"
+				src="/paper_background.png"
+				width={1280}
+				height={720}
+				className={styles.img()}
+			/>
+
 			<Spacer y="3xl" />
 
-			<ContactSection>
+			<ContactSection className={styles.contactSection()}>
 				<div>
 					<Title as="h2">
 						Мы уже <br /> приступили <br /> к работе!
@@ -71,8 +79,10 @@ const Footer = () => (
 
 const styles = tv({
 	slots: {
+		contactSection: 'relative z-10',
+		img: 'absolute z-0 aspect-[16/9] w-full max-md:aspect-[1/2]',
 		bg: 'bg-gradient-to-r from-gray-200 to-dark',
-		container: 'pb-8 pt-14 text-white',
+		container: 'pb-8 pt-14 text-white relative',
 		contactForm: 'max-w-xl',
 
 		logo: 'h-9',

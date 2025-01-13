@@ -20,6 +20,7 @@ const LinkSection = ({ title, href }: LinkSectionProps) => (
 				bold
 				size="lg"
 				variant="primary"
+				className={styles.button()}
 			>
 				{title}
 			</Button>

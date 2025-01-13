@@ -16,8 +16,9 @@ import { Title } from '~/components/ui/text'
 import { Footer } from '~/components/footer'
 import { Spacer } from '~/components/ui/spacer'
 import { Section } from '~/components/(sections)'
-import { FeedSection } from '~/components/(sections)/feed-section'
+import { LinkSection } from '~/components/(sections)/link-section'
 import { ServiceNavigation } from '../services/_components/service-navigation'
+import { navigation } from '~/config/navigation'
 
 const title = 'Web 3.0 - Эффективный дизайн'
 
@@ -50,7 +51,10 @@ const WebPage = () => {
 				<ProcessSection />
 			</Section>
 
-			<FeedSection title="Смотреть пример Web3" />
+			<LinkSection
+				title="Смотреть пример Web3"
+				href={[navigation.projects.href, 'web_3_0'].join('/')}
+			/>
 
 			<Spacer y="4xl" />
 
@@ -59,8 +63,6 @@ const WebPage = () => {
 					<UIServiceMarkdown />
 				</PromotionSection>
 			</Section>
-
-			<Spacer y="4xl" />
 
 			<Section
 				color="lightgray"

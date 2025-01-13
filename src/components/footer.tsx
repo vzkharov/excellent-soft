@@ -75,7 +75,7 @@ const Footer = () => (
 const styles = tv({
 	slots: {
 		bg: 'bg-gradient-to-r from-gray-200 to-dark',
-		container: 'pb-8 pt-14 text-white',
+		container: 'pb-8 pt-14 text-white px-0',
 		contactForm: 'max-w-xl',
 
 		logo: 'h-9',

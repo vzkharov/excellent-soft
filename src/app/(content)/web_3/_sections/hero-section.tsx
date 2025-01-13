@@ -7,14 +7,20 @@ import { Separator } from '~/components/ui/separator'
 
 const HeroSection = () => (
 	<>
-		<Section>
+		<Section className="max-md:hidden">
 			<Title
 				as="h1"
-				className="font-mulish flex w-fit text-[150px] font-[900] text-black max-lg:flex-col max-md:text-[86px]"
+				className="font-mulish flex w-fit text-[150px] font-[900] text-black max-lg:flex-col"
 			>
 				<span className="bg-primary">crypto</span> stack
 			</Title>
 		</Section>
+		<Title
+			as="h1"
+			className="font-mulish flex w-full flex-col text-center font-[900] text-black max-md:text-[86px] md:hidden"
+		>
+			<span className="bg-primary">crypto</span> stack
+		</Title>
 
 		<Spacer y="4xl" />
 

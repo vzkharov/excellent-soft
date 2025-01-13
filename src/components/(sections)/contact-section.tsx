@@ -16,7 +16,7 @@ const ContactSection = ({ children, className, variant, ...props }: ContactSecti
 
 const styles = tv({
 	slots: {
-		section: 'flex flex-col lg:flex-row gap-y-12 justify-between w-full max-lg:px-5',
+		section: 'flex flex-col lg:flex-row gap-y-12 justify-between w-full ',
 	},
 })()
 

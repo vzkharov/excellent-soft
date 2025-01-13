@@ -84,21 +84,21 @@ const WebPage = () => {
 						width: 'calc(19vw + 300px)',
 						height: 'calc(28vw + 200px)',
 					}}
-					className="img absolute aspect-auto opacity-30 brightness-150 max-lg:hidden"
+					className="img absolute aspect-auto opacity-30 brightness-150 max-md:hidden"
 				/>
 				<Image
 					alt="image-2"
 					src="/web_3/image-2.png"
-					width={830}
-					height={1140}
-					className="aspect-auto w-full "
+					width={720}
+					height={775}
+					className="aspect-[72/75] w-full md:w-[55%]"
 				/>
 				<Image
 					alt="image-3"
 					src="/web_3/image-3.png"
 					width={720}
 					height={755}
-					className="aspect-auto w-full flex-1"
+					className="aspect-[55/75] w-full md:w-[45%]"
 				/>
 			</section>
 

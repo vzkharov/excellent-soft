@@ -63,9 +63,9 @@ const ContactButton = (props: ButtonProps) => {
 
 const styles = tv({
 	slots: {
-		content: 'px-10 pb-12 pt-10',
+		content: 'px-16 pb-12 pt-10',
 		body: 'flex flex-col gap-y-3',
-		footer: 'flex flex-col items-stretch gap-y-4 md:flex-row',
+		footer: 'flex flex-col items-stretch gap-y-4 md:gap-x-10 md:flex-row',
 		submitButton: 'w-full md:w-fit',
 	},
 })()

@@ -79,6 +79,10 @@ const cardVariants = tv({
 			white: {
 				card: 'bg-white/50',
 			},
+			lightgray: {
+				card: 'bg-transparent border border-dark hover:border-transparent hover:bg-primary',
+				title: 'bg-white px-5 py-1.5 rounded-md w-fit !text-base',
+			},
 		},
 		size: {
 			sm: {

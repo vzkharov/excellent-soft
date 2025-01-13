@@ -18,29 +18,30 @@ const PaymentPage: Page = () => (
 	<>
 		<Section
 			as="div"
-			color="dark"
+			color="black"
 			bg={styles.titleBg()}
 			className={styles.title()}
 		>
-			<Title
-				as="h2"
-				gradient
-			>
-				Мы идем вам на встречу
+			<Title as="h2">
+				Предоставляем{' '}
+				<span className="bg-black text-primary max-sm:leading-[3rem]">
+					собственную рассрочку
+				</span>
 			</Title>
 		</Section>
 
 		<Section
-			color="dark"
+			color="black"
 			bg={styles.info()}
-			className={styles.infoContent()}
 		>
-			<PaymentMarkdown />
-			<Spacer y="xl" />
-			<FeedButton
-				bold
-				variant="shadow"
-			/>
+			<div className={styles.infoContent()}>
+				<PaymentMarkdown />
+				<Spacer y="xl" />
+				<FeedButton
+					bold
+					variant="secondary"
+				/>
+			</div>
 		</Section>
 
 		<Footer />

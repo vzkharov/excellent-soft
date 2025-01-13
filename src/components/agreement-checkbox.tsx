@@ -36,7 +36,7 @@ const AgreementCheckbox = ({ id, className, ...props }: AgreementCheckboxProps) 
 const styles = tv({
 	slots: {
 		container: 'flex items-center gap-x-3',
-		label: 'select-none max-w-fit min-w-0',
+		label: 'select-none max-w-fit min-w-0 text-wrap',
 
 		// fix
 		link: 'w-fit cursor-pointer font-gilroy text-xs underline',

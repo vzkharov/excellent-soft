@@ -21,7 +21,7 @@ const ProcessSection = () => (
 			</div>
 		</div>
 
-		<Spacer y="xl" />
+		<Spacer y="4xl" />
 
 		<Link
 			href={navigation.development.href}

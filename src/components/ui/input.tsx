@@ -20,8 +20,8 @@ const inputVariants = tv({
 	base: 'flex h-11 w-full border-b !rounded-none border-gray-300 bg-transparent transition-colors placeholder:text-gray-700 focus-visible:border-white focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',
 	variants: {
 		variant: {
-			default: 'text-dark border-gray-700 placeholder:text-gray-300 focus-visible:border-dark',
-			foreground: 'text-white border-gray-300 placeholder:text-gray-700 focus-visible:border-white',
+			default: 'text-black border-gray-700 placeholder:text-gray-300 focus-visible:border-black',
+			foreground: 'text-white border-gray-700 placeholder:text-gray-700 focus-visible:border-white',
 		},
 	},
 	defaultVariants: {

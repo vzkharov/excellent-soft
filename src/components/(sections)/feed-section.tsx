@@ -6,9 +6,10 @@ import { ContactButton } from '~/components/(buttons)/contact-button'
 
 type FeedSectionProps = {
 	christmas?: boolean
+	title?: string
 }
 
-const FeedSection = ({ christmas = false }: FeedSectionProps) => (
+const FeedSection = ({ christmas = false, title = 'Давайте обсудим ваш проект' }: FeedSectionProps) => (
 	<Section
 		color="primary"
 		className={`${styles.container()} ${christmas && 'relative h-96 max-md:h-[500px]'}`}
@@ -26,25 +27,14 @@ const FeedSection = ({ christmas = false }: FeedSectionProps) => (
 			</>
 		)}
 
-		{christmas ? (
-			<ContactButton
-				bold
-				size="lg"
-				variant="primary"
-				className={styles.button()}
-			>
-				В рассрочку
-			</ContactButton>
-		) : (
-			<ContactButton
-				bold
-				size="lg"
-				variant="primary"
-				className={styles.button()}
-			>
-				Давайте обсудим ваш проект
-			</ContactButton>
-		)}
+		<ContactButton
+			bold
+			size="lg"
+			variant="primary"
+			className={styles.button()}
+		>
+			{title}
+		</ContactButton>
 
 		{christmas && (
 			<Image

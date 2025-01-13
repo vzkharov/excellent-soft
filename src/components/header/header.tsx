@@ -21,9 +21,9 @@ const Header = () => (
 
 const styles = tv({
 	slots: {
-		header: 'sticky top-0 z-20 container mx-auto flex items-center',
+		header: 'sticky top-0 z-20 container mx-auto flex first-of-type:items-center items-end',
 		headerItem: 'flex-1 flex items-center first-of-type:justify-start last-of-type:justify-end',
-		logo: 'bg-gray-100 rounded-b-xl px-1.5 pb-1.5 pt-4 ',
+		logo: 'bg-gray-200 rounded-b-xl px-1.5 pb-1.5 pt-4 ',
 	},
 })()
 

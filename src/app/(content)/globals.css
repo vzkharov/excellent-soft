@@ -77,4 +77,31 @@ a:focus-visible {
 		scrollbar-width: none; /* Firefox */
 		-ms-overflow-style: none; /* IE and Edge */
 	}
+
+	.img {
+		top: -30vw;
+	}
+	@media (min-width: 1000px) and (max-width: 1300px) {
+		.img {
+			left: 10%;
+		}
+	}
+
+	@media (min-width: 1300px) and (max-width: 1500px) {
+		.img {
+			left: 17%;
+		}
+	}
+	@media (min-width: 1500px) and (max-width: 1920px) {
+		.img {
+			left: 22%;
+		}
+	}
+
+	@media (min-width: 1920px) {
+		.img {
+			left: 25%;
+			top: -25vw;
+		}
+	}
 }

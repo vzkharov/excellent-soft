@@ -19,7 +19,7 @@ const HeaderNav = () => {
 	const pathname = usePathname()
 
 	return (
-		<NavigationMenu>
+		<NavigationMenu className="">
 			<NavigationMenuList>
 				<NavigationMenuItem>
 					<NavigationMenuTrigger
@@ -47,7 +47,7 @@ const HeaderNav = () => {
 						</ul>
 					</NavigationMenuContent>
 				</NavigationMenuItem>
-				{[navigation.projects, navigation.payment].map((link) => (
+				{[navigation.projects, navigation.web_3].map((link) => (
 					<NavigationMenuItem key={link.id}>
 						<Link
 							href={link.href}

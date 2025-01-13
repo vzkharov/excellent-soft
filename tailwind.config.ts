@@ -37,7 +37,7 @@ const config = {
 					900: 'hsl(218 44% 94%)',
 				},
 				white: 'hsl(0 0% 100%)',
-
+				'gradient-gray': 'hsla(0, 0%, 60%, 0.05)',
 				'gradient-start': 'hsl(180 73% 80%)',
 				'gradient-end': 'hsl(223 99% 74%)',
 			},
@@ -59,6 +59,7 @@ const config = {
 				gilroy: ['var(--font-gilroy)'],
 				'gilroy-bold': ['var(--font-gilroy-bold)'],
 				inter: ['var(--font-inter)'],
+				mulish: ['var(--font-mulish)'],
 			},
 			borderRadius: {
 				lg: '35px',

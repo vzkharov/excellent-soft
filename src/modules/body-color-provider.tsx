@@ -10,7 +10,7 @@ const pageColors: Record<string, string> = {
 	DEFAULT: 'bg-white',
 	[navigation.index.href]: 'bg-gray-100',
 	[navigation.contact.href]: 'bg-gray-100',
-	[navigation.payment.href]: 'bg-gray-100',
+	[navigation.payment.href]: 'bg-black',
 }
 
 const BodyColorProvider: Provider = ({ children }) => {

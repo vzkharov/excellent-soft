@@ -26,6 +26,7 @@ const linkVariants = tv({
 			default: 'font-gilroy-bold',
 			underline: 'font-gilroy underline',
 			gradient: 'hover:text-gradient focus:text-gradient',
+			primary: 'hover:text-primary focus:text-primary',
 		},
 		full: { true: 'w-full', false: '' },
 		truncate: { true: 'w-full overflow-hidden text-ellipsis whitespace-nowrap' },

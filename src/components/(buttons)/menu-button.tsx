@@ -34,6 +34,7 @@ const MenuButton = () => {
 				<ul>
 					{[
 						navigation.development,
+						navigation.web_3,
 						navigation.design,
 						navigation.promotion,
 						navigation.projects,
@@ -43,7 +44,7 @@ const MenuButton = () => {
 						<li key={link.id}>
 							<Link
 								href={link.href}
-								variant="gradient"
+								variant="primary"
 								onClick={() => setOpen(false)}
 								className={styles.link()}
 							>
@@ -57,7 +58,7 @@ const MenuButton = () => {
 					<FeedButton
 						bold
 						dir="y"
-						variant="shadow"
+						variant="secondary"
 						className={styles.feed()}
 					/>
 				</div>

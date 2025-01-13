@@ -29,7 +29,7 @@ const checkboxVariants = tv({
 	base: 'peer h-5 w-5 shrink-0 rounded-[1px] border focus-visible:outline-none focus-visible:outline-1 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
 	variants: {
 		variant: {
-			default: 'border-dark focus-visible:outline-dark data-[state=checked]:bg-dark data-[state=checked]:text-white',
+			default: 'border-black focus-visible:outline-dark data-[state=checked]:bg-white data-[state=checked]:text-black',
 			foreground: 'border-white focus-visible:outline-white data-[state=checked]:bg-white data-[state=checked]:text-dark',
 		},
 	},

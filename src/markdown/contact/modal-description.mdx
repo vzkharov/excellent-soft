@@ -1,11 +1,14 @@
 import { Spacer } from '~/components/ui/spacer'
+import { contactConfig } from '~/config/contact'
+import { Link } from '~/components/ui/link'
 
 <span>С нами можно связаться любым удобным способом:</span>
 
 <Spacer y={12} />
-
-- Написать нам в Telegram или WhatsApp
-
-<Spacer y={12} />
-
-- Либо мы вам перезвоним
+<ul className="list-outside list-disc space-y-3">
+	<li>
+		Написать нам в <Link href={contactConfig.telegram.href}>[{contactConfig.telegram.name}]()</Link> или{' '}
+		<Link href={contactConfig.whatsapp.href}>[{contactConfig.whatsapp.name}]()</Link>
+	</li>
+	<li>Либо мы вам перезвоним</li>
+</ul>

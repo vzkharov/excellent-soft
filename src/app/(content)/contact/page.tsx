@@ -19,17 +19,12 @@ import { styles } from './styles'
 const ContactPage: Page = () => (
 	<Section className={styles.page()}>
 		<div className={styles.inner()}>
-			<ContactSection className={styles.card()}>
+			<ContactSection
+				className={styles.card()}
+				variant="foreground"
+			>
 				<ContactMarkdown />
 			</ContactSection>
-
-			<Link
-				target="_blank"
-				href={contactConfig.phone.href}
-				className={styles.phone()}
-			>
-				{contactConfig.phone.value}
-			</Link>
 		</div>
 
 		<BackgroundImage className="h-screen">

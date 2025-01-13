@@ -14,9 +14,13 @@ const DevelopmentSection = () => (
 				<Title
 					color="black"
 					as="h2"
+					className="max-sm:leading-[3rem]"
 				>
 					Сайты и веб сервисы <br />
-					<span className="bg-black text-primary">«под ключ»</span> любой сложности
+					<span className="bg-black text-primary max-sm:leading-[3rem]">
+						«под ключ»
+					</span>{' '}
+					любой сложности
 				</Title>
 
 				<Spacer y="lg" />
@@ -50,7 +54,7 @@ const DevelopmentSection = () => (
 const styles = tv({
 	slots: {
 		container: 'flex justify-between max-md:flex-col max-md:gap-10',
-		img: 'aspect-[1/1] w-[200px] max-md:self-center',
+		img: 'aspect-[1/1] w-[200px] max-md:hidden',
 	},
 })()
 

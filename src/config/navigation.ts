@@ -12,6 +12,12 @@ const navigation = {
 		name: 'Главная',
 		description: '',
 	},
+	web_3: {
+		id: 'web_3',
+		href: '/web_3',
+		name: 'Web 3',
+		description: 'Разработаем эффективный Web 3 дизайн, опираясь на практический опыт.',
+	},
 	projects: {
 		id: 'project',
 		href: '/projects',

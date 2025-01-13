@@ -29,24 +29,33 @@ const buttonVariants = tv({
 	variants: {
 		variant: {
 			default: {
-				button: 'bg-dark border-dark hover:bg-transparent focus-visible:bg-transparent',
-				text: 'text-white group-hover/button:text-dark group-focus-visible:text-dark',
+				button: 'bg-black border-black hover:bg-transparent focus-visible:bg-transparent',
+				text: 'text-white group-hover/button:text-black group-focus-visible:text-black',
 			},
 			outlined: {
 				button: 'border-white hover:bg-white ',
 				text: 'text-white group-hover/button:text-dark  group-hover/button:font-gilroy-bold ',
 			},
 			primary: {
-				button: 'bg-primary border-dark hover:bg-dark hover:border-primary focus-visible:bg-dark  ',
+				button: 'bg-primary border-black hover:bg-black focus-visible:bg-dark  ',
 				text: 'text-dark group-hover/button:text-primary group-focus-visible:text-primary',
 			},
+			secondary: {
+				button: 'bg-white/10 hover:border-primary focus-visible:bg-transparent',
+				text: 'text-white group-hover/button:text-primary group-focus-visible:text-primary',
+			},
+
 			shadow: {
 				button: 'bg-gray-300/30',
 				text: 'text-gray-700 group-hover/button:text-gradient group-hover/button:[&>svg]:text-secondary',
 			},
 			gradient: {
-				button: 'border-transparent text-dark hover:border-secondary bg-gradient-to-r from-gradient-start to-gradient-end hover:bg-none',
-				text: 'group-hover/button:text-gradient',
+				button: 'bg-white/10  focus-visible:bg-transparent',
+				text: 'text-white group-hover/button:text-primary group-focus-visible:text-primary',
+			},
+			foreground: {
+				button: 'border-white hover:bg-white',
+				text: 'text-white group-hover/button:text-dark  group-hover/button:font-gilroy-bold ',
 			},
 		},
 		size: {

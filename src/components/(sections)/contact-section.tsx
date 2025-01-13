@@ -1,22 +1,22 @@
 import { tv } from 'tailwind-variants'
 
-import { ContactForm } from '~/modules/contact-form'
+import { ContactForm, ContactFormProps } from '~/modules/contact-form'
 
-type ContactSectionProps = React.HTMLAttributes<HTMLDivElement>
+type ContactSectionProps = React.HTMLAttributes<HTMLDivElement> & Pick<ContactFormProps, 'variant'>
 
-const ContactSection = ({ children, className, ...props }: ContactSectionProps) => (
+const ContactSection = ({ children, className, variant, ...props }: ContactSectionProps) => (
 	<section
 		{...props}
 		className={styles.section({ className })}
 	>
 		{children}
-		<ContactForm />
+		<ContactForm variant={variant} />
 	</section>
 )
 
 const styles = tv({
 	slots: {
-		section: 'flex flex-col lg:flex-row gap-y-12 justify-between max-w-screen-lg',
+		section: 'flex flex-col lg:flex-row gap-y-12 justify-between w-full max-lg:px-5',
 	},
 })()
 

@@ -21,7 +21,10 @@ const HomePage: Page = () => (
 			<WelcomeSection />
 		</Section>
 
-		<FeedSection christmas />
+		<FeedSection
+			christmas
+			title="В рассрочку"
+		/>
 
 		<Section
 			color="white"
@@ -51,8 +54,6 @@ const HomePage: Page = () => (
 			withTitle
 			color="white"
 		/>
-
-		{/* <Section color="primary" /> */}
 
 		<FaqSection color="black" />
 

@@ -19,7 +19,7 @@ const RequisitesButton = ({ style, className }: StyleProps) => (
 		>
 			<Button
 				size="icon"
-				variant="shadow"
+				variant="gradient"
 			>
 				<ArrowDownIcon size="1.25em" />
 			</Button>

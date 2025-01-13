@@ -72,8 +72,8 @@ const ProjectCard = ({ style, className, ...project }: ProjectCardProps) => {
 const styles = tv({
 	slots: {
 		card: 'relative flex flex-col gap-y-5',
-		imgWrapper: 'relative overflow-hidden cursor-pointer',
-		imgOverlay: 'absolute inset-0 flex items-center justify-center select-none bg-black/20 opacity-0 backdrop-blur-lg transition-opacity hover:opacity-100',
+		imgWrapper: 'relative overflow-visible cursor-pointer',
+		imgOverlay: 'absolute inset-0 flex items-center justify-center select-none bg-black/20 opacity-0 backdrop-blur-lg  transition-opacity hover:opacity-100',
 		companyLogo: 'h-auto w-auto object-none pointer-events-none',
 		info: 'space-y-1',
 	},

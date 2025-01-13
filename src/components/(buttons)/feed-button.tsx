@@ -15,7 +15,7 @@ const FeedButton = ({ size, bold, variant, className, dir = 'x', ...props }: Fee
 		{...props}
 		className={feedButtonVariants({ dir })}
 	>
-		{[feedConfig.phone, feedConfig.telegram, feedConfig.whatsapp].map((feed) => (
+		{[feedConfig.telegram, feedConfig.whatsapp].map((feed) => (
 			<Link
 				key={feed.id}
 				href={feed.url}

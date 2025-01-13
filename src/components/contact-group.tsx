@@ -42,8 +42,8 @@ const ContactGroup = ({ className, ...props }: ContactGroupProps) => (
 
 const styles = tv({
 	slots: {
-		wrapper: 'flex flex-col gap-y-3',
-		group: 'flex items-center gap-x-5',
+		wrapper: 'flex flex-col gap-y-5',
+		group: 'flex items-center gap-x-7',
 		link: 'w-fit',
 		img: 'h-7 w-auto filter grayscale brightness-[5] hover:grayscale-0 hover:brightness-100 transition-all',
 	},

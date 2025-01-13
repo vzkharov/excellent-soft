@@ -1,7 +1,7 @@
 'use client'
 
 import { toast } from 'sonner'
-import { useCallback } from 'react'
+import { FormEventHandler, useCallback, useRef } from 'react'
 import { useFormStatus } from 'react-dom'
 
 import type { MergeWithHTMLProps } from '~/lib/types'
@@ -19,6 +19,7 @@ type Props = Partial<{
 type HubSpotFormProps = MergeWithHTMLProps<'form', Props>
 
 const HubSpotForm = ({ children, onError, onSuccess, onSettled, ...props }: HubSpotFormProps) => {
+	const formRef = useRef<HTMLFormElement>(null)
 	const handleSubmit = useCallback(
 		async (formData: FormData) => {
 			const promise = submitHubspot(formData)
@@ -33,6 +34,7 @@ const HubSpotForm = ({ children, onError, onSuccess, onSettled, ...props }: HubS
 
 					if (success) {
 						toast.success('Успешно!', { id: toastId, description: data.message })
+						formRef.current?.reset()
 						onSuccess?.()
 					} else {
 						toast.error('Что-то пошло не так', {
@@ -49,6 +51,7 @@ const HubSpotForm = ({ children, onError, onSuccess, onSettled, ...props }: HubS
 
 	return (
 		<form
+			ref={formRef}
 			{...props}
 			action={handleSubmit}
 		>

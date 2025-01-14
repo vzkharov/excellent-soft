@@ -173,7 +173,7 @@ const CarouselItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
 CarouselItem.displayName = '@excellent-soft/carousel/item'
 
 const CarouselControls = React.forwardRef<HTMLDivElement, React.ComponentProps<typeof Button>>(
-	({ className, variant = 'outlined', size = 'icon', ...props }, ref) => {
+	({ className, variant = 'foreground', size = 'icon', ...props }, ref) => {
 		const { orientation, scrollNext, canScrollNext, scrollPrev, canScrollPrev } = useCarousel()
 
 		const styles = carouselStyles({ orientation })

@@ -41,7 +41,7 @@ const buttonVariants = tv({
 				text: 'text-dark group-hover/button:text-primary group-focus-visible:text-primary',
 			},
 			secondary: {
-				button: 'bg-white/10 hover:border-primary focus-visible:bg-transparent',
+				button: 'bg-white/10 hover:border-primary focus-visible:bg-[#474b52]',
 				text: 'text-white group-hover/button:text-primary group-focus-visible:text-primary',
 			},
 
@@ -54,8 +54,8 @@ const buttonVariants = tv({
 				text: 'text-white group-hover/button:text-primary group-focus-visible:text-primary',
 			},
 			foreground: {
-				button: 'border-white hover:bg-white',
-				text: 'text-white group-hover/button:text-dark  group-hover/button:font-gilroy-bold ',
+				button: 'bg-white ',
+				text: 'text-black group-hover/button:text-dark  group-hover/button:font-gilroy-bold ',
 			},
 		},
 		size: {

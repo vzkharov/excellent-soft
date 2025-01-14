@@ -71,7 +71,7 @@ const projectsConfig: Project[] = [
 		purpose: ProjectPurpose.Tourism,
 		company: {
 			name: 'Web 3.0',
-			logo: '',
+			logo: '/projects/web_3_0/logo.svg',
 		},
 
 		cover: '/projects/web_3_0/cover.png',

@@ -27,8 +27,8 @@ const ProjectProblems = (project: Project) => (
 
 		<Spacer y="xl" />
 
-		<div className="grid gap-10 md:grid-cols-2 md:gap-5">
-			<div className="grid grid-rows-[auto_1fr_1fr] gap-5">
+		<div className="grid grid-rows-[30px_repeat(auto-fill,minmax(1fr,1fr))] gap-10 md:grid-cols-2 md:gap-5 ">
+			<div className="grid gap-5">
 				<Text
 					bold
 					as="h6"
@@ -40,14 +40,14 @@ const ProjectProblems = (project: Project) => (
 						key={idx}
 						idx={idx + 1}
 						title=" "
-						className="h-full"
+						className="h-[260px] max-md:h-[300px]"
 					>
 						{item.problem}
 					</Card>
 				))}
 			</div>
 
-			<div className="grid grid-rows-[auto_1fr_1fr] gap-5">
+			<div className="grid gap-5">
 				<Text
 					bold
 					as="h6"
@@ -59,13 +59,14 @@ const ProjectProblems = (project: Project) => (
 						key={idx}
 						idx={idx + 1}
 						title=" "
-						className="h-full"
+						className="h-[260px] max-md:h-[300px]"
 					>
 						{item.solution}
 					</Card>
 				))}
 			</div>
 		</div>
+		<Spacer y="xl" />
 	</div>
 )
 

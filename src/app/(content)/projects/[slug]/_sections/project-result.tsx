@@ -36,16 +36,6 @@ const ProjectResults = (project: Project) => (
 						<span key={idx}>{text}</span>
 					))}
 				</div>
-
-				<Link href={project.previewUrl || '#'}>
-					<Button
-						bold
-						size="lg"
-						variant="primary"
-					>
-						Смотреть сайт
-					</Button>
-				</Link>
 			</div>
 		</div>
 

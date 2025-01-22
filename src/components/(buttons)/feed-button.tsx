@@ -8,30 +8,68 @@ import { feedConfig } from '~/config/feed'
 
 import { Button, type ButtonProps } from '~/components/ui/button'
 
-type FeedButtonProps = Pick<ButtonProps, 'size' | 'bold' | 'variant'> & FeedButtonVariants & StyleProps & {}
+type FeedButtonProps = Pick<ButtonProps, 'size' | 'bold' | 'variant'> &
+	FeedButtonVariants &
+	StyleProps & {
+		short?: boolean
+	}
 
-const FeedButton = ({ size, bold, variant, className, dir = 'x', ...props }: FeedButtonProps) => (
+const FeedButton = ({ size, bold, variant, className, short = false, dir = 'x', ...props }: FeedButtonProps) => (
 	<div
 		{...props}
 		className={feedButtonVariants({ dir })}
 	>
-		{[feedConfig.telegram, feedConfig.whatsapp].map((feed) => (
-			<Link
-				key={feed.id}
-				href={feed.url}
-				target="_blank"
-			>
-				<Button
-					size={size}
-					bold={bold}
-					variant={variant}
-					className={cn('[&>*]:gap-x-3', className)}
+		{short ? (
+			<>
+				<Link
+					href={feedConfig.telegram.url}
+					target="_blank"
 				>
-					{feed.name}
-					{feed.icon}
-				</Button>
-			</Link>
-		))}
+					<Button
+						size={size}
+						bold={bold}
+						variant={variant}
+						className={cn('[&>*]:gap-x-3', className)}
+					>
+						{feedConfig.telegram.name}
+						{feedConfig.telegram.icon}
+					</Button>
+				</Link>
+				<Link
+					href={feedConfig.whatsapp.url}
+					target="_blank"
+				>
+					<Button
+						size={size}
+						bold={bold}
+						variant={variant}
+						className={cn('[&>*]:gap-x-3', className)}
+					>
+						{feedConfig.whatsapp.icon}
+					</Button>
+				</Link>
+			</>
+		) : (
+			<>
+				{[feedConfig.telegram, feedConfig.whatsapp].map((feed) => (
+					<Link
+						key={feed.id}
+						href={feed.url}
+						target="_blank"
+					>
+						<Button
+							size={size}
+							bold={bold}
+							variant={variant}
+							className={cn('[&>*]:gap-x-3', className)}
+						>
+							{feed.name}
+							{feed.icon}
+						</Button>
+					</Link>
+				))}
+			</>
+		)}
 	</div>
 )
 

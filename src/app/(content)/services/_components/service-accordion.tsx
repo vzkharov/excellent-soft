@@ -45,7 +45,8 @@ const ServiceAccordionItem = ({ value, title, children }: ServiceAccordionItemPr
 			<Spacer y="xl" />
 			<FeedButton
 				bold
-				variant="primary"
+				short
+				variant="shadow"
 			/>
 		</AccordionContent>
 	</AccordionItem>

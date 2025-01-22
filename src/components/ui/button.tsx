@@ -46,8 +46,8 @@ const buttonVariants = tv({
 			},
 
 			shadow: {
-				button: 'bg-gray-300/30',
-				text: 'text-gray-700 group-hover/button:text-gradient group-hover/button:[&>svg]:text-secondary',
+				button: 'bg-white border-black hover:bg-black',
+				text: 'text-black group-hover/button:text-white ',
 			},
 			gradient: {
 				button: 'bg-white/10  focus-visible:bg-transparent',

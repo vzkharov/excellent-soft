@@ -27,27 +27,28 @@ const ProjectProblems = (project: Project) => (
 
 		<Spacer y="xl" />
 
-		<div className="grid grid-rows-[30px_repeat(auto-fill,minmax(1fr,1fr))] gap-10 md:grid-cols-2 md:gap-5 ">
-			<div className="grid gap-5">
+		<div className="grid gap-10 md:grid-cols-2 md:gap-5 ">
+			<div className="grid grid-rows-[30px] gap-5 md:auto-rows-[1fr]">
 				<Text
 					bold
 					as="h6"
 				>
 					Проблема
 				</Text>
+
 				{project.problems.map((item, idx) => (
 					<Card
 						key={idx}
 						idx={idx + 1}
 						title=" "
-						className="h-[260px] max-md:h-[300px]"
+						className=" max-md:h-fit"
 					>
 						{item.problem}
 					</Card>
 				))}
 			</div>
 
-			<div className="grid gap-5">
+			<div className="grid grid-rows-[30px] gap-5 md:auto-rows-[1fr]">
 				<Text
 					bold
 					as="h6"
@@ -59,7 +60,7 @@ const ProjectProblems = (project: Project) => (
 						key={idx}
 						idx={idx + 1}
 						title=" "
-						className="h-[260px] max-md:h-[300px]"
+						className="max-md:h-fit"
 					>
 						{item.solution}
 					</Card>

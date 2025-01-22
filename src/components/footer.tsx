@@ -39,7 +39,7 @@ const Footer = () => (
 				</div>
 			</ContactSection>
 
-			<Spacer y="4xl" />
+			<Spacer y="2xl" />
 
 			<footer className={styles.footer()}>
 				<Logo className={styles.logo()} />

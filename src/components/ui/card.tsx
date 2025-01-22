@@ -67,7 +67,7 @@ const cardVariants = tv({
 				card: 'bg-gray-800',
 			},
 			outlined: {
-				card: 'bg-transparent border border-dark hover:border-transparent hover:bg-primary',
+				card: 'bg-transparent border border-dark md:hover:border-transparent md:hover:bg-primary',
 			},
 			dark: {
 				card: 'bg-[#5A5F6B] text-white gap-5',
@@ -80,7 +80,7 @@ const cardVariants = tv({
 				card: 'bg-white/50',
 			},
 			lightgray: {
-				card: 'bg-transparent border border-dark hover:border-transparent hover:bg-primary',
+				card: 'bg-transparent border border-dark md:hover:border-transparent md:hover:bg-primary',
 				title: 'bg-white px-5 py-1.5 rounded-md w-fit !text-base',
 			},
 		},

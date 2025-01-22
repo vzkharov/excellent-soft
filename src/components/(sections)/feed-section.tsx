@@ -17,7 +17,7 @@ const FeedSection = ({ christmas = false, title = 'Давайте обсудим
 		{christmas && (
 			<>
 				<h3 className="text-center font-inter font-extrabold text-black">
-					Хочу получить подарок <br /> к Рождеству!
+					Хочу получить подарок!
 				</h3>
 
 				<p className="max-w-[520px] text-center font-inter text-base font-bold text-black">
@@ -35,7 +35,7 @@ const FeedSection = ({ christmas = false, title = 'Давайте обсудим
 		>
 			{title}
 		</ContactButton>
-
+		{/* 
 		{christmas && (
 			<Image
 				src="/new-year/santa.png"
@@ -44,7 +44,7 @@ const FeedSection = ({ christmas = false, title = 'Давайте обсудим
 				height={260}
 				className="absolute bottom-0 right-20 aspect-[1/2] w-[160px] max-md:hidden "
 			/>
-		)}
+		)} */}
 
 		{christmas && (
 			<Image
@@ -52,7 +52,7 @@ const FeedSection = ({ christmas = false, title = 'Давайте обсудим
 				alt="gift"
 				width={160}
 				height={260}
-				className="absolute bottom-14 left-20 aspect-[1/1] w-[195px] max-md:static max-md:w-[140px]"
+				className="absolute bottom-14 aspect-[1/1] max-lg:w-[140px] max-md:static md:left-9 lg:left-20  lg:w-[195px]"
 			/>
 		)}
 	</Section>

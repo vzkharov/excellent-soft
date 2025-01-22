@@ -39,7 +39,7 @@ const ProjectResearch = (project: Project) => (
 						<Button
 							key={idx}
 							size="sm"
-							variant="outlined"
+							variant="shadow"
 						>
 							{file.label}
 						</Button>

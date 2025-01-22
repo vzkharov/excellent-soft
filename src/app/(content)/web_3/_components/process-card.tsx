@@ -41,8 +41,8 @@ const styles = tv({
 		bg: 'bg-black',
 		card: 'group flex md:flex-row items-center  py-16 gap-y-4 gap-x-16 cursor-pointer border-t border-white',
 		header: 'flex w-full md:items-center md:justify-between max-md:flex-col max-md:gap-5',
-		title: 'group-hover:text-primary translate-y-1 min-w-[380px]',
-		description: 'flex-1 text-sm md:text-md line-clamp-2 group-hover:text-primary',
+		title: 'group-hover:text-primary translate-y-1 min-w-[380px] max-lg:min-w-[280px]',
+		description: 'flex-1 text-sm md:text-md group-hover:text-primary lg:mr-24',
 	},
 })()
 

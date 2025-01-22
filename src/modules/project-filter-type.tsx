@@ -26,7 +26,6 @@ const ProjectFilterType = () => {
 					projectTypeConfig.Commercial,
 					projectTypeConfig.eShop,
 					projectTypeConfig.Portal,
-					projectTypeConfig.Design,
 					projectTypeConfig.Identic,
 				].map((type) => (
 					<TabsTrigger

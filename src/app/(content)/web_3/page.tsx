@@ -83,7 +83,7 @@ const WebPage = () => {
 					width={580}
 					height={700}
 					style={{
-						width: 'calc(19vw + 300px)',
+						width: 'calc(19vw + 250px)',
 						height: 'calc(28vw + 200px)',
 					}}
 					className="img absolute aspect-auto opacity-30 brightness-150 max-md:hidden"
@@ -91,16 +91,18 @@ const WebPage = () => {
 				<Image
 					alt="image-2"
 					src="/web_3/image-2.png"
-					width={720}
-					height={775}
-					className="aspect-[72/75] w-full md:w-[55%]"
+					width={1077}
+					height={1130}
+					className="aspect-auto w-full md:w-[57%]"
+					quality={100}
 				/>
 				<Image
 					alt="image-3"
 					src="/web_3/image-3.png"
-					width={720}
-					height={755}
-					className="aspect-[55/75] w-full md:w-[45%]"
+					width={684}
+					height={937}
+					className="aspect-[7/9] object-cover md:w-[43%]"
+					quality={100}
 				/>
 			</section>
 

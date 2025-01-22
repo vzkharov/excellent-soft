@@ -11,7 +11,7 @@ const contactConfig = {
 		id: 'instagram',
 		name: 'Instagram',
 		img: '/social-media/instagram.png',
-		href: '',
+		href: 'https://www.instagram.com/exlnt.soft',
 		value: '',
 	},
 	behance: {

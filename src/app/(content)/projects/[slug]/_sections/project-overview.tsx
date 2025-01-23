@@ -90,14 +90,14 @@ const ProjectOverview = (project: Project) => (
 				src={createImageSrc(project.slug, 'image-1.png')}
 				width={546}
 				height={546}
-				className="h-[343px] md:h-[550px]"
+				className=" object-contain md:h-[550px]"
 			/>
 			<Image
 				alt="cover-2"
 				src={createImageSrc(project.slug, 'image-2.png')}
 				width={546}
 				height={546}
-				className="h-[343px] md:h-[550px]"
+				className="object-contain md:h-[550px]"
 			/>
 		</div>
 	</div>

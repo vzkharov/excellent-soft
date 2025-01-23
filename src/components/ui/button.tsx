@@ -32,9 +32,13 @@ const buttonVariants = tv({
 				button: 'bg-black border-black hover:bg-transparent focus-visible:bg-transparent',
 				text: 'text-white group-hover/button:text-black group-focus-visible:text-black',
 			},
+			foreground: {
+				button: 'bg-white hover:bg-white/80',
+				text: 'text-black group-hover/button:text-black group-hover/button:font-gilroy-bold ',
+			},
 			outlined: {
 				button: 'border-white hover:bg-white ',
-				text: 'text-white group-hover/button:text-dark  group-hover/button:font-gilroy-bold ',
+				text: 'text-white group-hover/button:text-black  group-hover/button:font-gilroy-bold ',
 			},
 			primary: {
 				button: 'bg-primary border-black hover:bg-black focus-visible:bg-dark  ',
@@ -44,18 +48,13 @@ const buttonVariants = tv({
 				button: 'bg-white/10 hover:border-primary focus-visible:bg-[#474b52]',
 				text: 'text-white group-hover/button:text-primary group-focus-visible:text-primary',
 			},
-
 			shadow: {
 				button: 'bg-white/10 border-black hover:bg-black',
 				text: 'text-black group-hover/button:text-white ',
 			},
-			gradient: {
+			requisites: {
 				button: 'bg-white/10  focus-visible:bg-transparent',
 				text: 'text-white group-hover/button:text-primary group-focus-visible:text-primary',
-			},
-			foreground: {
-				button: 'bg-white ',
-				text: 'text-black group-hover/button:text-dark  group-hover/button:font-gilroy-bold ',
 			},
 		},
 		size: {

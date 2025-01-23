@@ -17,7 +17,7 @@ type ServiceTechnologyProps = {
 }
 
 const ServiceTechnology = ({ techStack }: ServiceTechnologyProps) => (
-	<section>
+	<section id="technologies">
 		<Spacer y="3xl" />
 		<Title as="h3">Технологии, которые мы используем</Title>
 		<Spacer y="xl" />

@@ -1,5 +1,6 @@
 import { tv } from 'tailwind-variants'
 
+import Link from 'next/link'
 import type { StyleProps } from '~/lib/types'
 import { renderSplittedText } from '~/helpers/string'
 
@@ -10,32 +11,39 @@ import { ArrowRightIcon } from '../ui/icons/arrow-right-icon'
 type PartnerCardProps = StyleProps & {
 	title: string
 	description: string
+	href: string
 }
 
-const PartnerCard = ({ title, description, className, ...props }: PartnerCardProps) => (
+const PartnerCard = ({ title, description, href, className, ...props }: PartnerCardProps) => (
 	<Section
 		{...props}
 		color="black"
 		bg={styles.bg()}
-		className={styles.card({ className })}
 	>
-		<div className={styles.header()}>
-			<Title
-				as="h3"
-				className={styles.title()}
-			>
-				{title}
-			</Title>
-			<Text
-				size="md"
-				font="gilroy-bold"
-				className={styles.description()}
-			>
-				{renderSplittedText(description)}
-			</Text>
-		</div>
+		<Link
+			href={href}
+			className="!whitespace-normal"
+		>
+			<div className={styles.card({ className })}>
+				<div className={styles.header()}>
+					<Title
+						as="h3"
+						className={styles.title()}
+					>
+						{title}
+					</Title>
+					<Text
+						size="md"
+						font="gilroy-bold"
+						className={styles.description()}
+					>
+						{renderSplittedText(description)}
+					</Text>
+				</div>
 
-		<ArrowRightIcon className={styles.arrowIcon()} />
+				<ArrowRightIcon className={styles.arrowIcon()} />
+			</div>
+		</Link>
 	</Section>
 )
 
